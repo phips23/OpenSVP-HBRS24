@@ -1,0 +1,90 @@
+2024-11-27 09:48:05.602  D  
+2024-11-27 09:48:05.602  D  **************  Starting VV_1  **************
+2024-11-27 09:48:05.603  D  Script: VV.py 1.4.3
+2024-11-27 09:48:05.603  I  Test Parameters:
+2024-11-27 09:48:05.603  I      Volt-Var mode = Normal
+2024-11-27 09:48:05.604  I      Characteristic 1 curve = Enabled
+2024-11-27 09:48:05.604  I      Response time (s) for curve 1 = 10.0
+2024-11-27 09:48:05.605  I      Characteristic 2 curve = Disabled
+2024-11-27 09:48:05.605  I      Characteristic 3 curve = Disabled
+2024-11-27 09:48:05.605  I      Power Levels iteration = 100%
+2024-11-27 09:48:05.605  I      Voltage reference iteration = All
+2024-11-27 09:48:05.606  I  EUT Parameters:
+2024-11-27 09:48:05.606  I      Phases = Three phase
+2024-11-27 09:48:05.615  I      Apparent power rating (VA) = 10000.0
+2024-11-27 09:48:05.616  I      Output power rating (W) = 8000.0
+2024-11-27 09:48:05.617  I      Minimum Power Rating(W) = 1000.0
+2024-11-27 09:48:05.618  I      Output var rating (vars) = 2000.0
+2024-11-27 09:48:05.619  I      Nominal AC voltage (V) = 120.0
+2024-11-27 09:48:05.620  I      Minimum AC voltage (V) = 105.6
+2024-11-27 09:48:05.621  I      Maximum AC voltage (V) = 132.0
+2024-11-27 09:48:05.621  I      V_in_nom: Nominal input voltage (Vdc) = 400
+2024-11-27 09:48:05.621  I      Nominal AC frequency (Hz) = 60.0
+2024-11-27 09:48:05.622  I      Maximum frequency in the continuous operating region (Hz) = 66.0
+2024-11-27 09:48:05.622  I      Minimum frequency in the continuous operating region (Hz) = 56.0
+2024-11-27 09:48:05.622  I      EUT response to phase imbalance is calculated by: = EUT response to the average of the three-phase effective (RMS)
+2024-11-27 09:48:05.623  I  DER Parameters:
+2024-11-27 09:48:05.623  I      DER Mode = Disabled
+2024-11-27 09:48:05.623  I  Grid Simulator Parameters:
+2024-11-27 09:48:05.623  I      Mode = Disabled
+2024-11-27 09:48:05.624  I      Configure grid simulator at beginning of test = Disabled
+2024-11-27 09:48:05.624  I  PV Simulator Parameters:
+2024-11-27 09:48:05.624  I      Mode = Disabled
+2024-11-27 09:48:05.624  I  Data Acquisition System Parameters:
+2024-11-27 09:48:05.625  I      Mode = Opal
+2024-11-27 09:48:05.625  I      Opal Parameters:
+2024-11-27 09:48:05.625  I          Sample Interval (ms) = 1000
+2024-11-27 09:48:05.625  I          Opal Analog Channel Map (e.g. simulinks blocks, etc,.) = IEEE1547_VRT
+2024-11-27 09:48:05.626  I          Waveform Directory = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\models\IEEE_1547_Testing\ieee_1547_testing_sm_source\OpREDHAWK64target
+2024-11-27 09:48:05.626  I          Waveform Channel List = PhaseJump
+2024-11-27 09:48:05.626  I          Waveform Data File Name (.mat) = Data.mat
+2024-11-27 09:48:05.627  I          Capture data from the console? = No
+2024-11-27 09:48:05.627  I  HIL Parameters:
+2024-11-27 09:48:05.627  I      Mode = Opal-RT
+2024-11-27 09:48:05.627  I      Opal-RT Parameters:
+2024-11-27 09:48:05.628  I          Target name in RT-LAB = Microgrid_Testbench
+2024-11-27 09:48:05.628  I          Project Directory Loacation = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 09:48:05.628  I          RT-LAB model name (.mdl or .slx) = IEEE_1547_Testing
+2024-11-27 09:48:05.629  I          Real-Time simulation mode = Hardware
+2024-11-27 09:48:05.629  I          Configure HIL in init = False
+2024-11-27 09:48:05.629  I          Stop Time = 3600.0
+2024-11-27 09:48:05.630  I  Functions to be activated in this test script = ['VV']
+2024-11-27 09:48:05.630  D  Sc points: ['V_MEAS', 'V_TARGET', 'Q_MEAS', 'Q_TARGET', 'Q_TARGET_MIN', 'Q_TARGET_MAX', 'EVENT']
+2024-11-27 09:48:05.630  D  summary column=90%_BY_TR=1,WITHIN_BOUNDS_BY_TR=1,WITHIN_BOUNDS_BY_LAST_TR,V_MEAS,V_TARGET,Q_MEAS,Q_TARGET,Q_TARGET_MIN,Q_TARGET_MAX,STEP,FILENAME
+2024-11-27 09:48:05.715  D  1547.1 Library configured for UNDEFINED IN TEST CLASS
+2024-11-27 09:48:05.716  D  y_variables={'Q': 'VV'}
+2024-11-27 09:48:05.716  D  y_temp: Q
+2024-11-27 09:48:05.717  D  y_points: ['AC_Q_1,AC_Q_2,AC_Q_3']
+2024-11-27 09:48:05.717  D  y2_variable for result: V
+2024-11-27 09:48:05.718  D  {'plot.title': 'title_name', 'plot.x.title': 'Time (sec)', 'plot.x.points': 'TIME', 'plot.y.points': 'AC_Q_1,AC_Q_2,AC_Q_3', 'plot.y.title': 'Reactive Power', 'plot.y2.points': 'AC_VRMS_1,AC_VRMS_2,AC_VRMS_3', 'plot.y2.title': 'Voltage', 'plot.Q_TARGET.min_error': 'Q_TARGET_MIN', 'plot.Q_TARGET.max_error': 'Q_TARGET_MAX'}
+2024-11-27 09:48:05.719  D  ***************HIL initialization***************
+2024-11-27 09:48:05.916  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 09:48:05.918  I  Assuming project name is an absolute path to .llp file
+2024-11-27 09:48:05.921  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 09:48:05.949  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 09:48:05.950  D  info(), self.target_name = Microgrid_Testbench
+2024-11-27 09:48:05.989  I  OPAL-RT - Platform version OPAL-RTLinux 3.5.4 (4.19.80-opalrtlinux) (IP address : 192.168.10.102)
+2024-11-27 09:48:05.990  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 09:48:05.990  I  Assuming project name is an absolute path to .llp file
+2024-11-27 09:48:06.119  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 09:48:06.124  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 09:48:06.125  I  Setting the simulation stop time for 3600.0 to run experiment.
+2024-11-27 09:48:06.125  W  Stop time already set to 3600.0
+2024-11-27 09:48:06.126  D  ***************PVSIM initialization***************
+2024-11-27 09:48:06.126  D  ***************DAS initialization***************
+2024-11-27 09:48:06.126  D  DAS connected to with HIL: <svpelab.hil_opal.HIL object at 0x00000222AF11CA48>, DC meas: None, and gridsim: None
+2024-11-27 09:48:06.128  E  Test script exception: Traceback (most recent call last):
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Scripts\VV.py", line 135, in volt_vars_mode
+    daq = das.das_init(ts, sc_points=das_points['sc'], support_interfaces={'hil': chil})
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\das.py", line 128, in das_init
+    support_interfaces=support_interfaces)
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\das_opal.py", line 63, in __init__
+    self.device = device_das_opal.Device(self.params)
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\device_das_opal.py", line 268, in __init__
+    self.data_point_map = opal_points_map[self.map]  # dict with the {data_point: opal signal} map
+KeyError: 'IEEE1547_VRT'
+
+2024-11-27 09:48:06.332  I  Stopping/Resetting simulation. Current State: Model Loadable
+2024-11-27 09:48:06.333  I  Model already stopped.
+2024-11-27 09:48:06.334  I  Model state is now: Model Loadable
+2024-11-27 09:48:07.165  I  Test result - Fail
