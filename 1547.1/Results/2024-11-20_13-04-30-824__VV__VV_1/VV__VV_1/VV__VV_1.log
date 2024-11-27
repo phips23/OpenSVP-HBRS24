@@ -1,0 +1,90 @@
+2024-11-20 13:04:32.711  D  
+2024-11-20 13:04:32.711  D  **************  Starting VV_1  **************
+2024-11-20 13:04:32.712  D  Script: VV.py 1.4.3
+2024-11-20 13:04:32.712  I  Test Parameters:
+2024-11-20 13:04:32.712  I      Volt-Var mode = Normal
+2024-11-20 13:04:32.712  I      Characteristic 1 curve = Enabled
+2024-11-20 13:04:32.713  I      Response time (s) for curve 1 = 10.0
+2024-11-20 13:04:32.713  I      Characteristic 2 curve = Disabled
+2024-11-20 13:04:32.713  I      Characteristic 3 curve = Disabled
+2024-11-20 13:04:32.713  I      Power Levels iteration = 100%
+2024-11-20 13:04:32.714  I      Voltage reference iteration = All
+2024-11-20 13:04:32.714  I  EUT Parameters:
+2024-11-20 13:04:32.714  I      Phases = Three phase
+2024-11-20 13:04:32.714  I      Apparent power rating (VA) = 10000.0
+2024-11-20 13:04:32.715  I      Output power rating (W) = 8000.0
+2024-11-20 13:04:32.715  I      Minimum Power Rating(W) = 1000.0
+2024-11-20 13:04:32.715  I      Output var rating (vars) = 2000.0
+2024-11-20 13:04:32.715  I      Nominal AC voltage (V) = 120.0
+2024-11-20 13:04:32.715  I      Minimum AC voltage (V) = 105.6
+2024-11-20 13:04:32.716  I      Maximum AC voltage (V) = 132.0
+2024-11-20 13:04:32.716  I      V_in_nom: Nominal input voltage (Vdc) = 400
+2024-11-20 13:04:32.716  I      Nominal AC frequency (Hz) = 60.0
+2024-11-20 13:04:32.716  I      Maximum frequency in the continuous operating region (Hz) = 66.0
+2024-11-20 13:04:32.717  I      Minimum frequency in the continuous operating region (Hz) = 56.0
+2024-11-20 13:04:32.717  I      EUT response to phase imbalance is calculated by: = EUT response to the average of the three-phase effective (RMS)
+2024-11-20 13:04:32.717  I  DER Parameters:
+2024-11-20 13:04:32.717  I      DER Mode = Disabled
+2024-11-20 13:04:32.718  I  Grid Simulator Parameters:
+2024-11-20 13:04:32.718  I      Mode = Disabled
+2024-11-20 13:04:32.718  I      Configure grid simulator at beginning of test = Disabled
+2024-11-20 13:04:32.718  I  PV Simulator Parameters:
+2024-11-20 13:04:32.719  I      Mode = Disabled
+2024-11-20 13:04:32.719  I  Data Acquisition System Parameters:
+2024-11-20 13:04:32.719  I      Mode = Disabled
+2024-11-20 13:04:32.720  I  HIL Parameters:
+2024-11-20 13:04:32.720  I      Mode = Opal-RT
+2024-11-20 13:04:32.720  I      Opal-RT Parameters:
+2024-11-20 13:04:32.720  I          Target name in RT-LAB = Microgrid_Testbench
+2024-11-20 13:04:32.721  I          Project Directory Loacation = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-20 13:04:32.721  I          RT-LAB model name (.mdl or .slx) = IEEE_1547_Testing
+2024-11-20 13:04:32.721  I          Real-Time simulation mode = Hardware
+2024-11-20 13:04:32.722  I          Configure HIL in init = False
+2024-11-20 13:04:32.722  I          Stop Time = 3600.0
+2024-11-20 13:04:32.722  I  Functions to be activated in this test script = ['VV']
+2024-11-20 13:04:32.723  D  Sc points: ['V_MEAS', 'V_TARGET', 'Q_MEAS', 'Q_TARGET', 'Q_TARGET_MIN', 'Q_TARGET_MAX', 'EVENT']
+2024-11-20 13:04:32.723  D  summary column=90%_BY_TR=1,WITHIN_BOUNDS_BY_TR=1,WITHIN_BOUNDS_BY_LAST_TR,V_MEAS,V_TARGET,Q_MEAS,Q_TARGET,Q_TARGET_MIN,Q_TARGET_MAX,STEP,FILENAME
+2024-11-20 13:04:32.723  D  1547.1 Library configured for UNDEFINED IN TEST CLASS
+2024-11-20 13:04:32.723  D  y_variables={'Q': 'VV'}
+2024-11-20 13:04:32.724  D  y_temp: Q
+2024-11-20 13:04:32.724  D  y_points: ['AC_Q_1,AC_Q_2,AC_Q_3']
+2024-11-20 13:04:32.724  D  y2_variable for result: V
+2024-11-20 13:04:32.724  D  {'plot.title': 'title_name', 'plot.x.title': 'Time (sec)', 'plot.x.points': 'TIME', 'plot.y.points': 'AC_Q_1,AC_Q_2,AC_Q_3', 'plot.y.title': 'Reactive Power', 'plot.y2.points': 'AC_VRMS_1,AC_VRMS_2,AC_VRMS_3', 'plot.y2.title': 'Voltage', 'plot.Q_TARGET.min_error': 'Q_TARGET_MIN', 'plot.Q_TARGET.max_error': 'Q_TARGET_MAX'}
+2024-11-20 13:04:32.749  D  ***************HIL initialization***************
+2024-11-20 13:04:32.751  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-20 13:04:32.753  I  Assuming project name is an absolute path to .llp file
+2024-11-20 13:04:32.754  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-20 13:04:32.780  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-20 13:04:32.781  D  info(), self.target_name = Microgrid_Testbench
+2024-11-20 13:04:32.848  I  OPAL-RT - Platform version OPAL-RTLinux 3.5.4 (4.19.80-opalrtlinux) (IP address : 192.168.10.102)
+2024-11-20 13:04:32.944  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-20 13:04:32.945  I  Assuming project name is an absolute path to .llp file
+2024-11-20 13:04:32.946  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-20 13:04:32.949  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-20 13:04:32.950  I  Setting the simulation stop time for 3600.0 to run experiment.
+2024-11-20 13:04:32.950  W  Stop time already set to 3600.0
+2024-11-20 13:04:32.951  D  ***************PVSIM initialization***************
+2024-11-20 13:04:32.951  D  ***************EUT initialization***************
+2024-11-20 13:04:32.951  D  Set L/HVRT and trip parameters set to the widest range of adjustability possible.
+2024-11-20 13:04:33.142  D  ***************GRIDSIM initialization***************
+2024-11-20 13:04:34.024  I  Starting test with characteristic curve 1
+2024-11-20 13:04:34.024  D  P1547 Librairy curve has been set 1
+2024-11-20 13:04:34.024  D  P1547 Time response has been set to 10.0 seconds
+2024-11-20 13:04:34.025  D  P1547 Number of Time response has been set to 2 cycles
+2024-11-20 13:04:34.025  D  P1547 Librairy power level has been set 100%
+2024-11-20 13:04:34.025  I  Setting v_ref at 100 % of v_nom
+2024-11-20 13:04:34.025  I  Start simulation of CHIL
+2024-11-20 13:04:34.027  W  Model is not running because the status is:  Model Loadable
+2024-11-20 13:04:34.027  D  OrderedDict([('Step G', 120.6), ('Step H', 124.2), ('Step I', 126.0), ('Step J', 127.8), ('Step K', 131.4), ('Step L', 130.2), ('Step M', 131.4), ('Step N', 127.8), ('Step O', 126.0), ('Step P', 124.2), ('Step Q', 120.6), ('Step R', 120.0), ('Step S', 119.4), ('Step T', 115.8), ('Step U', 114.0), ('Step V', 112.2), ('Step W', 108.6), ('Step X', 107.4), ('Step Y', 108.6), ('Step Z', 112.2), ('Step AA', 114.0), ('Step BB', 115.8), ('Step CC', 119.4), ('Step DD', 120.0)])
+2024-11-20 13:04:34.027  I  Setting v_ref at 95 % of v_nom
+2024-11-20 13:04:34.027  I  Start simulation of CHIL
+2024-11-20 13:04:34.028  W  Model is not running because the status is:  Model Loadable
+2024-11-20 13:04:34.028  D  OrderedDict([('Step G', 120.6), ('Step H', 124.2), ('Step I', 126.0), ('Step J', 127.8), ('Step K', 131.4), ('Step L', 130.2), ('Step M', 131.4), ('Step N', 127.8), ('Step O', 126.0), ('Step P', 124.2), ('Step Q', 120.6), ('Step R', 114.0), ('Step S', 119.4), ('Step T', 115.8), ('Step U', 114.0), ('Step V', 112.2), ('Step W', 108.6), ('Step X', 107.4), ('Step Y', 108.6), ('Step Z', 112.2), ('Step AA', 114.0), ('Step BB', 115.8), ('Step CC', 119.4), ('Step DD', 114.0)])
+2024-11-20 13:04:34.028  I  Setting v_ref at 105 % of v_nom
+2024-11-20 13:04:34.029  I  Start simulation of CHIL
+2024-11-20 13:04:34.029  W  Model is not running because the status is:  Model Loadable
+2024-11-20 13:04:34.029  D  OrderedDict([('Step G', 120.6), ('Step H', 124.2), ('Step I', 126.0), ('Step J', 127.8), ('Step K', 131.4), ('Step L', 130.2), ('Step M', 131.4), ('Step N', 127.8), ('Step O', 126.0), ('Step P', 124.2), ('Step Q', 120.6), ('Step R', 126.0), ('Step S', 119.4), ('Step T', 115.8), ('Step U', 114.0), ('Step V', 112.2), ('Step W', 108.6), ('Step X', 107.4), ('Step Y', 108.6), ('Step Z', 112.2), ('Step AA', 114.0), ('Step BB', 115.8), ('Step CC', 119.4), ('Step DD', 126.0)])
+2024-11-20 13:04:34.030  I  Stopping/Resetting simulation. Current State: Model Loadable
+2024-11-20 13:04:34.030  I  Model already stopped.
+2024-11-20 13:04:34.030  I  Model state is now: Model Loadable
+2024-11-20 13:04:34.653  I  Test result - Complete
