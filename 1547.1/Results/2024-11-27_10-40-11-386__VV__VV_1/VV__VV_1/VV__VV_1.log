@@ -1,0 +1,1869 @@
+2024-11-27 10:40:13.254  D  
+2024-11-27 10:40:13.255  D  **************  Starting VV_1  **************
+2024-11-27 10:40:13.255  D  Script: VV.py 1.4.3
+2024-11-27 10:40:13.255  I  Test Parameters:
+2024-11-27 10:40:13.255  I      Volt-Var mode = Normal
+2024-11-27 10:40:13.256  I      Characteristic 1 curve = Enabled
+2024-11-27 10:40:13.256  I      Response time (s) for curve 1 = 10.0
+2024-11-27 10:40:13.256  I      Characteristic 2 curve = Disabled
+2024-11-27 10:40:13.257  I      Characteristic 3 curve = Disabled
+2024-11-27 10:40:13.257  I      Power Levels iteration = 100%
+2024-11-27 10:40:13.257  I      Voltage reference iteration = All
+2024-11-27 10:40:13.257  I  EUT Parameters:
+2024-11-27 10:40:13.258  I      Phases = Three phase
+2024-11-27 10:40:13.265  I      Apparent power rating (VA) = 10000.0
+2024-11-27 10:40:13.265  I      Output power rating (W) = 8000.0
+2024-11-27 10:40:13.265  I      Minimum Power Rating(W) = 1000.0
+2024-11-27 10:40:13.265  I      Output var rating (vars) = 2000.0
+2024-11-27 10:40:13.266  I      Nominal AC voltage (V) = 120.0
+2024-11-27 10:40:13.266  I      Minimum AC voltage (V) = 105.6
+2024-11-27 10:40:13.266  I      Maximum AC voltage (V) = 132.0
+2024-11-27 10:40:13.267  I      V_in_nom: Nominal input voltage (Vdc) = 400
+2024-11-27 10:40:13.267  I      Nominal AC frequency (Hz) = 60.0
+2024-11-27 10:40:13.267  I      Maximum frequency in the continuous operating region (Hz) = 66.0
+2024-11-27 10:40:13.267  I      Minimum frequency in the continuous operating region (Hz) = 56.0
+2024-11-27 10:40:13.268  I      EUT response to phase imbalance is calculated by: = EUT response to the average of the three-phase effective (RMS)
+2024-11-27 10:40:13.268  I  DER Parameters:
+2024-11-27 10:40:13.268  I      DER Mode = Disabled
+2024-11-27 10:40:13.269  I  Grid Simulator Parameters:
+2024-11-27 10:40:13.269  I      Mode = Disabled
+2024-11-27 10:40:13.269  I      Configure grid simulator at beginning of test = Disabled
+2024-11-27 10:40:13.270  I  PV Simulator Parameters:
+2024-11-27 10:40:13.270  I      Mode = Disabled
+2024-11-27 10:40:13.270  I  Data Acquisition System Parameters:
+2024-11-27 10:40:13.270  I      Mode = Opal
+2024-11-27 10:40:13.271  I      Opal Parameters:
+2024-11-27 10:40:13.271  I          Sample Interval (ms) = 1000
+2024-11-27 10:40:13.271  I          Opal Analog Channel Map (e.g. simulinks blocks, etc,.) = Opal_Phase_Jump
+2024-11-27 10:40:13.272  I          Waveform Directory = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\models\IEEE_1547_Testing\ieee_1547_testing_sm_source\OpREDHAWK64target
+2024-11-27 10:40:13.272  I          Waveform Channel List = PhaseJump
+2024-11-27 10:40:13.272  I          Waveform Data File Name (.mat) = Data.mat
+2024-11-27 10:40:13.273  I          Capture data from the console? = No
+2024-11-27 10:40:13.273  I  HIL Parameters:
+2024-11-27 10:40:13.273  I      Mode = Opal-RT
+2024-11-27 10:40:13.273  I      Opal-RT Parameters:
+2024-11-27 10:40:13.274  I          Target name in RT-LAB = Microgrid_Testbench
+2024-11-27 10:40:13.274  I          Project Directory Loacation = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:40:13.274  I          RT-LAB model name (.mdl or .slx) = IEEE_1547_Testing
+2024-11-27 10:40:13.275  I          Real-Time simulation mode = Hardware
+2024-11-27 10:40:13.275  I          Configure HIL in init = False
+2024-11-27 10:40:13.275  I          Stop Time = 3600.0
+2024-11-27 10:40:13.276  I  Functions to be activated in this test script = ['VV']
+2024-11-27 10:40:13.276  D  Sc points: ['V_MEAS', 'V_TARGET', 'Q_MEAS', 'Q_TARGET', 'Q_TARGET_MIN', 'Q_TARGET_MAX', 'EVENT']
+2024-11-27 10:40:13.276  D  summary column=90%_BY_TR=1,WITHIN_BOUNDS_BY_TR=1,WITHIN_BOUNDS_BY_LAST_TR,V_MEAS,V_TARGET,Q_MEAS,Q_TARGET,Q_TARGET_MIN,Q_TARGET_MAX,STEP,FILENAME
+2024-11-27 10:40:13.285  D  1547.1 Library configured for UNDEFINED IN TEST CLASS
+2024-11-27 10:40:13.285  D  y_variables={'Q': 'VV'}
+2024-11-27 10:40:13.286  D  y_temp: Q
+2024-11-27 10:40:13.286  D  y_points: ['AC_Q_1,AC_Q_2,AC_Q_3']
+2024-11-27 10:40:13.287  D  y2_variable for result: V
+2024-11-27 10:40:13.287  D  {'plot.title': 'title_name', 'plot.x.title': 'Time (sec)', 'plot.x.points': 'TIME', 'plot.y.points': 'AC_Q_1,AC_Q_2,AC_Q_3', 'plot.y.title': 'Reactive Power', 'plot.y2.points': 'AC_VRMS_1,AC_VRMS_2,AC_VRMS_3', 'plot.y2.title': 'Voltage', 'plot.Q_TARGET.min_error': 'Q_TARGET_MIN', 'plot.Q_TARGET.max_error': 'Q_TARGET_MAX'}
+2024-11-27 10:40:13.289  D  ***************HIL initialization***************
+2024-11-27 10:40:13.490  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:40:13.493  I  Assuming project name is an absolute path to .llp file
+2024-11-27 10:40:13.494  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:40:13.517  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:40:13.518  D  info(), self.target_name = Microgrid_Testbench
+2024-11-27 10:40:13.579  I  OPAL-RT - Platform version OPAL-RTLinux 3.5.4 (4.19.80-opalrtlinux) (IP address : 192.168.10.102)
+2024-11-27 10:40:13.579  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:40:13.579  I  Assuming project name is an absolute path to .llp file
+2024-11-27 10:40:13.693  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:40:13.698  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:40:13.698  I  Setting the simulation stop time for 3600.0 to run experiment.
+2024-11-27 10:40:13.698  W  Stop time already set to 3600.0
+2024-11-27 10:40:13.699  D  ***************PVSIM initialization***************
+2024-11-27 10:40:13.699  D  ***************DAS initialization***************
+2024-11-27 10:40:13.699  D  DAS connected to with HIL: <svpelab.hil_opal.HIL object at 0x000001C834F5CA48>, DC meas: None, and gridsim: None
+2024-11-27 10:40:13.732  I  DAS device: OPAL-RT - Platform version OPAL-RTLinux 3.5.4 (4.19.80-opalrtlinux) (IP address : 192.168.10.102)
+2024-11-27 10:40:13.896  D  ***************EUT initialization***************
+2024-11-27 10:40:13.899  D  Set L/HVRT and trip parameters set to the widest range of adjustability possible.
+2024-11-27 10:40:13.900  D  ***************GRIDSIM initialization***************
+2024-11-27 10:40:14.783  I  Starting test with characteristic curve 1
+2024-11-27 10:40:14.784  D  P1547 Librairy curve has been set 1
+2024-11-27 10:40:14.786  D  P1547 Time response has been set to 10.0 seconds
+2024-11-27 10:40:14.787  D  P1547 Number of Time response has been set to 2 cycles
+2024-11-27 10:40:14.787  D  P1547 Librairy power level has been set 100%
+2024-11-27 10:40:14.789  I  Setting v_ref at 100 % of v_nom
+2024-11-27 10:40:14.790  I  Start simulation of CHIL
+2024-11-27 10:40:14.791  I  Loading Model.  This may take a while...
+2024-11-27 10:40:14.792  I  The realtimemod : HARD_SYNC_MODE(0)
+2024-11-27 10:40:38.489  I  Simulation started.
+2024-11-27 10:40:38.674  D  OrderedDict([('Step G', 120.6), ('Step H', 124.2), ('Step I', 126.0), ('Step J', 127.8), ('Step K', 131.4), ('Step L', 130.2), ('Step M', 131.4), ('Step N', 127.8), ('Step O', 126.0), ('Step P', 124.2), ('Step Q', 120.6), ('Step R', 120.0), ('Step S', 119.4), ('Step T', 115.8), ('Step U', 114.0), ('Step V', 112.2), ('Step W', 108.6), ('Step X', 107.4), ('Step Y', 108.6), ('Step Z', 112.2), ('Step AA', 114.0), ('Step BB', 115.8), ('Step CC', 119.4), ('Step DD', 120.0)])
+2024-11-27 10:40:38.674  I  Voltage step: setting Grid simulator voltage to 120.6 (Step G)
+2024-11-27 10:40:39.224  D  0.0
+2024-11-27 10:40:39.224  D  nan
+2024-11-27 10:40:39.224  I  Waiting 9.450192 seconds to get the next Tr data for analysis...
+2024-11-27 10:40:49.436  I  Value V: 0.0
+2024-11-27 10:40:49.436  I  Value Q: nan
+2024-11-27 10:40:49.436  I  Waiting 9.237857 seconds to get the next Tr data for analysis...
+2024-11-27 10:40:59.664  I  Value V: 0.0
+2024-11-27 10:40:59.664  I  Value Q: nan
+2024-11-27 10:40:59.664  I  Waiting 9.009282 seconds to get the next Tr data for analysis...
+2024-11-27 10:41:09.398  I  Value V: 0.0
+2024-11-27 10:41:09.398  I  Value Q: nan
+2024-11-27 10:41:09.398  D  daq={'V_MEAS': 0.0, 'V_TARGET': 120.0, 'Q_MEAS': nan, 'Q_TARGET': 100, 'Q_TARGET_MIN': 100, 'Q_TARGET_MAX': 100, 'EVENT': 'Step G_TR_3', 'event': 'Step G'}
+2024-11-27 10:41:09.399  D  tr_iter=0
+2024-11-27 10:41:09.399  D  step_dict
+2024-11-27 10:41:09.399  D  tr_targ=120.6
+2024-11-27 10:41:09.400  I  X Value (V) = 0.0
+2024-11-27 10:41:09.400  D  function=VV
+2024-11-27 10:41:09.401  D  0.0
+2024-11-27 10:41:09.401  D  Q_TR_TARG_0
+2024-11-27 10:41:09.401  D  tr_target=0.0
+2024-11-27 10:41:09.401  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:41:09.402  D  tr_iter=1
+2024-11-27 10:41:09.402  D  step_dict
+2024-11-27 10:41:09.402  D  tr_targ=120.6
+2024-11-27 10:41:09.402  I  X Value (V) = 0.0
+2024-11-27 10:41:09.402  D  function=VV
+2024-11-27 10:41:09.403  D  0.0
+2024-11-27 10:41:09.403  D  Q_TR_TARG_1
+2024-11-27 10:41:09.403  D  tr_target=0.0
+2024-11-27 10:41:09.403  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:41:09.404  D  tr_iter=2
+2024-11-27 10:41:09.404  D  step_dict
+2024-11-27 10:41:09.404  D  tr_targ=120.6
+2024-11-27 10:41:09.404  I  X Value (V) = 0.0
+2024-11-27 10:41:09.404  D  function=VV
+2024-11-27 10:41:09.405  D  0.0
+2024-11-27 10:41:09.405  D  Q_TR_TARG_2
+2024-11-27 10:41:09.405  D  tr_target=0.0
+2024-11-27 10:41:09.406  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:41:09.406  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:41:09.406  D  y_target = nan, y_ss [0.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:41:09.406  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:41:09.406  D  RESULT_ACCURACY
+2024-11-27 10:41:09.407  I    Steady state Q(Tr_1) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:41:09.407  I    Steady state Q(Tr_2) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:41:09.407  I  Voltage step: setting Grid simulator voltage to 124.2 (Step H)
+2024-11-27 10:41:09.976  D  0.0
+2024-11-27 10:41:09.976  D  nan
+2024-11-27 10:41:09.976  I  Waiting 9.430188 seconds to get the next Tr data for analysis...
+2024-11-27 10:41:20.188  I  Value V: 0.0
+2024-11-27 10:41:20.188  I  Value Q: nan
+2024-11-27 10:41:20.188  I  Waiting 9.218349 seconds to get the next Tr data for analysis...
+2024-11-27 10:41:30.424  I  Value V: 0.0
+2024-11-27 10:41:30.425  I  Value Q: nan
+2024-11-27 10:41:30.425  I  Waiting 8.98201 seconds to get the next Tr data for analysis...
+2024-11-27 10:41:40.082  I  Value V: 0.0
+2024-11-27 10:41:40.082  I  Value Q: nan
+2024-11-27 10:41:40.082  D  daq={'V_MEAS': 0.0, 'V_TARGET': 120.6, 'Q_MEAS': nan, 'Q_TARGET': 0.0, 'Q_TARGET_MIN': -750.0, 'Q_TARGET_MAX': 750.0, 'EVENT': 'Step H_TR_3', 'event': 'Step H'}
+2024-11-27 10:41:40.083  D  tr_iter=0
+2024-11-27 10:41:40.083  D  step_dict
+2024-11-27 10:41:40.083  D  tr_targ=124.2
+2024-11-27 10:41:40.084  I  X Value (V) = 0.0
+2024-11-27 10:41:40.084  D  function=VV
+2024-11-27 10:41:40.084  D  0.0
+2024-11-27 10:41:40.084  D  Q_TR_TARG_0
+2024-11-27 10:41:40.084  D  tr_target=-1100.0
+2024-11-27 10:41:40.084  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 10:41:40.084  D  tr_iter=1
+2024-11-27 10:41:40.085  D  step_dict
+2024-11-27 10:41:40.085  D  tr_targ=124.2
+2024-11-27 10:41:40.085  I  X Value (V) = 0.0
+2024-11-27 10:41:40.085  D  function=VV
+2024-11-27 10:41:40.086  D  0.0
+2024-11-27 10:41:40.086  D  Q_TR_TARG_1
+2024-11-27 10:41:40.086  D  tr_target=-1100.0
+2024-11-27 10:41:40.086  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 10:41:40.087  D  tr_iter=2
+2024-11-27 10:41:40.087  D  step_dict
+2024-11-27 10:41:40.087  D  tr_targ=124.2
+2024-11-27 10:41:40.087  I  X Value (V) = 0.0
+2024-11-27 10:41:40.087  D  function=VV
+2024-11-27 10:41:40.088  D  0.0
+2024-11-27 10:41:40.088  D  Q_TR_TARG_2
+2024-11-27 10:41:40.088  D  tr_target=-1100.0
+2024-11-27 10:41:40.088  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 10:41:40.088  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:41:40.089  D  y_target = nan, y_ss [-1100.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:41:40.089  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:41:40.089  D  RESULT_ACCURACY
+2024-11-27 10:41:40.089  I    Steady state Q(Tr_1) evaluation: -1850.0 <= nan <= -350.0  [Fail]
+2024-11-27 10:41:40.090  I    Steady state Q(Tr_2) evaluation: -1850.0 <= nan <= -350.0  [Fail]
+2024-11-27 10:41:40.090  I  Voltage step: setting Grid simulator voltage to 126.0 (Step I)
+2024-11-27 10:41:40.632  D  0.0
+2024-11-27 10:41:40.632  D  nan
+2024-11-27 10:41:40.632  I  Waiting 9.457814 seconds to get the next Tr data for analysis...
+2024-11-27 10:41:50.846  I  Value V: 0.0
+2024-11-27 10:41:50.846  I  Value Q: nan
+2024-11-27 10:41:50.846  I  Waiting 9.244308 seconds to get the next Tr data for analysis...
+2024-11-27 10:42:01.114  I  Value V: 0.0
+2024-11-27 10:42:01.114  I  Value Q: nan
+2024-11-27 10:42:01.115  I  Waiting 8.9751 seconds to get the next Tr data for analysis...
+2024-11-27 10:42:10.814  I  Value V: 0.0
+2024-11-27 10:42:10.814  I  Value Q: nan
+2024-11-27 10:42:10.815  D  daq={'V_MEAS': 0.0, 'V_TARGET': 124.2, 'Q_MEAS': nan, 'Q_TARGET': -1100.0, 'Q_TARGET_MIN': -1850.0, 'Q_TARGET_MAX': -350.0, 'EVENT': 'Step I_TR_3', 'event': 'Step I'}
+2024-11-27 10:42:10.815  D  tr_iter=0
+2024-11-27 10:42:10.815  D  step_dict
+2024-11-27 10:42:10.815  D  tr_targ=126.0
+2024-11-27 10:42:10.815  I  X Value (V) = 0.0
+2024-11-27 10:42:10.816  D  function=VV
+2024-11-27 10:42:10.816  D  0.0
+2024-11-27 10:42:10.816  D  Q_TR_TARG_0
+2024-11-27 10:42:10.816  D  tr_target=-2200.0
+2024-11-27 10:42:10.817  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 10:42:10.817  D  tr_iter=1
+2024-11-27 10:42:10.817  D  step_dict
+2024-11-27 10:42:10.817  D  tr_targ=126.0
+2024-11-27 10:42:10.818  I  X Value (V) = 0.0
+2024-11-27 10:42:10.818  D  function=VV
+2024-11-27 10:42:10.818  D  0.0
+2024-11-27 10:42:10.818  D  Q_TR_TARG_1
+2024-11-27 10:42:10.818  D  tr_target=-2200.0
+2024-11-27 10:42:10.819  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 10:42:10.819  D  tr_iter=2
+2024-11-27 10:42:10.819  D  step_dict
+2024-11-27 10:42:10.819  D  tr_targ=126.0
+2024-11-27 10:42:10.820  I  X Value (V) = 0.0
+2024-11-27 10:42:10.820  D  function=VV
+2024-11-27 10:42:10.820  D  0.0
+2024-11-27 10:42:10.820  D  Q_TR_TARG_2
+2024-11-27 10:42:10.820  D  tr_target=-2200.0
+2024-11-27 10:42:10.821  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 10:42:10.821  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:42:10.821  D  y_target = nan, y_ss [-2200.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:42:10.821  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:42:10.822  D  RESULT_ACCURACY
+2024-11-27 10:42:10.822  I    Steady state Q(Tr_1) evaluation: -2950.0 <= nan <= -1450.0  [Fail]
+2024-11-27 10:42:10.822  I    Steady state Q(Tr_2) evaluation: -2950.0 <= nan <= -1450.0  [Fail]
+2024-11-27 10:42:10.822  I  Voltage step: setting Grid simulator voltage to 127.8 (Step J)
+2024-11-27 10:42:11.358  D  0.0
+2024-11-27 10:42:11.358  D  nan
+2024-11-27 10:42:11.359  I  Waiting 9.463243 seconds to get the next Tr data for analysis...
+2024-11-27 10:42:21.626  I  Value V: 0.0
+2024-11-27 10:42:21.626  I  Value Q: nan
+2024-11-27 10:42:21.626  I  Waiting 9.196033 seconds to get the next Tr data for analysis...
+2024-11-27 10:42:31.868  I  Value V: 0.0
+2024-11-27 10:42:31.868  I  Value Q: nan
+2024-11-27 10:42:31.868  I  Waiting 8.953887 seconds to get the next Tr data for analysis...
+2024-11-27 10:42:41.584  I  Value V: 0.0
+2024-11-27 10:42:41.585  I  Value Q: nan
+2024-11-27 10:42:41.585  D  daq={'V_MEAS': 0.0, 'V_TARGET': 126.0, 'Q_MEAS': nan, 'Q_TARGET': -2200.0, 'Q_TARGET_MIN': -2950.0, 'Q_TARGET_MAX': -1450.0, 'EVENT': 'Step J_TR_3', 'event': 'Step J'}
+2024-11-27 10:42:41.586  D  tr_iter=0
+2024-11-27 10:42:41.586  D  step_dict
+2024-11-27 10:42:41.586  D  tr_targ=127.8
+2024-11-27 10:42:41.587  I  X Value (V) = 0.0
+2024-11-27 10:42:41.587  D  function=VV
+2024-11-27 10:42:41.587  D  0.0
+2024-11-27 10:42:41.588  D  Q_TR_TARG_0
+2024-11-27 10:42:41.588  D  tr_target=-3300.0
+2024-11-27 10:42:41.588  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 10:42:41.588  D  tr_iter=1
+2024-11-27 10:42:41.589  D  step_dict
+2024-11-27 10:42:41.589  D  tr_targ=127.8
+2024-11-27 10:42:41.589  I  X Value (V) = 0.0
+2024-11-27 10:42:41.589  D  function=VV
+2024-11-27 10:42:41.589  D  0.0
+2024-11-27 10:42:41.590  D  Q_TR_TARG_1
+2024-11-27 10:42:41.590  D  tr_target=-3300.0
+2024-11-27 10:42:41.590  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 10:42:41.590  D  tr_iter=2
+2024-11-27 10:42:41.590  D  step_dict
+2024-11-27 10:42:41.591  D  tr_targ=127.8
+2024-11-27 10:42:41.591  I  X Value (V) = 0.0
+2024-11-27 10:42:41.591  D  function=VV
+2024-11-27 10:42:41.591  D  0.0
+2024-11-27 10:42:41.592  D  Q_TR_TARG_2
+2024-11-27 10:42:41.592  D  tr_target=-3300.0
+2024-11-27 10:42:41.592  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 10:42:41.592  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:42:41.592  D  y_target = nan, y_ss [-3300.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:42:41.593  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:42:41.593  D  RESULT_ACCURACY
+2024-11-27 10:42:41.593  I    Steady state Q(Tr_1) evaluation: -4050.0 <= nan <= -2550.0  [Fail]
+2024-11-27 10:42:41.593  I    Steady state Q(Tr_2) evaluation: -4050.0 <= nan <= -2550.0  [Fail]
+2024-11-27 10:42:41.593  I  Voltage step: setting Grid simulator voltage to 131.4 (Step K)
+2024-11-27 10:42:42.132  D  0.0
+2024-11-27 10:42:42.132  D  nan
+2024-11-27 10:42:42.132  I  Waiting 9.462659 seconds to get the next Tr data for analysis...
+2024-11-27 10:42:52.340  I  Value V: 0.0
+2024-11-27 10:42:52.340  I  Value Q: nan
+2024-11-27 10:42:52.341  I  Waiting 9.253724 seconds to get the next Tr data for analysis...
+2024-11-27 10:43:02.539  I  Value V: 0.0
+2024-11-27 10:43:02.539  I  Value Q: nan
+2024-11-27 10:43:02.540  I  Waiting 9.054291 seconds to get the next Tr data for analysis...
+2024-11-27 10:43:12.176  I  Value V: 0.0
+2024-11-27 10:43:12.176  I  Value Q: nan
+2024-11-27 10:43:12.176  D  daq={'V_MEAS': 0.0, 'V_TARGET': 127.8, 'Q_MEAS': nan, 'Q_TARGET': -3300.0, 'Q_TARGET_MIN': -4050.0, 'Q_TARGET_MAX': -2550.0, 'EVENT': 'Step K_TR_3', 'event': 'Step K'}
+2024-11-27 10:43:12.176  D  tr_iter=0
+2024-11-27 10:43:12.176  D  step_dict
+2024-11-27 10:43:12.176  D  tr_targ=131.4
+2024-11-27 10:43:12.177  I  X Value (V) = 0.0
+2024-11-27 10:43:12.177  D  function=VV
+2024-11-27 10:43:12.177  D  0.0
+2024-11-27 10:43:12.177  D  Q_TR_TARG_0
+2024-11-27 10:43:12.178  D  tr_target=-4400.0
+2024-11-27 10:43:12.178  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:43:12.178  D  tr_iter=1
+2024-11-27 10:43:12.178  D  step_dict
+2024-11-27 10:43:12.178  D  tr_targ=131.4
+2024-11-27 10:43:12.179  I  X Value (V) = 0.0
+2024-11-27 10:43:12.179  D  function=VV
+2024-11-27 10:43:12.179  D  0.0
+2024-11-27 10:43:12.179  D  Q_TR_TARG_1
+2024-11-27 10:43:12.180  D  tr_target=-4400.0
+2024-11-27 10:43:12.180  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:43:12.180  D  tr_iter=2
+2024-11-27 10:43:12.180  D  step_dict
+2024-11-27 10:43:12.180  D  tr_targ=131.4
+2024-11-27 10:43:12.181  I  X Value (V) = 0.0
+2024-11-27 10:43:12.181  D  function=VV
+2024-11-27 10:43:12.181  D  0.0
+2024-11-27 10:43:12.181  D  Q_TR_TARG_2
+2024-11-27 10:43:12.182  D  tr_target=-4400.0
+2024-11-27 10:43:12.182  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:43:12.182  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:43:12.182  D  y_target = nan, y_ss [-4400.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:43:12.182  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:43:12.183  D  RESULT_ACCURACY
+2024-11-27 10:43:12.183  I    Steady state Q(Tr_1) evaluation: -5150.0 <= nan <= -3650.0  [Fail]
+2024-11-27 10:43:12.183  I    Steady state Q(Tr_2) evaluation: -5150.0 <= nan <= -3650.0  [Fail]
+2024-11-27 10:43:12.183  I  Voltage step: setting Grid simulator voltage to 130.2 (Step L)
+2024-11-27 10:43:12.712  D  0.0
+2024-11-27 10:43:12.712  D  nan
+2024-11-27 10:43:12.713  I  Waiting 9.470715 seconds to get the next Tr data for analysis...
+2024-11-27 10:43:22.896  I  Value V: 0.0
+2024-11-27 10:43:22.896  I  Value Q: nan
+2024-11-27 10:43:22.897  I  Waiting 9.287564 seconds to get the next Tr data for analysis...
+2024-11-27 10:43:33.065  I  Value V: 0.0
+2024-11-27 10:43:33.065  I  Value Q: nan
+2024-11-27 10:43:33.065  I  Waiting 9.118897 seconds to get the next Tr data for analysis...
+2024-11-27 10:43:43.236  I  Value V: 0.0
+2024-11-27 10:43:43.237  I  Value Q: nan
+2024-11-27 10:43:43.238  D  daq={'V_MEAS': 0.0, 'V_TARGET': 131.4, 'Q_MEAS': nan, 'Q_TARGET': -4400.0, 'Q_TARGET_MIN': -5150.0, 'Q_TARGET_MAX': -3650.0, 'EVENT': 'Step L_TR_3', 'event': 'Step L'}
+2024-11-27 10:43:43.238  D  tr_iter=0
+2024-11-27 10:43:43.238  D  step_dict
+2024-11-27 10:43:43.239  D  tr_targ=130.2
+2024-11-27 10:43:43.239  I  X Value (V) = 0.0
+2024-11-27 10:43:43.239  D  function=VV
+2024-11-27 10:43:43.239  D  0.0
+2024-11-27 10:43:43.240  D  Q_TR_TARG_0
+2024-11-27 10:43:43.240  D  tr_target=-4400.0
+2024-11-27 10:43:43.240  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:43:43.240  D  tr_iter=1
+2024-11-27 10:43:43.241  D  step_dict
+2024-11-27 10:43:43.241  D  tr_targ=130.2
+2024-11-27 10:43:43.241  I  X Value (V) = 0.0
+2024-11-27 10:43:43.242  D  function=VV
+2024-11-27 10:43:43.242  D  0.0
+2024-11-27 10:43:43.242  D  Q_TR_TARG_1
+2024-11-27 10:43:43.242  D  tr_target=-4400.0
+2024-11-27 10:43:43.242  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:43:43.242  D  tr_iter=2
+2024-11-27 10:43:43.242  D  step_dict
+2024-11-27 10:43:43.243  D  tr_targ=130.2
+2024-11-27 10:43:43.243  I  X Value (V) = 0.0
+2024-11-27 10:43:43.243  D  function=VV
+2024-11-27 10:43:43.243  D  0.0
+2024-11-27 10:43:43.243  D  Q_TR_TARG_2
+2024-11-27 10:43:43.244  D  tr_target=-4400.0
+2024-11-27 10:43:43.244  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:43:43.244  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:43:43.244  D  y_target = nan, y_ss [-4400.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:43:43.245  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:43:43.245  D  RESULT_ACCURACY
+2024-11-27 10:43:43.245  I    Steady state Q(Tr_1) evaluation: -5150.0 <= nan <= -3650.0  [Fail]
+2024-11-27 10:43:43.245  I    Steady state Q(Tr_2) evaluation: -5150.0 <= nan <= -3650.0  [Fail]
+2024-11-27 10:43:43.246  I  Voltage step: setting Grid simulator voltage to 131.4 (Step M)
+2024-11-27 10:43:43.779  D  0.0
+2024-11-27 10:43:43.779  D  nan
+2024-11-27 10:43:43.779  I  Waiting 9.467011 seconds to get the next Tr data for analysis...
+2024-11-27 10:43:54.018  I  Value V: 0.0
+2024-11-27 10:43:54.018  I  Value Q: nan
+2024-11-27 10:43:54.018  I  Waiting 9.228664 seconds to get the next Tr data for analysis...
+2024-11-27 10:44:04.171  I  Value V: 0.0
+2024-11-27 10:44:04.171  I  Value Q: nan
+2024-11-27 10:44:04.172  I  Waiting 9.074406 seconds to get the next Tr data for analysis...
+2024-11-27 10:44:13.885  I  Value V: 0.0
+2024-11-27 10:44:13.886  I  Value Q: nan
+2024-11-27 10:44:13.887  D  daq={'V_MEAS': 0.0, 'V_TARGET': 130.2, 'Q_MEAS': nan, 'Q_TARGET': -4400.0, 'Q_TARGET_MIN': -5150.0, 'Q_TARGET_MAX': -3650.0, 'EVENT': 'Step M_TR_3', 'event': 'Step M'}
+2024-11-27 10:44:13.888  D  tr_iter=0
+2024-11-27 10:44:13.889  D  step_dict
+2024-11-27 10:44:13.890  D  tr_targ=131.4
+2024-11-27 10:44:13.890  I  X Value (V) = 0.0
+2024-11-27 10:44:13.891  D  function=VV
+2024-11-27 10:44:13.892  D  0.0
+2024-11-27 10:44:13.893  D  Q_TR_TARG_0
+2024-11-27 10:44:13.893  D  tr_target=-4400.0
+2024-11-27 10:44:13.893  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:44:13.893  D  tr_iter=1
+2024-11-27 10:44:13.894  D  step_dict
+2024-11-27 10:44:13.894  D  tr_targ=131.4
+2024-11-27 10:44:13.894  I  X Value (V) = 0.0
+2024-11-27 10:44:13.894  D  function=VV
+2024-11-27 10:44:13.895  D  0.0
+2024-11-27 10:44:13.895  D  Q_TR_TARG_1
+2024-11-27 10:44:13.895  D  tr_target=-4400.0
+2024-11-27 10:44:13.895  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:44:13.895  D  tr_iter=2
+2024-11-27 10:44:13.895  D  step_dict
+2024-11-27 10:44:13.895  D  tr_targ=131.4
+2024-11-27 10:44:13.896  I  X Value (V) = 0.0
+2024-11-27 10:44:13.896  D  function=VV
+2024-11-27 10:44:13.896  D  0.0
+2024-11-27 10:44:13.896  D  Q_TR_TARG_2
+2024-11-27 10:44:13.897  D  tr_target=-4400.0
+2024-11-27 10:44:13.897  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:44:13.897  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:44:13.897  D  y_target = nan, y_ss [-4400.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:44:13.897  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:44:13.898  D  RESULT_ACCURACY
+2024-11-27 10:44:13.898  I    Steady state Q(Tr_1) evaluation: -5150.0 <= nan <= -3650.0  [Fail]
+2024-11-27 10:44:13.898  I    Steady state Q(Tr_2) evaluation: -5150.0 <= nan <= -3650.0  [Fail]
+2024-11-27 10:44:13.898  I  Voltage step: setting Grid simulator voltage to 127.8 (Step N)
+2024-11-27 10:44:14.453  D  0.0
+2024-11-27 10:44:14.454  D  nan
+2024-11-27 10:44:14.454  I  Waiting 9.44469 seconds to get the next Tr data for analysis...
+2024-11-27 10:44:24.698  I  Value V: 0.0
+2024-11-27 10:44:24.698  I  Value Q: nan
+2024-11-27 10:44:24.698  I  Waiting 9.20103 seconds to get the next Tr data for analysis...
+2024-11-27 10:44:34.860  I  Value V: 0.0
+2024-11-27 10:44:34.860  I  Value Q: nan
+2024-11-27 10:44:34.861  I  Waiting 9.038439 seconds to get the next Tr data for analysis...
+2024-11-27 10:44:44.600  I  Value V: 0.0
+2024-11-27 10:44:44.601  I  Value Q: nan
+2024-11-27 10:44:44.602  D  daq={'V_MEAS': 0.0, 'V_TARGET': 131.4, 'Q_MEAS': nan, 'Q_TARGET': -4400.0, 'Q_TARGET_MIN': -5150.0, 'Q_TARGET_MAX': -3650.0, 'EVENT': 'Step N_TR_3', 'event': 'Step N'}
+2024-11-27 10:44:44.602  D  tr_iter=0
+2024-11-27 10:44:44.602  D  step_dict
+2024-11-27 10:44:44.602  D  tr_targ=127.8
+2024-11-27 10:44:44.602  I  X Value (V) = 0.0
+2024-11-27 10:44:44.602  D  function=VV
+2024-11-27 10:44:44.603  D  0.0
+2024-11-27 10:44:44.603  D  Q_TR_TARG_0
+2024-11-27 10:44:44.603  D  tr_target=-3300.0
+2024-11-27 10:44:44.603  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 10:44:44.604  D  tr_iter=1
+2024-11-27 10:44:44.604  D  step_dict
+2024-11-27 10:44:44.604  D  tr_targ=127.8
+2024-11-27 10:44:44.604  I  X Value (V) = 0.0
+2024-11-27 10:44:44.604  D  function=VV
+2024-11-27 10:44:44.605  D  0.0
+2024-11-27 10:44:44.605  D  Q_TR_TARG_1
+2024-11-27 10:44:44.605  D  tr_target=-3300.0
+2024-11-27 10:44:44.605  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 10:44:44.605  D  tr_iter=2
+2024-11-27 10:44:44.606  D  step_dict
+2024-11-27 10:44:44.606  D  tr_targ=127.8
+2024-11-27 10:44:44.606  I  X Value (V) = 0.0
+2024-11-27 10:44:44.606  D  function=VV
+2024-11-27 10:44:44.606  D  0.0
+2024-11-27 10:44:44.607  D  Q_TR_TARG_2
+2024-11-27 10:44:44.607  D  tr_target=-3300.0
+2024-11-27 10:44:44.607  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 10:44:44.607  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:44:44.607  D  y_target = nan, y_ss [-3300.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:44:44.608  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:44:44.608  D  RESULT_ACCURACY
+2024-11-27 10:44:44.608  I    Steady state Q(Tr_1) evaluation: -4050.0 <= nan <= -2550.0  [Fail]
+2024-11-27 10:44:44.608  I    Steady state Q(Tr_2) evaluation: -4050.0 <= nan <= -2550.0  [Fail]
+2024-11-27 10:44:44.609  I  Voltage step: setting Grid simulator voltage to 126.0 (Step O)
+2024-11-27 10:44:45.150  D  0.0
+2024-11-27 10:44:45.150  D  nan
+2024-11-27 10:44:45.150  I  Waiting 9.459294 seconds to get the next Tr data for analysis...
+2024-11-27 10:44:55.397  I  Value V: 0.0
+2024-11-27 10:44:55.397  I  Value Q: nan
+2024-11-27 10:44:55.398  I  Waiting 9.211518 seconds to get the next Tr data for analysis...
+2024-11-27 10:45:05.590  I  Value V: 0.0
+2024-11-27 10:45:05.590  I  Value Q: nan
+2024-11-27 10:45:05.591  I  Waiting 9.018961 seconds to get the next Tr data for analysis...
+2024-11-27 10:45:15.324  I  Value V: 0.0
+2024-11-27 10:45:15.324  I  Value Q: nan
+2024-11-27 10:45:15.325  D  daq={'V_MEAS': 0.0, 'V_TARGET': 127.8, 'Q_MEAS': nan, 'Q_TARGET': -3300.0, 'Q_TARGET_MIN': -4050.0, 'Q_TARGET_MAX': -2550.0, 'EVENT': 'Step O_TR_3', 'event': 'Step O'}
+2024-11-27 10:45:15.325  D  tr_iter=0
+2024-11-27 10:45:15.325  D  step_dict
+2024-11-27 10:45:15.326  D  tr_targ=126.0
+2024-11-27 10:45:15.326  I  X Value (V) = 0.0
+2024-11-27 10:45:15.326  D  function=VV
+2024-11-27 10:45:15.326  D  0.0
+2024-11-27 10:45:15.327  D  Q_TR_TARG_0
+2024-11-27 10:45:15.327  D  tr_target=-2200.0
+2024-11-27 10:45:15.327  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 10:45:15.327  D  tr_iter=1
+2024-11-27 10:45:15.328  D  step_dict
+2024-11-27 10:45:15.328  D  tr_targ=126.0
+2024-11-27 10:45:15.328  I  X Value (V) = 0.0
+2024-11-27 10:45:15.328  D  function=VV
+2024-11-27 10:45:15.328  D  0.0
+2024-11-27 10:45:15.329  D  Q_TR_TARG_1
+2024-11-27 10:45:15.329  D  tr_target=-2200.0
+2024-11-27 10:45:15.329  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 10:45:15.329  D  tr_iter=2
+2024-11-27 10:45:15.329  D  step_dict
+2024-11-27 10:45:15.330  D  tr_targ=126.0
+2024-11-27 10:45:15.330  I  X Value (V) = 0.0
+2024-11-27 10:45:15.330  D  function=VV
+2024-11-27 10:45:15.330  D  0.0
+2024-11-27 10:45:15.331  D  Q_TR_TARG_2
+2024-11-27 10:45:15.331  D  tr_target=-2200.0
+2024-11-27 10:45:15.331  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 10:45:15.331  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:45:15.331  D  y_target = nan, y_ss [-2200.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:45:15.332  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:45:15.332  D  RESULT_ACCURACY
+2024-11-27 10:45:15.332  I    Steady state Q(Tr_1) evaluation: -2950.0 <= nan <= -1450.0  [Fail]
+2024-11-27 10:45:15.332  I    Steady state Q(Tr_2) evaluation: -2950.0 <= nan <= -1450.0  [Fail]
+2024-11-27 10:45:15.332  I  Voltage step: setting Grid simulator voltage to 124.2 (Step P)
+2024-11-27 10:45:15.871  D  0.0
+2024-11-27 10:45:15.871  D  nan
+2024-11-27 10:45:15.872  I  Waiting 9.461454 seconds to get the next Tr data for analysis...
+2024-11-27 10:45:26.092  I  Value V: 0.0
+2024-11-27 10:45:26.093  I  Value Q: nan
+2024-11-27 10:45:26.093  I  Waiting 9.240141 seconds to get the next Tr data for analysis...
+2024-11-27 10:45:36.291  I  Value V: 0.0
+2024-11-27 10:45:36.291  I  Value Q: nan
+2024-11-27 10:45:36.291  I  Waiting 9.042384 seconds to get the next Tr data for analysis...
+2024-11-27 10:45:46.013  I  Value V: 0.0
+2024-11-27 10:45:46.014  I  Value Q: nan
+2024-11-27 10:45:46.014  D  daq={'V_MEAS': 0.0, 'V_TARGET': 126.0, 'Q_MEAS': nan, 'Q_TARGET': -2200.0, 'Q_TARGET_MIN': -2950.0, 'Q_TARGET_MAX': -1450.0, 'EVENT': 'Step P_TR_3', 'event': 'Step P'}
+2024-11-27 10:45:46.014  D  tr_iter=0
+2024-11-27 10:45:46.014  D  step_dict
+2024-11-27 10:45:46.015  D  tr_targ=124.2
+2024-11-27 10:45:46.015  I  X Value (V) = 0.0
+2024-11-27 10:45:46.015  D  function=VV
+2024-11-27 10:45:46.015  D  0.0
+2024-11-27 10:45:46.016  D  Q_TR_TARG_0
+2024-11-27 10:45:46.016  D  tr_target=-1100.0
+2024-11-27 10:45:46.016  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 10:45:46.016  D  tr_iter=1
+2024-11-27 10:45:46.017  D  step_dict
+2024-11-27 10:45:46.017  D  tr_targ=124.2
+2024-11-27 10:45:46.017  I  X Value (V) = 0.0
+2024-11-27 10:45:46.017  D  function=VV
+2024-11-27 10:45:46.017  D  0.0
+2024-11-27 10:45:46.018  D  Q_TR_TARG_1
+2024-11-27 10:45:46.018  D  tr_target=-1100.0
+2024-11-27 10:45:46.018  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 10:45:46.018  D  tr_iter=2
+2024-11-27 10:45:46.019  D  step_dict
+2024-11-27 10:45:46.019  D  tr_targ=124.2
+2024-11-27 10:45:46.019  I  X Value (V) = 0.0
+2024-11-27 10:45:46.019  D  function=VV
+2024-11-27 10:45:46.019  D  0.0
+2024-11-27 10:45:46.020  D  Q_TR_TARG_2
+2024-11-27 10:45:46.020  D  tr_target=-1100.0
+2024-11-27 10:45:46.020  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 10:45:46.020  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:45:46.021  D  y_target = nan, y_ss [-1100.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:45:46.021  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:45:46.021  D  RESULT_ACCURACY
+2024-11-27 10:45:46.021  I    Steady state Q(Tr_1) evaluation: -1850.0 <= nan <= -350.0  [Fail]
+2024-11-27 10:45:46.022  I    Steady state Q(Tr_2) evaluation: -1850.0 <= nan <= -350.0  [Fail]
+2024-11-27 10:45:46.022  I  Voltage step: setting Grid simulator voltage to 120.6 (Step Q)
+2024-11-27 10:45:46.577  D  0.0
+2024-11-27 10:45:46.577  D  nan
+2024-11-27 10:45:46.577  I  Waiting 9.444852 seconds to get the next Tr data for analysis...
+2024-11-27 10:45:56.828  I  Value V: 0.0
+2024-11-27 10:45:56.828  I  Value Q: nan
+2024-11-27 10:45:56.828  I  Waiting 9.193875 seconds to get the next Tr data for analysis...
+2024-11-27 10:46:07.020  I  Value V: 0.0
+2024-11-27 10:46:07.020  I  Value Q: nan
+2024-11-27 10:46:07.020  I  Waiting 9.002192 seconds to get the next Tr data for analysis...
+2024-11-27 10:46:16.712  I  Value V: 0.0
+2024-11-27 10:46:16.712  I  Value Q: nan
+2024-11-27 10:46:16.712  D  daq={'V_MEAS': 0.0, 'V_TARGET': 124.2, 'Q_MEAS': nan, 'Q_TARGET': -1100.0, 'Q_TARGET_MIN': -1850.0, 'Q_TARGET_MAX': -350.0, 'EVENT': 'Step Q_TR_3', 'event': 'Step Q'}
+2024-11-27 10:46:16.712  D  tr_iter=0
+2024-11-27 10:46:16.713  D  step_dict
+2024-11-27 10:46:16.713  D  tr_targ=120.6
+2024-11-27 10:46:16.714  I  X Value (V) = 0.0
+2024-11-27 10:46:16.714  D  function=VV
+2024-11-27 10:46:16.714  D  0.0
+2024-11-27 10:46:16.715  D  Q_TR_TARG_0
+2024-11-27 10:46:16.716  D  tr_target=0.0
+2024-11-27 10:46:16.716  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:46:16.716  D  tr_iter=1
+2024-11-27 10:46:16.716  D  step_dict
+2024-11-27 10:46:16.716  D  tr_targ=120.6
+2024-11-27 10:46:16.716  I  X Value (V) = 0.0
+2024-11-27 10:46:16.716  D  function=VV
+2024-11-27 10:46:16.716  D  0.0
+2024-11-27 10:46:16.717  D  Q_TR_TARG_1
+2024-11-27 10:46:16.717  D  tr_target=0.0
+2024-11-27 10:46:16.717  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:46:16.717  D  tr_iter=2
+2024-11-27 10:46:16.717  D  step_dict
+2024-11-27 10:46:16.718  D  tr_targ=120.6
+2024-11-27 10:46:16.718  I  X Value (V) = 0.0
+2024-11-27 10:46:16.718  D  function=VV
+2024-11-27 10:46:16.718  D  0.0
+2024-11-27 10:46:16.719  D  Q_TR_TARG_2
+2024-11-27 10:46:16.719  D  tr_target=0.0
+2024-11-27 10:46:16.719  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:46:16.719  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:46:16.719  D  y_target = nan, y_ss [0.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:46:16.720  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:46:16.720  D  RESULT_ACCURACY
+2024-11-27 10:46:16.720  I    Steady state Q(Tr_1) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:46:16.720  I    Steady state Q(Tr_2) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:46:16.721  I  Voltage step: setting Grid simulator voltage to 120.0 (Step R)
+2024-11-27 10:46:17.267  D  0.0
+2024-11-27 10:46:17.267  D  nan
+2024-11-27 10:46:17.267  I  Waiting 9.454036 seconds to get the next Tr data for analysis...
+2024-11-27 10:46:27.506  I  Value V: 0.0
+2024-11-27 10:46:27.506  I  Value Q: nan
+2024-11-27 10:46:27.506  I  Waiting 9.215509 seconds to get the next Tr data for analysis...
+2024-11-27 10:46:37.731  I  Value V: 0.0
+2024-11-27 10:46:37.732  I  Value Q: nan
+2024-11-27 10:46:37.732  I  Waiting 8.989137 seconds to get the next Tr data for analysis...
+2024-11-27 10:46:47.448  I  Value V: 0.0
+2024-11-27 10:46:47.449  I  Value Q: nan
+2024-11-27 10:46:47.450  D  daq={'V_MEAS': 0.0, 'V_TARGET': 120.6, 'Q_MEAS': nan, 'Q_TARGET': 0.0, 'Q_TARGET_MIN': -750.0, 'Q_TARGET_MAX': 750.0, 'EVENT': 'Step R_TR_3', 'event': 'Step R'}
+2024-11-27 10:46:47.450  D  tr_iter=0
+2024-11-27 10:46:47.451  D  step_dict
+2024-11-27 10:46:47.451  D  tr_targ=120.0
+2024-11-27 10:46:47.452  I  X Value (V) = 0.0
+2024-11-27 10:46:47.452  D  function=VV
+2024-11-27 10:46:47.452  D  0.0
+2024-11-27 10:46:47.452  D  Q_TR_TARG_0
+2024-11-27 10:46:47.452  D  tr_target=0.0
+2024-11-27 10:46:47.453  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:46:47.453  D  tr_iter=1
+2024-11-27 10:46:47.453  D  step_dict
+2024-11-27 10:46:47.453  D  tr_targ=120.0
+2024-11-27 10:46:47.454  I  X Value (V) = 0.0
+2024-11-27 10:46:47.454  D  function=VV
+2024-11-27 10:46:47.454  D  0.0
+2024-11-27 10:46:47.454  D  Q_TR_TARG_1
+2024-11-27 10:46:47.454  D  tr_target=0.0
+2024-11-27 10:46:47.455  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:46:47.455  D  tr_iter=2
+2024-11-27 10:46:47.455  D  step_dict
+2024-11-27 10:46:47.455  D  tr_targ=120.0
+2024-11-27 10:46:47.456  I  X Value (V) = 0.0
+2024-11-27 10:46:47.456  D  function=VV
+2024-11-27 10:46:47.456  D  0.0
+2024-11-27 10:46:47.456  D  Q_TR_TARG_2
+2024-11-27 10:46:47.456  D  tr_target=0.0
+2024-11-27 10:46:47.457  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:46:47.457  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:46:47.457  D  y_target = nan, y_ss [0.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:46:47.457  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:46:47.457  D  RESULT_ACCURACY
+2024-11-27 10:46:47.458  I    Steady state Q(Tr_1) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:46:47.458  I    Steady state Q(Tr_2) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:46:47.458  I  Voltage step: setting Grid simulator voltage to 119.4 (Step S)
+2024-11-27 10:46:48.011  D  0.0
+2024-11-27 10:46:48.011  D  nan
+2024-11-27 10:46:48.011  I  Waiting 9.447325 seconds to get the next Tr data for analysis...
+2024-11-27 10:46:58.172  I  Value V: 0.0
+2024-11-27 10:46:58.172  I  Value Q: nan
+2024-11-27 10:46:58.172  I  Waiting 9.285824 seconds to get the next Tr data for analysis...
+2024-11-27 10:47:08.353  I  Value V: 0.0
+2024-11-27 10:47:08.354  I  Value Q: nan
+2024-11-27 10:47:08.355  I  Waiting 9.103353 seconds to get the next Tr data for analysis...
+2024-11-27 10:47:18.055  I  Value V: 0.0
+2024-11-27 10:47:18.055  I  Value Q: nan
+2024-11-27 10:47:18.055  D  daq={'V_MEAS': 0.0, 'V_TARGET': 120.0, 'Q_MEAS': nan, 'Q_TARGET': 0.0, 'Q_TARGET_MIN': -750.0, 'Q_TARGET_MAX': 750.0, 'EVENT': 'Step S_TR_3', 'event': 'Step S'}
+2024-11-27 10:47:18.056  D  tr_iter=0
+2024-11-27 10:47:18.056  D  step_dict
+2024-11-27 10:47:18.056  D  tr_targ=119.4
+2024-11-27 10:47:18.057  I  X Value (V) = 0.0
+2024-11-27 10:47:18.057  D  function=VV
+2024-11-27 10:47:18.057  D  0.0
+2024-11-27 10:47:18.058  D  Q_TR_TARG_0
+2024-11-27 10:47:18.058  D  tr_target=0.0
+2024-11-27 10:47:18.058  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:47:18.058  D  tr_iter=1
+2024-11-27 10:47:18.059  D  step_dict
+2024-11-27 10:47:18.059  D  tr_targ=119.4
+2024-11-27 10:47:18.059  I  X Value (V) = 0.0
+2024-11-27 10:47:18.059  D  function=VV
+2024-11-27 10:47:18.060  D  0.0
+2024-11-27 10:47:18.060  D  Q_TR_TARG_1
+2024-11-27 10:47:18.060  D  tr_target=0.0
+2024-11-27 10:47:18.060  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:47:18.061  D  tr_iter=2
+2024-11-27 10:47:18.061  D  step_dict
+2024-11-27 10:47:18.061  D  tr_targ=119.4
+2024-11-27 10:47:18.061  I  X Value (V) = 0.0
+2024-11-27 10:47:18.062  D  function=VV
+2024-11-27 10:47:18.062  D  0.0
+2024-11-27 10:47:18.062  D  Q_TR_TARG_2
+2024-11-27 10:47:18.062  D  tr_target=0.0
+2024-11-27 10:47:18.062  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:47:18.063  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:47:18.063  D  y_target = nan, y_ss [0.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:47:18.063  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:47:18.063  D  RESULT_ACCURACY
+2024-11-27 10:47:18.063  I    Steady state Q(Tr_1) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:47:18.064  I    Steady state Q(Tr_2) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:47:18.064  I  Voltage step: setting Grid simulator voltage to 115.8 (Step T)
+2024-11-27 10:47:18.689  D  0.0
+2024-11-27 10:47:18.689  D  nan
+2024-11-27 10:47:18.689  I  Waiting 9.375551 seconds to get the next Tr data for analysis...
+2024-11-27 10:47:28.923  I  Value V: 0.0
+2024-11-27 10:47:28.923  I  Value Q: nan
+2024-11-27 10:47:28.923  I  Waiting 9.14216 seconds to get the next Tr data for analysis...
+2024-11-27 10:47:38.645  I  Value V: 0.0
+2024-11-27 10:47:38.645  I  Value Q: nan
+2024-11-27 10:47:38.645  I  Waiting 9.419948 seconds to get the next Tr data for analysis...
+2024-11-27 10:47:48.863  I  Value V: 0.0
+2024-11-27 10:47:48.863  I  Value Q: nan
+2024-11-27 10:47:48.864  D  daq={'V_MEAS': 0.0, 'V_TARGET': 119.4, 'Q_MEAS': nan, 'Q_TARGET': 0.0, 'Q_TARGET_MIN': -750.0, 'Q_TARGET_MAX': 750.0, 'EVENT': 'Step T_TR_3', 'event': 'Step T'}
+2024-11-27 10:47:48.864  D  tr_iter=0
+2024-11-27 10:47:48.864  D  step_dict
+2024-11-27 10:47:48.865  D  tr_targ=115.8
+2024-11-27 10:47:48.865  I  X Value (V) = 0.0
+2024-11-27 10:47:48.865  D  function=VV
+2024-11-27 10:47:48.865  D  0.0
+2024-11-27 10:47:48.866  D  Q_TR_TARG_0
+2024-11-27 10:47:48.866  D  tr_target=1100.0
+2024-11-27 10:47:48.866  I  Y Value (Q) = nan. Pass/fail bounds = [350.0, 1850.0]
+2024-11-27 10:47:48.866  D  tr_iter=1
+2024-11-27 10:47:48.867  D  step_dict
+2024-11-27 10:47:48.867  D  tr_targ=115.8
+2024-11-27 10:47:48.867  I  X Value (V) = 0.0
+2024-11-27 10:47:48.867  D  function=VV
+2024-11-27 10:47:48.868  D  0.0
+2024-11-27 10:47:48.868  D  Q_TR_TARG_1
+2024-11-27 10:47:48.868  D  tr_target=1100.0
+2024-11-27 10:47:48.868  I  Y Value (Q) = nan. Pass/fail bounds = [350.0, 1850.0]
+2024-11-27 10:47:48.868  D  tr_iter=2
+2024-11-27 10:47:48.869  D  step_dict
+2024-11-27 10:47:48.869  D  tr_targ=115.8
+2024-11-27 10:47:48.869  I  X Value (V) = 0.0
+2024-11-27 10:47:48.869  D  function=VV
+2024-11-27 10:47:48.870  D  0.0
+2024-11-27 10:47:48.870  D  Q_TR_TARG_2
+2024-11-27 10:47:48.870  D  tr_target=1100.0
+2024-11-27 10:47:48.870  I  Y Value (Q) = nan. Pass/fail bounds = [350.0, 1850.0]
+2024-11-27 10:47:48.871  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:47:48.871  D  y_target = nan, y_ss [1100.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:47:48.871  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:47:48.871  D  RESULT_ACCURACY
+2024-11-27 10:47:48.871  I    Steady state Q(Tr_1) evaluation: 350.0 <= nan <= 1850.0  [Fail]
+2024-11-27 10:47:48.872  I    Steady state Q(Tr_2) evaluation: 350.0 <= nan <= 1850.0  [Fail]
+2024-11-27 10:47:48.872  I  Voltage step: setting Grid simulator voltage to 114.0 (Step U)
+2024-11-27 10:47:49.451  D  0.0
+2024-11-27 10:47:49.451  D  nan
+2024-11-27 10:47:49.452  I  Waiting 9.420405 seconds to get the next Tr data for analysis...
+2024-11-27 10:47:59.674  I  Value V: 0.0
+2024-11-27 10:47:59.674  I  Value Q: nan
+2024-11-27 10:47:59.674  I  Waiting 9.198222 seconds to get the next Tr data for analysis...
+2024-11-27 10:48:09.865  I  Value V: 0.0
+2024-11-27 10:48:09.865  I  Value Q: nan
+2024-11-27 10:48:09.865  I  Waiting 9.007292 seconds to get the next Tr data for analysis...
+2024-11-27 10:48:19.625  I  Value V: 0.0
+2024-11-27 10:48:19.626  I  Value Q: nan
+2024-11-27 10:48:19.626  D  daq={'V_MEAS': 0.0, 'V_TARGET': 115.8, 'Q_MEAS': nan, 'Q_TARGET': 1100.0, 'Q_TARGET_MIN': 350.0, 'Q_TARGET_MAX': 1850.0, 'EVENT': 'Step U_TR_3', 'event': 'Step U'}
+2024-11-27 10:48:19.626  D  tr_iter=0
+2024-11-27 10:48:19.627  D  step_dict
+2024-11-27 10:48:19.627  D  tr_targ=114.0
+2024-11-27 10:48:19.627  I  X Value (V) = 0.0
+2024-11-27 10:48:19.627  D  function=VV
+2024-11-27 10:48:19.628  D  0.0
+2024-11-27 10:48:19.628  D  Q_TR_TARG_0
+2024-11-27 10:48:19.628  D  tr_target=2200.0
+2024-11-27 10:48:19.628  I  Y Value (Q) = nan. Pass/fail bounds = [1450.0, 2950.0]
+2024-11-27 10:48:19.629  D  tr_iter=1
+2024-11-27 10:48:19.629  D  step_dict
+2024-11-27 10:48:19.629  D  tr_targ=114.0
+2024-11-27 10:48:19.629  I  X Value (V) = 0.0
+2024-11-27 10:48:19.629  D  function=VV
+2024-11-27 10:48:19.630  D  0.0
+2024-11-27 10:48:19.630  D  Q_TR_TARG_1
+2024-11-27 10:48:19.630  D  tr_target=2200.0
+2024-11-27 10:48:19.630  I  Y Value (Q) = nan. Pass/fail bounds = [1450.0, 2950.0]
+2024-11-27 10:48:19.631  D  tr_iter=2
+2024-11-27 10:48:19.631  D  step_dict
+2024-11-27 10:48:19.631  D  tr_targ=114.0
+2024-11-27 10:48:19.631  I  X Value (V) = 0.0
+2024-11-27 10:48:19.631  D  function=VV
+2024-11-27 10:48:19.632  D  0.0
+2024-11-27 10:48:19.632  D  Q_TR_TARG_2
+2024-11-27 10:48:19.632  D  tr_target=2200.0
+2024-11-27 10:48:19.632  I  Y Value (Q) = nan. Pass/fail bounds = [1450.0, 2950.0]
+2024-11-27 10:48:19.633  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:48:19.633  D  y_target = nan, y_ss [2200.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:48:19.633  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:48:19.633  D  RESULT_ACCURACY
+2024-11-27 10:48:19.634  I    Steady state Q(Tr_1) evaluation: 1450.0 <= nan <= 2950.0  [Fail]
+2024-11-27 10:48:19.634  I    Steady state Q(Tr_2) evaluation: 1450.0 <= nan <= 2950.0  [Fail]
+2024-11-27 10:48:19.634  I  Voltage step: setting Grid simulator voltage to 112.2 (Step V)
+2024-11-27 10:48:20.184  D  0.0
+2024-11-27 10:48:20.185  D  nan
+2024-11-27 10:48:20.185  I  Waiting 9.448984 seconds to get the next Tr data for analysis...
+2024-11-27 10:48:30.414  I  Value V: 0.0
+2024-11-27 10:48:30.414  I  Value Q: nan
+2024-11-27 10:48:30.415  I  Waiting 9.2188 seconds to get the next Tr data for analysis...
+2024-11-27 10:48:40.611  I  Value V: 0.0
+2024-11-27 10:48:40.611  I  Value Q: nan
+2024-11-27 10:48:40.611  I  Waiting 9.02256 seconds to get the next Tr data for analysis...
+2024-11-27 10:48:50.265  I  Value V: 0.0
+2024-11-27 10:48:50.266  I  Value Q: nan
+2024-11-27 10:48:50.267  D  daq={'V_MEAS': 0.0, 'V_TARGET': 114.0, 'Q_MEAS': nan, 'Q_TARGET': 2200.0, 'Q_TARGET_MIN': 1450.0, 'Q_TARGET_MAX': 2950.0, 'EVENT': 'Step V_TR_3', 'event': 'Step V'}
+2024-11-27 10:48:50.267  D  tr_iter=0
+2024-11-27 10:48:50.267  D  step_dict
+2024-11-27 10:48:50.267  D  tr_targ=112.2
+2024-11-27 10:48:50.268  I  X Value (V) = 0.0
+2024-11-27 10:48:50.268  D  function=VV
+2024-11-27 10:48:50.268  D  0.0
+2024-11-27 10:48:50.268  D  Q_TR_TARG_0
+2024-11-27 10:48:50.269  D  tr_target=3300.0
+2024-11-27 10:48:50.269  I  Y Value (Q) = nan. Pass/fail bounds = [2550.0, 4050.0]
+2024-11-27 10:48:50.269  D  tr_iter=1
+2024-11-27 10:48:50.269  D  step_dict
+2024-11-27 10:48:50.269  D  tr_targ=112.2
+2024-11-27 10:48:50.270  I  X Value (V) = 0.0
+2024-11-27 10:48:50.270  D  function=VV
+2024-11-27 10:48:50.270  D  0.0
+2024-11-27 10:48:50.270  D  Q_TR_TARG_1
+2024-11-27 10:48:50.271  D  tr_target=3300.0
+2024-11-27 10:48:50.271  I  Y Value (Q) = nan. Pass/fail bounds = [2550.0, 4050.0]
+2024-11-27 10:48:50.271  D  tr_iter=2
+2024-11-27 10:48:50.271  D  step_dict
+2024-11-27 10:48:50.272  D  tr_targ=112.2
+2024-11-27 10:48:50.272  I  X Value (V) = 0.0
+2024-11-27 10:48:50.272  D  function=VV
+2024-11-27 10:48:50.272  D  0.0
+2024-11-27 10:48:50.272  D  Q_TR_TARG_2
+2024-11-27 10:48:50.273  D  tr_target=3300.0
+2024-11-27 10:48:50.273  I  Y Value (Q) = nan. Pass/fail bounds = [2550.0, 4050.0]
+2024-11-27 10:48:50.273  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:48:50.273  D  y_target = nan, y_ss [3300.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:48:50.274  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:48:50.274  D  RESULT_ACCURACY
+2024-11-27 10:48:50.274  I    Steady state Q(Tr_1) evaluation: 2550.0 <= nan <= 4050.0  [Fail]
+2024-11-27 10:48:50.274  I    Steady state Q(Tr_2) evaluation: 2550.0 <= nan <= 4050.0  [Fail]
+2024-11-27 10:48:50.274  I  Voltage step: setting Grid simulator voltage to 108.6 (Step W)
+2024-11-27 10:48:50.814  D  0.0
+2024-11-27 10:48:50.814  D  nan
+2024-11-27 10:48:50.815  I  Waiting 9.459887 seconds to get the next Tr data for analysis...
+2024-11-27 10:49:00.994  I  Value V: 0.0
+2024-11-27 10:49:00.994  I  Value Q: nan
+2024-11-27 10:49:00.994  I  Waiting 9.280393 seconds to get the next Tr data for analysis...
+2024-11-27 10:49:11.182  I  Value V: 0.0
+2024-11-27 10:49:11.183  I  Value Q: nan
+2024-11-27 10:49:11.183  I  Waiting 9.091568 seconds to get the next Tr data for analysis...
+2024-11-27 10:49:20.890  I  Value V: 0.0
+2024-11-27 10:49:20.890  I  Value Q: nan
+2024-11-27 10:49:20.891  D  daq={'V_MEAS': 0.0, 'V_TARGET': 112.2, 'Q_MEAS': nan, 'Q_TARGET': 3300.0, 'Q_TARGET_MIN': 2550.0, 'Q_TARGET_MAX': 4050.0, 'EVENT': 'Step W_TR_3', 'event': 'Step W'}
+2024-11-27 10:49:20.891  D  tr_iter=0
+2024-11-27 10:49:20.891  D  step_dict
+2024-11-27 10:49:20.891  D  tr_targ=108.6
+2024-11-27 10:49:20.891  I  X Value (V) = 0.0
+2024-11-27 10:49:20.892  D  function=VV
+2024-11-27 10:49:20.892  D  0.0
+2024-11-27 10:49:20.892  D  Q_TR_TARG_0
+2024-11-27 10:49:20.892  D  tr_target=4400.0
+2024-11-27 10:49:20.893  I  Y Value (Q) = nan. Pass/fail bounds = [3650.0, 5150.0]
+2024-11-27 10:49:20.893  D  tr_iter=1
+2024-11-27 10:49:20.893  D  step_dict
+2024-11-27 10:49:20.894  D  tr_targ=108.6
+2024-11-27 10:49:20.894  I  X Value (V) = 0.0
+2024-11-27 10:49:20.894  D  function=VV
+2024-11-27 10:49:20.894  D  0.0
+2024-11-27 10:49:20.895  D  Q_TR_TARG_1
+2024-11-27 10:49:20.895  D  tr_target=4400.0
+2024-11-27 10:49:20.895  I  Y Value (Q) = nan. Pass/fail bounds = [3650.0, 5150.0]
+2024-11-27 10:49:20.896  D  tr_iter=2
+2024-11-27 10:49:20.896  D  step_dict
+2024-11-27 10:49:20.896  D  tr_targ=108.6
+2024-11-27 10:49:20.896  I  X Value (V) = 0.0
+2024-11-27 10:49:20.897  D  function=VV
+2024-11-27 10:49:20.897  D  0.0
+2024-11-27 10:49:20.897  D  Q_TR_TARG_2
+2024-11-27 10:49:20.897  D  tr_target=4400.0
+2024-11-27 10:49:20.897  I  Y Value (Q) = nan. Pass/fail bounds = [3650.0, 5150.0]
+2024-11-27 10:49:20.898  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:49:20.898  D  y_target = nan, y_ss [4400.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:49:20.898  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:49:20.898  D  RESULT_ACCURACY
+2024-11-27 10:49:20.898  I    Steady state Q(Tr_1) evaluation: 3650.0 <= nan <= 5150.0  [Fail]
+2024-11-27 10:49:20.899  I    Steady state Q(Tr_2) evaluation: 3650.0 <= nan <= 5150.0  [Fail]
+2024-11-27 10:49:20.899  I  Voltage step: setting Grid simulator voltage to 107.4 (Step X)
+2024-11-27 10:49:21.446  D  0.0
+2024-11-27 10:49:21.446  D  nan
+2024-11-27 10:49:21.447  I  Waiting 9.451264 seconds to get the next Tr data for analysis...
+2024-11-27 10:49:31.650  I  Value V: 0.0
+2024-11-27 10:49:31.651  I  Value Q: nan
+2024-11-27 10:49:31.651  I  Waiting 9.247886 seconds to get the next Tr data for analysis...
+2024-11-27 10:49:41.856  I  Value V: 0.0
+2024-11-27 10:49:41.856  I  Value Q: nan
+2024-11-27 10:49:41.857  I  Waiting 9.041375 seconds to get the next Tr data for analysis...
+2024-11-27 10:49:51.572  I  Value V: 0.0
+2024-11-27 10:49:51.573  I  Value Q: nan
+2024-11-27 10:49:51.573  D  daq={'V_MEAS': 0.0, 'V_TARGET': 108.6, 'Q_MEAS': nan, 'Q_TARGET': 4400.0, 'Q_TARGET_MIN': 3650.0, 'Q_TARGET_MAX': 5150.0, 'EVENT': 'Step X_TR_3', 'event': 'Step X'}
+2024-11-27 10:49:51.573  D  tr_iter=0
+2024-11-27 10:49:51.573  D  step_dict
+2024-11-27 10:49:51.574  D  tr_targ=107.4
+2024-11-27 10:49:51.574  I  X Value (V) = 0.0
+2024-11-27 10:49:51.574  D  function=VV
+2024-11-27 10:49:51.574  D  0.0
+2024-11-27 10:49:51.575  D  Q_TR_TARG_0
+2024-11-27 10:49:51.575  D  tr_target=4400.0
+2024-11-27 10:49:51.575  I  Y Value (Q) = nan. Pass/fail bounds = [3650.0, 5150.0]
+2024-11-27 10:49:51.575  D  tr_iter=1
+2024-11-27 10:49:51.576  D  step_dict
+2024-11-27 10:49:51.576  D  tr_targ=107.4
+2024-11-27 10:49:51.576  I  X Value (V) = 0.0
+2024-11-27 10:49:51.576  D  function=VV
+2024-11-27 10:49:51.576  D  0.0
+2024-11-27 10:49:51.577  D  Q_TR_TARG_1
+2024-11-27 10:49:51.577  D  tr_target=4400.0
+2024-11-27 10:49:51.577  I  Y Value (Q) = nan. Pass/fail bounds = [3650.0, 5150.0]
+2024-11-27 10:49:51.577  D  tr_iter=2
+2024-11-27 10:49:51.578  D  step_dict
+2024-11-27 10:49:51.578  D  tr_targ=107.4
+2024-11-27 10:49:51.578  I  X Value (V) = 0.0
+2024-11-27 10:49:51.578  D  function=VV
+2024-11-27 10:49:51.578  D  0.0
+2024-11-27 10:49:51.579  D  Q_TR_TARG_2
+2024-11-27 10:49:51.579  D  tr_target=4400.0
+2024-11-27 10:49:51.579  I  Y Value (Q) = nan. Pass/fail bounds = [3650.0, 5150.0]
+2024-11-27 10:49:51.579  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:49:51.580  D  y_target = nan, y_ss [4400.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:49:51.580  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:49:51.580  D  RESULT_ACCURACY
+2024-11-27 10:49:51.580  I    Steady state Q(Tr_1) evaluation: 3650.0 <= nan <= 5150.0  [Fail]
+2024-11-27 10:49:51.580  I    Steady state Q(Tr_2) evaluation: 3650.0 <= nan <= 5150.0  [Fail]
+2024-11-27 10:49:51.581  I  Voltage step: setting Grid simulator voltage to 108.6 (Step Y)
+2024-11-27 10:49:52.128  D  0.0
+2024-11-27 10:49:52.128  D  nan
+2024-11-27 10:49:52.128  I  Waiting 9.452263 seconds to get the next Tr data for analysis...
+2024-11-27 10:50:02.398  I  Value V: 0.0
+2024-11-27 10:50:02.399  I  Value Q: nan
+2024-11-27 10:50:02.399  I  Waiting 9.181894 seconds to get the next Tr data for analysis...
+2024-11-27 10:50:12.639  I  Value V: 0.0
+2024-11-27 10:50:12.639  I  Value Q: nan
+2024-11-27 10:50:12.639  I  Waiting 8.941239 seconds to get the next Tr data for analysis...
+2024-11-27 10:50:22.320  I  Value V: 0.0
+2024-11-27 10:50:22.320  I  Value Q: nan
+2024-11-27 10:50:22.320  D  daq={'V_MEAS': 0.0, 'V_TARGET': 107.4, 'Q_MEAS': nan, 'Q_TARGET': 4400.0, 'Q_TARGET_MIN': 3650.0, 'Q_TARGET_MAX': 5150.0, 'EVENT': 'Step Y_TR_3', 'event': 'Step Y'}
+2024-11-27 10:50:22.321  D  tr_iter=0
+2024-11-27 10:50:22.321  D  step_dict
+2024-11-27 10:50:22.321  D  tr_targ=108.6
+2024-11-27 10:50:22.321  I  X Value (V) = 0.0
+2024-11-27 10:50:22.321  D  function=VV
+2024-11-27 10:50:22.322  D  0.0
+2024-11-27 10:50:22.322  D  Q_TR_TARG_0
+2024-11-27 10:50:22.322  D  tr_target=4400.0
+2024-11-27 10:50:22.322  I  Y Value (Q) = nan. Pass/fail bounds = [3650.0, 5150.0]
+2024-11-27 10:50:22.323  D  tr_iter=1
+2024-11-27 10:50:22.323  D  step_dict
+2024-11-27 10:50:22.323  D  tr_targ=108.6
+2024-11-27 10:50:22.323  I  X Value (V) = 0.0
+2024-11-27 10:50:22.323  D  function=VV
+2024-11-27 10:50:22.324  D  0.0
+2024-11-27 10:50:22.324  D  Q_TR_TARG_1
+2024-11-27 10:50:22.324  D  tr_target=4400.0
+2024-11-27 10:50:22.324  I  Y Value (Q) = nan. Pass/fail bounds = [3650.0, 5150.0]
+2024-11-27 10:50:22.325  D  tr_iter=2
+2024-11-27 10:50:22.325  D  step_dict
+2024-11-27 10:50:22.325  D  tr_targ=108.6
+2024-11-27 10:50:22.325  I  X Value (V) = 0.0
+2024-11-27 10:50:22.325  D  function=VV
+2024-11-27 10:50:22.325  D  0.0
+2024-11-27 10:50:22.326  D  Q_TR_TARG_2
+2024-11-27 10:50:22.326  D  tr_target=4400.0
+2024-11-27 10:50:22.326  I  Y Value (Q) = nan. Pass/fail bounds = [3650.0, 5150.0]
+2024-11-27 10:50:22.326  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:50:22.326  D  y_target = nan, y_ss [4400.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:50:22.327  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:50:22.327  D  RESULT_ACCURACY
+2024-11-27 10:50:22.327  I    Steady state Q(Tr_1) evaluation: 3650.0 <= nan <= 5150.0  [Fail]
+2024-11-27 10:50:22.328  I    Steady state Q(Tr_2) evaluation: 3650.0 <= nan <= 5150.0  [Fail]
+2024-11-27 10:50:22.328  I  Voltage step: setting Grid simulator voltage to 112.2 (Step Z)
+2024-11-27 10:50:22.865  D  0.0
+2024-11-27 10:50:22.865  D  nan
+2024-11-27 10:50:22.865  I  Waiting 9.463135 seconds to get the next Tr data for analysis...
+2024-11-27 10:50:33.044  I  Value V: 0.0
+2024-11-27 10:50:33.045  I  Value Q: nan
+2024-11-27 10:50:33.045  I  Waiting 9.283789 seconds to get the next Tr data for analysis...
+2024-11-27 10:50:43.279  I  Value V: 0.0
+2024-11-27 10:50:43.279  I  Value Q: nan
+2024-11-27 10:50:43.279  I  Waiting 9.049604 seconds to get the next Tr data for analysis...
+2024-11-27 10:50:53.028  I  Value V: 0.0
+2024-11-27 10:50:53.028  I  Value Q: nan
+2024-11-27 10:50:53.028  D  daq={'V_MEAS': 0.0, 'V_TARGET': 108.6, 'Q_MEAS': nan, 'Q_TARGET': 4400.0, 'Q_TARGET_MIN': 3650.0, 'Q_TARGET_MAX': 5150.0, 'EVENT': 'Step Z_TR_3', 'event': 'Step Z'}
+2024-11-27 10:50:53.029  D  tr_iter=0
+2024-11-27 10:50:53.029  D  step_dict
+2024-11-27 10:50:53.029  D  tr_targ=112.2
+2024-11-27 10:50:53.029  I  X Value (V) = 0.0
+2024-11-27 10:50:53.030  D  function=VV
+2024-11-27 10:50:53.030  D  0.0
+2024-11-27 10:50:53.030  D  Q_TR_TARG_0
+2024-11-27 10:50:53.030  D  tr_target=3300.0
+2024-11-27 10:50:53.031  I  Y Value (Q) = nan. Pass/fail bounds = [2550.0, 4050.0]
+2024-11-27 10:50:53.031  D  tr_iter=1
+2024-11-27 10:50:53.031  D  step_dict
+2024-11-27 10:50:53.031  D  tr_targ=112.2
+2024-11-27 10:50:53.032  I  X Value (V) = 0.0
+2024-11-27 10:50:53.032  D  function=VV
+2024-11-27 10:50:53.032  D  0.0
+2024-11-27 10:50:53.032  D  Q_TR_TARG_1
+2024-11-27 10:50:53.032  D  tr_target=3300.0
+2024-11-27 10:50:53.033  I  Y Value (Q) = nan. Pass/fail bounds = [2550.0, 4050.0]
+2024-11-27 10:50:53.033  D  tr_iter=2
+2024-11-27 10:50:53.033  D  step_dict
+2024-11-27 10:50:53.033  D  tr_targ=112.2
+2024-11-27 10:50:53.034  I  X Value (V) = 0.0
+2024-11-27 10:50:53.034  D  function=VV
+2024-11-27 10:50:53.034  D  0.0
+2024-11-27 10:50:53.034  D  Q_TR_TARG_2
+2024-11-27 10:50:53.035  D  tr_target=3300.0
+2024-11-27 10:50:53.035  I  Y Value (Q) = nan. Pass/fail bounds = [2550.0, 4050.0]
+2024-11-27 10:50:53.035  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:50:53.035  D  y_target = nan, y_ss [3300.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:50:53.035  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:50:53.036  D  RESULT_ACCURACY
+2024-11-27 10:50:53.036  I    Steady state Q(Tr_1) evaluation: 2550.0 <= nan <= 4050.0  [Fail]
+2024-11-27 10:50:53.036  I    Steady state Q(Tr_2) evaluation: 2550.0 <= nan <= 4050.0  [Fail]
+2024-11-27 10:50:53.036  I  Voltage step: setting Grid simulator voltage to 114.0 (Step AA)
+2024-11-27 10:50:53.582  D  0.0
+2024-11-27 10:50:53.583  D  nan
+2024-11-27 10:50:53.583  I  Waiting 9.453528 seconds to get the next Tr data for analysis...
+2024-11-27 10:51:03.760  I  Value V: 0.0
+2024-11-27 10:51:03.760  I  Value Q: nan
+2024-11-27 10:51:03.760  I  Waiting 9.275796 seconds to get the next Tr data for analysis...
+2024-11-27 10:51:13.994  I  Value V: 0.0
+2024-11-27 10:51:13.995  I  Value Q: nan
+2024-11-27 10:51:13.995  I  Waiting 9.040852 seconds to get the next Tr data for analysis...
+2024-11-27 10:51:23.729  I  Value V: 0.0
+2024-11-27 10:51:23.729  I  Value Q: nan
+2024-11-27 10:51:23.730  D  daq={'V_MEAS': 0.0, 'V_TARGET': 112.2, 'Q_MEAS': nan, 'Q_TARGET': 3300.0, 'Q_TARGET_MIN': 2550.0, 'Q_TARGET_MAX': 4050.0, 'EVENT': 'Step AA_TR_3', 'event': 'Step AA'}
+2024-11-27 10:51:23.730  D  tr_iter=0
+2024-11-27 10:51:23.730  D  step_dict
+2024-11-27 10:51:23.730  D  tr_targ=114.0
+2024-11-27 10:51:23.731  I  X Value (V) = 0.0
+2024-11-27 10:51:23.731  D  function=VV
+2024-11-27 10:51:23.731  D  0.0
+2024-11-27 10:51:23.731  D  Q_TR_TARG_0
+2024-11-27 10:51:23.732  D  tr_target=2200.0
+2024-11-27 10:51:23.732  I  Y Value (Q) = nan. Pass/fail bounds = [1450.0, 2950.0]
+2024-11-27 10:51:23.732  D  tr_iter=1
+2024-11-27 10:51:23.732  D  step_dict
+2024-11-27 10:51:23.733  D  tr_targ=114.0
+2024-11-27 10:51:23.733  I  X Value (V) = 0.0
+2024-11-27 10:51:23.733  D  function=VV
+2024-11-27 10:51:23.733  D  0.0
+2024-11-27 10:51:23.734  D  Q_TR_TARG_1
+2024-11-27 10:51:23.734  D  tr_target=2200.0
+2024-11-27 10:51:23.734  I  Y Value (Q) = nan. Pass/fail bounds = [1450.0, 2950.0]
+2024-11-27 10:51:23.734  D  tr_iter=2
+2024-11-27 10:51:23.735  D  step_dict
+2024-11-27 10:51:23.735  D  tr_targ=114.0
+2024-11-27 10:51:23.735  I  X Value (V) = 0.0
+2024-11-27 10:51:23.735  D  function=VV
+2024-11-27 10:51:23.735  D  0.0
+2024-11-27 10:51:23.736  D  Q_TR_TARG_2
+2024-11-27 10:51:23.736  D  tr_target=2200.0
+2024-11-27 10:51:23.736  I  Y Value (Q) = nan. Pass/fail bounds = [1450.0, 2950.0]
+2024-11-27 10:51:23.736  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:51:23.737  D  y_target = nan, y_ss [2200.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:51:23.737  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:51:23.737  D  RESULT_ACCURACY
+2024-11-27 10:51:23.737  I    Steady state Q(Tr_1) evaluation: 1450.0 <= nan <= 2950.0  [Fail]
+2024-11-27 10:51:23.737  I    Steady state Q(Tr_2) evaluation: 1450.0 <= nan <= 2950.0  [Fail]
+2024-11-27 10:51:23.738  I  Voltage step: setting Grid simulator voltage to 115.8 (Step BB)
+2024-11-27 10:51:24.320  D  0.0
+2024-11-27 10:51:24.320  D  nan
+2024-11-27 10:51:24.320  I  Waiting 9.418038 seconds to get the next Tr data for analysis...
+2024-11-27 10:51:34.535  I  Value V: 0.0
+2024-11-27 10:51:34.535  I  Value Q: nan
+2024-11-27 10:51:34.536  I  Waiting 9.201867 seconds to get the next Tr data for analysis...
+2024-11-27 10:51:44.779  I  Value V: 0.0
+2024-11-27 10:51:44.780  I  Value Q: nan
+2024-11-27 10:51:44.780  I  Waiting 8.95847 seconds to get the next Tr data for analysis...
+2024-11-27 10:51:54.492  I  Value V: 0.0
+2024-11-27 10:51:54.492  I  Value Q: nan
+2024-11-27 10:51:54.492  D  daq={'V_MEAS': 0.0, 'V_TARGET': 114.0, 'Q_MEAS': nan, 'Q_TARGET': 2200.0, 'Q_TARGET_MIN': 1450.0, 'Q_TARGET_MAX': 2950.0, 'EVENT': 'Step BB_TR_3', 'event': 'Step BB'}
+2024-11-27 10:51:54.492  D  tr_iter=0
+2024-11-27 10:51:54.493  D  step_dict
+2024-11-27 10:51:54.493  D  tr_targ=115.8
+2024-11-27 10:51:54.493  I  X Value (V) = 0.0
+2024-11-27 10:51:54.493  D  function=VV
+2024-11-27 10:51:54.494  D  0.0
+2024-11-27 10:51:54.494  D  Q_TR_TARG_0
+2024-11-27 10:51:54.494  D  tr_target=1100.0
+2024-11-27 10:51:54.494  I  Y Value (Q) = nan. Pass/fail bounds = [350.0, 1850.0]
+2024-11-27 10:51:54.495  D  tr_iter=1
+2024-11-27 10:51:54.495  D  step_dict
+2024-11-27 10:51:54.495  D  tr_targ=115.8
+2024-11-27 10:51:54.495  I  X Value (V) = 0.0
+2024-11-27 10:51:54.495  D  function=VV
+2024-11-27 10:51:54.496  D  0.0
+2024-11-27 10:51:54.496  D  Q_TR_TARG_1
+2024-11-27 10:51:54.496  D  tr_target=1100.0
+2024-11-27 10:51:54.496  I  Y Value (Q) = nan. Pass/fail bounds = [350.0, 1850.0]
+2024-11-27 10:51:54.496  D  tr_iter=2
+2024-11-27 10:51:54.497  D  step_dict
+2024-11-27 10:51:54.497  D  tr_targ=115.8
+2024-11-27 10:51:54.497  I  X Value (V) = 0.0
+2024-11-27 10:51:54.497  D  function=VV
+2024-11-27 10:51:54.497  D  0.0
+2024-11-27 10:51:54.498  D  Q_TR_TARG_2
+2024-11-27 10:51:54.498  D  tr_target=1100.0
+2024-11-27 10:51:54.498  I  Y Value (Q) = nan. Pass/fail bounds = [350.0, 1850.0]
+2024-11-27 10:51:54.498  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:51:54.499  D  y_target = nan, y_ss [1100.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:51:54.499  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:51:54.499  D  RESULT_ACCURACY
+2024-11-27 10:51:54.499  I    Steady state Q(Tr_1) evaluation: 350.0 <= nan <= 1850.0  [Fail]
+2024-11-27 10:51:54.500  I    Steady state Q(Tr_2) evaluation: 350.0 <= nan <= 1850.0  [Fail]
+2024-11-27 10:51:54.500  I  Voltage step: setting Grid simulator voltage to 119.4 (Step CC)
+2024-11-27 10:51:55.067  D  0.0
+2024-11-27 10:51:55.067  D  nan
+2024-11-27 10:51:55.068  I  Waiting 9.431866 seconds to get the next Tr data for analysis...
+2024-11-27 10:52:05.302  I  Value V: 0.0
+2024-11-27 10:52:05.302  I  Value Q: nan
+2024-11-27 10:52:05.303  I  Waiting 9.196948 seconds to get the next Tr data for analysis...
+2024-11-27 10:52:15.568  I  Value V: 0.0
+2024-11-27 10:52:15.568  I  Value Q: nan
+2024-11-27 10:52:15.568  I  Waiting 8.931828 seconds to get the next Tr data for analysis...
+2024-11-27 10:52:25.262  I  Value V: 0.0
+2024-11-27 10:52:25.262  I  Value Q: nan
+2024-11-27 10:52:25.263  D  daq={'V_MEAS': 0.0, 'V_TARGET': 115.8, 'Q_MEAS': nan, 'Q_TARGET': 1100.0, 'Q_TARGET_MIN': 350.0, 'Q_TARGET_MAX': 1850.0, 'EVENT': 'Step CC_TR_3', 'event': 'Step CC'}
+2024-11-27 10:52:25.263  D  tr_iter=0
+2024-11-27 10:52:25.263  D  step_dict
+2024-11-27 10:52:25.263  D  tr_targ=119.4
+2024-11-27 10:52:25.263  I  X Value (V) = 0.0
+2024-11-27 10:52:25.264  D  function=VV
+2024-11-27 10:52:25.264  D  0.0
+2024-11-27 10:52:25.264  D  Q_TR_TARG_0
+2024-11-27 10:52:25.264  D  tr_target=0.0
+2024-11-27 10:52:25.265  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:52:25.265  D  tr_iter=1
+2024-11-27 10:52:25.265  D  step_dict
+2024-11-27 10:52:25.265  D  tr_targ=119.4
+2024-11-27 10:52:25.266  I  X Value (V) = 0.0
+2024-11-27 10:52:25.266  D  function=VV
+2024-11-27 10:52:25.266  D  0.0
+2024-11-27 10:52:25.266  D  Q_TR_TARG_1
+2024-11-27 10:52:25.267  D  tr_target=0.0
+2024-11-27 10:52:25.267  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:52:25.267  D  tr_iter=2
+2024-11-27 10:52:25.267  D  step_dict
+2024-11-27 10:52:25.267  D  tr_targ=119.4
+2024-11-27 10:52:25.268  I  X Value (V) = 0.0
+2024-11-27 10:52:25.268  D  function=VV
+2024-11-27 10:52:25.268  D  0.0
+2024-11-27 10:52:25.268  D  Q_TR_TARG_2
+2024-11-27 10:52:25.269  D  tr_target=0.0
+2024-11-27 10:52:25.269  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:52:25.269  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:52:25.269  D  y_target = nan, y_ss [0.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:52:25.270  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:52:25.270  D  RESULT_ACCURACY
+2024-11-27 10:52:25.270  I    Steady state Q(Tr_1) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:52:25.270  I    Steady state Q(Tr_2) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:52:25.270  I  Voltage step: setting Grid simulator voltage to 120.0 (Step DD)
+2024-11-27 10:52:25.813  D  0.0
+2024-11-27 10:52:25.813  D  nan
+2024-11-27 10:52:25.814  I  Waiting 9.456738 seconds to get the next Tr data for analysis...
+2024-11-27 10:52:36.005  I  Value V: 0.0
+2024-11-27 10:52:36.006  I  Value Q: nan
+2024-11-27 10:52:36.006  I  Waiting 9.265067 seconds to get the next Tr data for analysis...
+2024-11-27 10:52:46.170  I  Value V: 0.0
+2024-11-27 10:52:46.171  I  Value Q: nan
+2024-11-27 10:52:46.171  I  Waiting 9.100383 seconds to get the next Tr data for analysis...
+2024-11-27 10:52:55.888  I  Value V: 0.0
+2024-11-27 10:52:55.889  I  Value Q: nan
+2024-11-27 10:52:55.889  D  daq={'V_MEAS': 0.0, 'V_TARGET': 119.4, 'Q_MEAS': nan, 'Q_TARGET': 0.0, 'Q_TARGET_MIN': -750.0, 'Q_TARGET_MAX': 750.0, 'EVENT': 'Step DD_TR_3', 'event': 'Step DD'}
+2024-11-27 10:52:55.889  D  tr_iter=0
+2024-11-27 10:52:55.889  D  step_dict
+2024-11-27 10:52:55.890  D  tr_targ=120.0
+2024-11-27 10:52:55.890  I  X Value (V) = 0.0
+2024-11-27 10:52:55.890  D  function=VV
+2024-11-27 10:52:55.890  D  0.0
+2024-11-27 10:52:55.891  D  Q_TR_TARG_0
+2024-11-27 10:52:55.891  D  tr_target=0.0
+2024-11-27 10:52:55.891  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:52:55.891  D  tr_iter=1
+2024-11-27 10:52:55.891  D  step_dict
+2024-11-27 10:52:55.892  D  tr_targ=120.0
+2024-11-27 10:52:55.892  I  X Value (V) = 0.0
+2024-11-27 10:52:55.892  D  function=VV
+2024-11-27 10:52:55.892  D  0.0
+2024-11-27 10:52:55.893  D  Q_TR_TARG_1
+2024-11-27 10:52:55.893  D  tr_target=0.0
+2024-11-27 10:52:55.893  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:52:55.893  D  tr_iter=2
+2024-11-27 10:52:55.893  D  step_dict
+2024-11-27 10:52:55.894  D  tr_targ=120.0
+2024-11-27 10:52:55.894  I  X Value (V) = 0.0
+2024-11-27 10:52:55.894  D  function=VV
+2024-11-27 10:52:55.894  D  0.0
+2024-11-27 10:52:55.895  D  Q_TR_TARG_2
+2024-11-27 10:52:55.895  D  tr_target=0.0
+2024-11-27 10:52:55.895  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:52:55.895  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:52:55.895  D  y_target = nan, y_ss [0.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:52:55.896  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:52:55.896  D  RESULT_ACCURACY
+2024-11-27 10:52:55.896  I    Steady state Q(Tr_1) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:52:55.896  I    Steady state Q(Tr_2) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:52:55.896  I  Sampling complete
+2024-11-27 10:52:55.897  I  Saving file: VV_1_PWR_100_vref_100.csv
+2024-11-27 10:52:56.552  I  Setting v_ref at 95 % of v_nom
+2024-11-27 10:52:56.552  I  Start simulation of CHIL
+2024-11-27 10:52:56.552  W  Model was not loaded because the status is:  Model Running
+2024-11-27 10:52:56.553  W  Model is not running because the status is:  Model Running
+2024-11-27 10:52:56.553  D  OrderedDict([('Step G', 120.6), ('Step H', 124.2), ('Step I', 126.0), ('Step J', 127.8), ('Step K', 131.4), ('Step L', 130.2), ('Step M', 131.4), ('Step N', 127.8), ('Step O', 126.0), ('Step P', 124.2), ('Step Q', 120.6), ('Step R', 114.0), ('Step S', 119.4), ('Step T', 115.8), ('Step U', 114.0), ('Step V', 112.2), ('Step W', 108.6), ('Step X', 107.4), ('Step Y', 108.6), ('Step Z', 112.2), ('Step AA', 114.0), ('Step BB', 115.8), ('Step CC', 119.4), ('Step DD', 114.0)])
+2024-11-27 10:52:56.553  I  Voltage step: setting Grid simulator voltage to 120.6 (Step G)
+2024-11-27 10:52:57.119  D  0.0
+2024-11-27 10:52:57.120  D  nan
+2024-11-27 10:52:57.120  I  Waiting 9.433592 seconds to get the next Tr data for analysis...
+2024-11-27 10:53:07.308  I  Value V: 0.0
+2024-11-27 10:53:07.308  I  Value Q: nan
+2024-11-27 10:53:07.309  I  Waiting 9.244439 seconds to get the next Tr data for analysis...
+2024-11-27 10:53:17.514  I  Value V: 0.0
+2024-11-27 10:53:17.514  I  Value Q: nan
+2024-11-27 10:53:17.514  I  Waiting 9.03907 seconds to get the next Tr data for analysis...
+2024-11-27 10:53:27.289  I  Value V: 0.0
+2024-11-27 10:53:27.289  I  Value Q: nan
+2024-11-27 10:53:27.290  D  daq={'V_MEAS': 0.0, 'V_TARGET': 120.0, 'Q_MEAS': nan, 'Q_TARGET': 0.0, 'Q_TARGET_MIN': -750.0, 'Q_TARGET_MAX': 750.0, 'EVENT': 'Step G_TR_3', 'event': 'Step G'}
+2024-11-27 10:53:27.290  D  tr_iter=0
+2024-11-27 10:53:27.290  D  step_dict
+2024-11-27 10:53:27.290  D  tr_targ=120.6
+2024-11-27 10:53:27.291  I  X Value (V) = 0.0
+2024-11-27 10:53:27.291  D  function=VV
+2024-11-27 10:53:27.291  D  0.0
+2024-11-27 10:53:27.291  D  Q_TR_TARG_0
+2024-11-27 10:53:27.292  D  tr_target=0.0
+2024-11-27 10:53:27.292  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:53:27.292  D  tr_iter=1
+2024-11-27 10:53:27.292  D  step_dict
+2024-11-27 10:53:27.293  D  tr_targ=120.6
+2024-11-27 10:53:27.293  I  X Value (V) = 0.0
+2024-11-27 10:53:27.293  D  function=VV
+2024-11-27 10:53:27.293  D  0.0
+2024-11-27 10:53:27.294  D  Q_TR_TARG_1
+2024-11-27 10:53:27.294  D  tr_target=0.0
+2024-11-27 10:53:27.294  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:53:27.294  D  tr_iter=2
+2024-11-27 10:53:27.295  D  step_dict
+2024-11-27 10:53:27.295  D  tr_targ=120.6
+2024-11-27 10:53:27.295  I  X Value (V) = 0.0
+2024-11-27 10:53:27.295  D  function=VV
+2024-11-27 10:53:27.295  D  0.0
+2024-11-27 10:53:27.296  D  Q_TR_TARG_2
+2024-11-27 10:53:27.296  D  tr_target=0.0
+2024-11-27 10:53:27.296  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:53:27.296  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:53:27.297  D  y_target = nan, y_ss [0.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:53:27.297  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:53:27.297  D  RESULT_ACCURACY
+2024-11-27 10:53:27.297  I    Steady state Q(Tr_1) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:53:27.297  I    Steady state Q(Tr_2) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:53:27.298  I  Voltage step: setting Grid simulator voltage to 124.2 (Step H)
+2024-11-27 10:53:27.865  D  0.0
+2024-11-27 10:53:27.865  D  nan
+2024-11-27 10:53:27.866  I  Waiting 9.431749 seconds to get the next Tr data for analysis...
+2024-11-27 10:53:38.096  I  Value V: 0.0
+2024-11-27 10:53:38.096  I  Value Q: nan
+2024-11-27 10:53:38.096  I  Waiting 9.201551 seconds to get the next Tr data for analysis...
+2024-11-27 10:53:48.316  I  Value V: 0.0
+2024-11-27 10:53:48.316  I  Value Q: nan
+2024-11-27 10:53:48.317  I  Waiting 8.980336 seconds to get the next Tr data for analysis...
+2024-11-27 10:53:58.067  I  Value V: 0.0
+2024-11-27 10:53:58.067  I  Value Q: nan
+2024-11-27 10:53:58.068  D  daq={'V_MEAS': 0.0, 'V_TARGET': 120.6, 'Q_MEAS': nan, 'Q_TARGET': 0.0, 'Q_TARGET_MIN': -750.0, 'Q_TARGET_MAX': 750.0, 'EVENT': 'Step H_TR_3', 'event': 'Step H'}
+2024-11-27 10:53:58.068  D  tr_iter=0
+2024-11-27 10:53:58.068  D  step_dict
+2024-11-27 10:53:58.069  D  tr_targ=124.2
+2024-11-27 10:53:58.069  I  X Value (V) = 0.0
+2024-11-27 10:53:58.069  D  function=VV
+2024-11-27 10:53:58.069  D  0.0
+2024-11-27 10:53:58.069  D  Q_TR_TARG_0
+2024-11-27 10:53:58.070  D  tr_target=-1100.0
+2024-11-27 10:53:58.070  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 10:53:58.070  D  tr_iter=1
+2024-11-27 10:53:58.070  D  step_dict
+2024-11-27 10:53:58.071  D  tr_targ=124.2
+2024-11-27 10:53:58.071  I  X Value (V) = 0.0
+2024-11-27 10:53:58.071  D  function=VV
+2024-11-27 10:53:58.071  D  0.0
+2024-11-27 10:53:58.071  D  Q_TR_TARG_1
+2024-11-27 10:53:58.072  D  tr_target=-1100.0
+2024-11-27 10:53:58.072  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 10:53:58.072  D  tr_iter=2
+2024-11-27 10:53:58.072  D  step_dict
+2024-11-27 10:53:58.072  D  tr_targ=124.2
+2024-11-27 10:53:58.073  I  X Value (V) = 0.0
+2024-11-27 10:53:58.073  D  function=VV
+2024-11-27 10:53:58.073  D  0.0
+2024-11-27 10:53:58.073  D  Q_TR_TARG_2
+2024-11-27 10:53:58.074  D  tr_target=-1100.0
+2024-11-27 10:53:58.074  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 10:53:58.074  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:53:58.074  D  y_target = nan, y_ss [-1100.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:53:58.074  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:53:58.075  D  RESULT_ACCURACY
+2024-11-27 10:53:58.075  I    Steady state Q(Tr_1) evaluation: -1850.0 <= nan <= -350.0  [Fail]
+2024-11-27 10:53:58.075  I    Steady state Q(Tr_2) evaluation: -1850.0 <= nan <= -350.0  [Fail]
+2024-11-27 10:53:58.075  I  Voltage step: setting Grid simulator voltage to 126.0 (Step I)
+2024-11-27 10:53:58.624  D  0.0
+2024-11-27 10:53:58.625  D  nan
+2024-11-27 10:53:58.625  I  Waiting 9.450431 seconds to get the next Tr data for analysis...
+2024-11-27 10:54:08.799  I  Value V: 0.0
+2024-11-27 10:54:08.799  I  Value Q: nan
+2024-11-27 10:54:08.799  I  Waiting 9.277088 seconds to get the next Tr data for analysis...
+2024-11-27 10:54:19.050  I  Value V: 0.0
+2024-11-27 10:54:19.050  I  Value Q: nan
+2024-11-27 10:54:19.050  I  Waiting 9.025539 seconds to get the next Tr data for analysis...
+2024-11-27 10:54:28.785  I  Value V: 0.0
+2024-11-27 10:54:28.785  I  Value Q: nan
+2024-11-27 10:54:28.786  D  daq={'V_MEAS': 0.0, 'V_TARGET': 124.2, 'Q_MEAS': nan, 'Q_TARGET': -1100.0, 'Q_TARGET_MIN': -1850.0, 'Q_TARGET_MAX': -350.0, 'EVENT': 'Step I_TR_3', 'event': 'Step I'}
+2024-11-27 10:54:28.786  D  tr_iter=0
+2024-11-27 10:54:28.786  D  step_dict
+2024-11-27 10:54:28.786  D  tr_targ=126.0
+2024-11-27 10:54:28.786  I  X Value (V) = 0.0
+2024-11-27 10:54:28.787  D  function=VV
+2024-11-27 10:54:28.787  D  0.0
+2024-11-27 10:54:28.787  D  Q_TR_TARG_0
+2024-11-27 10:54:28.787  D  tr_target=-2200.0
+2024-11-27 10:54:28.788  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 10:54:28.788  D  tr_iter=1
+2024-11-27 10:54:28.788  D  step_dict
+2024-11-27 10:54:28.788  D  tr_targ=126.0
+2024-11-27 10:54:28.788  I  X Value (V) = 0.0
+2024-11-27 10:54:28.789  D  function=VV
+2024-11-27 10:54:28.789  D  0.0
+2024-11-27 10:54:28.789  D  Q_TR_TARG_1
+2024-11-27 10:54:28.789  D  tr_target=-2200.0
+2024-11-27 10:54:28.790  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 10:54:28.790  D  tr_iter=2
+2024-11-27 10:54:28.790  D  step_dict
+2024-11-27 10:54:28.790  D  tr_targ=126.0
+2024-11-27 10:54:28.790  I  X Value (V) = 0.0
+2024-11-27 10:54:28.791  D  function=VV
+2024-11-27 10:54:28.791  D  0.0
+2024-11-27 10:54:28.791  D  Q_TR_TARG_2
+2024-11-27 10:54:28.791  D  tr_target=-2200.0
+2024-11-27 10:54:28.792  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 10:54:28.792  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:54:28.792  D  y_target = nan, y_ss [-2200.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:54:28.792  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:54:28.792  D  RESULT_ACCURACY
+2024-11-27 10:54:28.793  I    Steady state Q(Tr_1) evaluation: -2950.0 <= nan <= -1450.0  [Fail]
+2024-11-27 10:54:28.793  I    Steady state Q(Tr_2) evaluation: -2950.0 <= nan <= -1450.0  [Fail]
+2024-11-27 10:54:28.793  I  Voltage step: setting Grid simulator voltage to 127.8 (Step J)
+2024-11-27 10:54:29.368  D  0.0
+2024-11-27 10:54:29.369  D  nan
+2024-11-27 10:54:29.369  I  Waiting 9.423883 seconds to get the next Tr data for analysis...
+2024-11-27 10:54:39.590  I  Value V: 0.0
+2024-11-27 10:54:39.590  I  Value Q: nan
+2024-11-27 10:54:39.591  I  Waiting 9.201309 seconds to get the next Tr data for analysis...
+2024-11-27 10:54:49.353  I  Value V: 0.0
+2024-11-27 10:54:49.353  I  Value Q: nan
+2024-11-27 10:54:49.353  I  Waiting 9.439962 seconds to get the next Tr data for analysis...
+2024-11-27 10:54:59.539  I  Value V: 0.0
+2024-11-27 10:54:59.539  I  Value Q: nan
+2024-11-27 10:54:59.539  D  daq={'V_MEAS': 0.0, 'V_TARGET': 126.0, 'Q_MEAS': nan, 'Q_TARGET': -2200.0, 'Q_TARGET_MIN': -2950.0, 'Q_TARGET_MAX': -1450.0, 'EVENT': 'Step J_TR_3', 'event': 'Step J'}
+2024-11-27 10:54:59.540  D  tr_iter=0
+2024-11-27 10:54:59.540  D  step_dict
+2024-11-27 10:54:59.541  D  tr_targ=127.8
+2024-11-27 10:54:59.541  I  X Value (V) = 0.0
+2024-11-27 10:54:59.541  D  function=VV
+2024-11-27 10:54:59.541  D  0.0
+2024-11-27 10:54:59.541  D  Q_TR_TARG_0
+2024-11-27 10:54:59.541  D  tr_target=-3300.0
+2024-11-27 10:54:59.541  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 10:54:59.542  D  tr_iter=1
+2024-11-27 10:54:59.542  D  step_dict
+2024-11-27 10:54:59.542  D  tr_targ=127.8
+2024-11-27 10:54:59.542  I  X Value (V) = 0.0
+2024-11-27 10:54:59.543  D  function=VV
+2024-11-27 10:54:59.543  D  0.0
+2024-11-27 10:54:59.543  D  Q_TR_TARG_1
+2024-11-27 10:54:59.543  D  tr_target=-3300.0
+2024-11-27 10:54:59.543  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 10:54:59.544  D  tr_iter=2
+2024-11-27 10:54:59.544  D  step_dict
+2024-11-27 10:54:59.544  D  tr_targ=127.8
+2024-11-27 10:54:59.544  I  X Value (V) = 0.0
+2024-11-27 10:54:59.545  D  function=VV
+2024-11-27 10:54:59.545  D  0.0
+2024-11-27 10:54:59.545  D  Q_TR_TARG_2
+2024-11-27 10:54:59.545  D  tr_target=-3300.0
+2024-11-27 10:54:59.545  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 10:54:59.546  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:54:59.546  D  y_target = nan, y_ss [-3300.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:54:59.546  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:54:59.546  D  RESULT_ACCURACY
+2024-11-27 10:54:59.547  I    Steady state Q(Tr_1) evaluation: -4050.0 <= nan <= -2550.0  [Fail]
+2024-11-27 10:54:59.547  I    Steady state Q(Tr_2) evaluation: -4050.0 <= nan <= -2550.0  [Fail]
+2024-11-27 10:54:59.547  I  Voltage step: setting Grid simulator voltage to 131.4 (Step K)
+2024-11-27 10:55:00.093  D  0.0
+2024-11-27 10:55:00.093  D  nan
+2024-11-27 10:55:00.094  I  Waiting 9.453397 seconds to get the next Tr data for analysis...
+2024-11-27 10:55:10.335  I  Value V: 0.0
+2024-11-27 10:55:10.335  I  Value Q: nan
+2024-11-27 10:55:10.336  I  Waiting 9.211639 seconds to get the next Tr data for analysis...
+2024-11-27 10:55:20.581  I  Value V: 0.0
+2024-11-27 10:55:20.581  I  Value Q: nan
+2024-11-27 10:55:20.581  I  Waiting 8.966188 seconds to get the next Tr data for analysis...
+2024-11-27 10:55:30.268  I  Value V: 0.0
+2024-11-27 10:55:30.268  I  Value Q: nan
+2024-11-27 10:55:30.268  D  daq={'V_MEAS': 0.0, 'V_TARGET': 127.8, 'Q_MEAS': nan, 'Q_TARGET': -3300.0, 'Q_TARGET_MIN': -4050.0, 'Q_TARGET_MAX': -2550.0, 'EVENT': 'Step K_TR_3', 'event': 'Step K'}
+2024-11-27 10:55:30.268  D  tr_iter=0
+2024-11-27 10:55:30.269  D  step_dict
+2024-11-27 10:55:30.269  D  tr_targ=131.4
+2024-11-27 10:55:30.269  I  X Value (V) = 0.0
+2024-11-27 10:55:30.269  D  function=VV
+2024-11-27 10:55:30.270  D  0.0
+2024-11-27 10:55:30.270  D  Q_TR_TARG_0
+2024-11-27 10:55:30.270  D  tr_target=-4400.0
+2024-11-27 10:55:30.270  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:55:30.271  D  tr_iter=1
+2024-11-27 10:55:30.271  D  step_dict
+2024-11-27 10:55:30.271  D  tr_targ=131.4
+2024-11-27 10:55:30.271  I  X Value (V) = 0.0
+2024-11-27 10:55:30.271  D  function=VV
+2024-11-27 10:55:30.272  D  0.0
+2024-11-27 10:55:30.272  D  Q_TR_TARG_1
+2024-11-27 10:55:30.272  D  tr_target=-4400.0
+2024-11-27 10:55:30.272  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:55:30.273  D  tr_iter=2
+2024-11-27 10:55:30.273  D  step_dict
+2024-11-27 10:55:30.273  D  tr_targ=131.4
+2024-11-27 10:55:30.273  I  X Value (V) = 0.0
+2024-11-27 10:55:30.273  D  function=VV
+2024-11-27 10:55:30.274  D  0.0
+2024-11-27 10:55:30.274  D  Q_TR_TARG_2
+2024-11-27 10:55:30.274  D  tr_target=-4400.0
+2024-11-27 10:55:30.274  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:55:30.274  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:55:30.275  D  y_target = nan, y_ss [-4400.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:55:30.275  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:55:30.275  D  RESULT_ACCURACY
+2024-11-27 10:55:30.275  I    Steady state Q(Tr_1) evaluation: -5150.0 <= nan <= -3650.0  [Fail]
+2024-11-27 10:55:30.276  I    Steady state Q(Tr_2) evaluation: -5150.0 <= nan <= -3650.0  [Fail]
+2024-11-27 10:55:30.276  I  Voltage step: setting Grid simulator voltage to 130.2 (Step L)
+2024-11-27 10:55:30.822  D  0.0
+2024-11-27 10:55:30.823  D  nan
+2024-11-27 10:55:30.823  I  Waiting 9.452615 seconds to get the next Tr data for analysis...
+2024-11-27 10:55:41.069  I  Value V: 0.0
+2024-11-27 10:55:41.069  I  Value Q: nan
+2024-11-27 10:55:41.069  I  Waiting 9.207012 seconds to get the next Tr data for analysis...
+2024-11-27 10:55:51.337  I  Value V: 0.0
+2024-11-27 10:55:51.338  I  Value Q: nan
+2024-11-27 10:55:51.338  I  Waiting 8.937812 seconds to get the next Tr data for analysis...
+2024-11-27 10:56:01.059  I  Value V: 0.0
+2024-11-27 10:56:01.059  I  Value Q: nan
+2024-11-27 10:56:01.059  D  daq={'V_MEAS': 0.0, 'V_TARGET': 131.4, 'Q_MEAS': nan, 'Q_TARGET': -4400.0, 'Q_TARGET_MIN': -5150.0, 'Q_TARGET_MAX': -3650.0, 'EVENT': 'Step L_TR_3', 'event': 'Step L'}
+2024-11-27 10:56:01.060  D  tr_iter=0
+2024-11-27 10:56:01.060  D  step_dict
+2024-11-27 10:56:01.060  D  tr_targ=130.2
+2024-11-27 10:56:01.061  I  X Value (V) = 0.0
+2024-11-27 10:56:01.061  D  function=VV
+2024-11-27 10:56:01.061  D  0.0
+2024-11-27 10:56:01.061  D  Q_TR_TARG_0
+2024-11-27 10:56:01.061  D  tr_target=-4400.0
+2024-11-27 10:56:01.062  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:56:01.062  D  tr_iter=1
+2024-11-27 10:56:01.062  D  step_dict
+2024-11-27 10:56:01.062  D  tr_targ=130.2
+2024-11-27 10:56:01.063  I  X Value (V) = 0.0
+2024-11-27 10:56:01.063  D  function=VV
+2024-11-27 10:56:01.063  D  0.0
+2024-11-27 10:56:01.063  D  Q_TR_TARG_1
+2024-11-27 10:56:01.064  D  tr_target=-4400.0
+2024-11-27 10:56:01.064  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:56:01.064  D  tr_iter=2
+2024-11-27 10:56:01.064  D  step_dict
+2024-11-27 10:56:01.065  D  tr_targ=130.2
+2024-11-27 10:56:01.065  I  X Value (V) = 0.0
+2024-11-27 10:56:01.065  D  function=VV
+2024-11-27 10:56:01.065  D  0.0
+2024-11-27 10:56:01.065  D  Q_TR_TARG_2
+2024-11-27 10:56:01.066  D  tr_target=-4400.0
+2024-11-27 10:56:01.066  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:56:01.066  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:56:01.066  D  y_target = nan, y_ss [-4400.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:56:01.067  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:56:01.067  D  RESULT_ACCURACY
+2024-11-27 10:56:01.067  I    Steady state Q(Tr_1) evaluation: -5150.0 <= nan <= -3650.0  [Fail]
+2024-11-27 10:56:01.067  I    Steady state Q(Tr_2) evaluation: -5150.0 <= nan <= -3650.0  [Fail]
+2024-11-27 10:56:01.067  I  Voltage step: setting Grid simulator voltage to 131.4 (Step M)
+2024-11-27 10:56:01.624  D  0.0
+2024-11-27 10:56:01.625  D  nan
+2024-11-27 10:56:01.625  I  Waiting 9.443321 seconds to get the next Tr data for analysis...
+2024-11-27 10:56:11.850  I  Value V: 0.0
+2024-11-27 10:56:11.850  I  Value Q: nan
+2024-11-27 10:56:11.850  I  Waiting 9.218163 seconds to get the next Tr data for analysis...
+2024-11-27 10:56:22.006  I  Value V: 0.0
+2024-11-27 10:56:22.006  I  Value Q: nan
+2024-11-27 10:56:22.007  I  Waiting 9.060688 seconds to get the next Tr data for analysis...
+2024-11-27 10:56:31.717  I  Value V: 0.0
+2024-11-27 10:56:31.718  I  Value Q: nan
+2024-11-27 10:56:31.718  D  daq={'V_MEAS': 0.0, 'V_TARGET': 130.2, 'Q_MEAS': nan, 'Q_TARGET': -4400.0, 'Q_TARGET_MIN': -5150.0, 'Q_TARGET_MAX': -3650.0, 'EVENT': 'Step M_TR_3', 'event': 'Step M'}
+2024-11-27 10:56:31.718  D  tr_iter=0
+2024-11-27 10:56:31.718  D  step_dict
+2024-11-27 10:56:31.718  D  tr_targ=131.4
+2024-11-27 10:56:31.719  I  X Value (V) = 0.0
+2024-11-27 10:56:31.719  D  function=VV
+2024-11-27 10:56:31.719  D  0.0
+2024-11-27 10:56:31.719  D  Q_TR_TARG_0
+2024-11-27 10:56:31.720  D  tr_target=-4400.0
+2024-11-27 10:56:31.720  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:56:31.720  D  tr_iter=1
+2024-11-27 10:56:31.720  D  step_dict
+2024-11-27 10:56:31.720  D  tr_targ=131.4
+2024-11-27 10:56:31.721  I  X Value (V) = 0.0
+2024-11-27 10:56:31.721  D  function=VV
+2024-11-27 10:56:31.721  D  0.0
+2024-11-27 10:56:31.721  D  Q_TR_TARG_1
+2024-11-27 10:56:31.722  D  tr_target=-4400.0
+2024-11-27 10:56:31.722  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:56:31.722  D  tr_iter=2
+2024-11-27 10:56:31.722  D  step_dict
+2024-11-27 10:56:31.722  D  tr_targ=131.4
+2024-11-27 10:56:31.723  I  X Value (V) = 0.0
+2024-11-27 10:56:31.723  D  function=VV
+2024-11-27 10:56:31.723  D  0.0
+2024-11-27 10:56:31.723  D  Q_TR_TARG_2
+2024-11-27 10:56:31.723  D  tr_target=-4400.0
+2024-11-27 10:56:31.724  I  Y Value (Q) = nan. Pass/fail bounds = [-5150.0, -3650.0]
+2024-11-27 10:56:31.724  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:56:31.724  D  y_target = nan, y_ss [-4400.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:56:31.724  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:56:31.725  D  RESULT_ACCURACY
+2024-11-27 10:56:31.725  I    Steady state Q(Tr_1) evaluation: -5150.0 <= nan <= -3650.0  [Fail]
+2024-11-27 10:56:31.725  I    Steady state Q(Tr_2) evaluation: -5150.0 <= nan <= -3650.0  [Fail]
+2024-11-27 10:56:31.725  I  Voltage step: setting Grid simulator voltage to 127.8 (Step N)
+2024-11-27 10:56:32.274  D  0.0
+2024-11-27 10:56:32.274  D  nan
+2024-11-27 10:56:32.274  I  Waiting 9.451057 seconds to get the next Tr data for analysis...
+2024-11-27 10:56:42.537  I  Value V: 0.0
+2024-11-27 10:56:42.537  I  Value Q: nan
+2024-11-27 10:56:42.537  I  Waiting 9.188033 seconds to get the next Tr data for analysis...
+2024-11-27 10:56:52.680  I  Value V: 0.0
+2024-11-27 10:56:52.680  I  Value Q: nan
+2024-11-27 10:56:52.681  I  Waiting 9.043991 seconds to get the next Tr data for analysis...
+2024-11-27 10:57:02.414  I  Value V: 0.0
+2024-11-27 10:57:02.414  I  Value Q: nan
+2024-11-27 10:57:02.415  D  daq={'V_MEAS': 0.0, 'V_TARGET': 131.4, 'Q_MEAS': nan, 'Q_TARGET': -4400.0, 'Q_TARGET_MIN': -5150.0, 'Q_TARGET_MAX': -3650.0, 'EVENT': 'Step N_TR_3', 'event': 'Step N'}
+2024-11-27 10:57:02.415  D  tr_iter=0
+2024-11-27 10:57:02.415  D  step_dict
+2024-11-27 10:57:02.415  D  tr_targ=127.8
+2024-11-27 10:57:02.416  I  X Value (V) = 0.0
+2024-11-27 10:57:02.416  D  function=VV
+2024-11-27 10:57:02.416  D  0.0
+2024-11-27 10:57:02.416  D  Q_TR_TARG_0
+2024-11-27 10:57:02.416  D  tr_target=-3300.0
+2024-11-27 10:57:02.417  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 10:57:02.417  D  tr_iter=1
+2024-11-27 10:57:02.417  D  step_dict
+2024-11-27 10:57:02.417  D  tr_targ=127.8
+2024-11-27 10:57:02.418  I  X Value (V) = 0.0
+2024-11-27 10:57:02.418  D  function=VV
+2024-11-27 10:57:02.418  D  0.0
+2024-11-27 10:57:02.418  D  Q_TR_TARG_1
+2024-11-27 10:57:02.419  D  tr_target=-3300.0
+2024-11-27 10:57:02.419  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 10:57:02.419  D  tr_iter=2
+2024-11-27 10:57:02.419  D  step_dict
+2024-11-27 10:57:02.419  D  tr_targ=127.8
+2024-11-27 10:57:02.420  I  X Value (V) = 0.0
+2024-11-27 10:57:02.420  D  function=VV
+2024-11-27 10:57:02.420  D  0.0
+2024-11-27 10:57:02.420  D  Q_TR_TARG_2
+2024-11-27 10:57:02.421  D  tr_target=-3300.0
+2024-11-27 10:57:02.421  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 10:57:02.421  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:57:02.421  D  y_target = nan, y_ss [-3300.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:57:02.422  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:57:02.422  D  RESULT_ACCURACY
+2024-11-27 10:57:02.422  I    Steady state Q(Tr_1) evaluation: -4050.0 <= nan <= -2550.0  [Fail]
+2024-11-27 10:57:02.422  I    Steady state Q(Tr_2) evaluation: -4050.0 <= nan <= -2550.0  [Fail]
+2024-11-27 10:57:02.422  I  Voltage step: setting Grid simulator voltage to 126.0 (Step O)
+2024-11-27 10:57:02.972  D  0.0
+2024-11-27 10:57:02.972  D  nan
+2024-11-27 10:57:02.973  I  Waiting 9.449747 seconds to get the next Tr data for analysis...
+2024-11-27 10:57:13.187  I  Value V: 0.0
+2024-11-27 10:57:13.187  I  Value Q: nan
+2024-11-27 10:57:13.187  I  Waiting 9.235686 seconds to get the next Tr data for analysis...
+2024-11-27 10:57:23.335  I  Value V: 0.0
+2024-11-27 10:57:23.335  I  Value Q: nan
+2024-11-27 10:57:23.335  I  Waiting 9.087544 seconds to get the next Tr data for analysis...
+2024-11-27 10:57:32.979  I  Value V: 0.0
+2024-11-27 10:57:32.980  I  Value Q: nan
+2024-11-27 10:57:32.980  D  daq={'V_MEAS': 0.0, 'V_TARGET': 127.8, 'Q_MEAS': nan, 'Q_TARGET': -3300.0, 'Q_TARGET_MIN': -4050.0, 'Q_TARGET_MAX': -2550.0, 'EVENT': 'Step O_TR_3', 'event': 'Step O'}
+2024-11-27 10:57:32.980  D  tr_iter=0
+2024-11-27 10:57:32.980  D  step_dict
+2024-11-27 10:57:32.981  D  tr_targ=126.0
+2024-11-27 10:57:32.981  I  X Value (V) = 0.0
+2024-11-27 10:57:32.981  D  function=VV
+2024-11-27 10:57:32.981  D  0.0
+2024-11-27 10:57:32.982  D  Q_TR_TARG_0
+2024-11-27 10:57:32.982  D  tr_target=-2200.0
+2024-11-27 10:57:32.982  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 10:57:32.982  D  tr_iter=1
+2024-11-27 10:57:32.983  D  step_dict
+2024-11-27 10:57:32.983  D  tr_targ=126.0
+2024-11-27 10:57:32.983  I  X Value (V) = 0.0
+2024-11-27 10:57:32.983  D  function=VV
+2024-11-27 10:57:32.984  D  0.0
+2024-11-27 10:57:32.984  D  Q_TR_TARG_1
+2024-11-27 10:57:32.984  D  tr_target=-2200.0
+2024-11-27 10:57:32.984  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 10:57:32.984  D  tr_iter=2
+2024-11-27 10:57:32.985  D  step_dict
+2024-11-27 10:57:32.985  D  tr_targ=126.0
+2024-11-27 10:57:32.985  I  X Value (V) = 0.0
+2024-11-27 10:57:32.985  D  function=VV
+2024-11-27 10:57:32.985  D  0.0
+2024-11-27 10:57:32.986  D  Q_TR_TARG_2
+2024-11-27 10:57:32.986  D  tr_target=-2200.0
+2024-11-27 10:57:32.986  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 10:57:32.986  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:57:32.986  D  y_target = nan, y_ss [-2200.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:57:32.986  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:57:32.986  D  RESULT_ACCURACY
+2024-11-27 10:57:32.986  I    Steady state Q(Tr_1) evaluation: -2950.0 <= nan <= -1450.0  [Fail]
+2024-11-27 10:57:32.987  I    Steady state Q(Tr_2) evaluation: -2950.0 <= nan <= -1450.0  [Fail]
+2024-11-27 10:57:32.987  I  Voltage step: setting Grid simulator voltage to 124.2 (Step P)
+2024-11-27 10:57:33.540  D  0.0
+2024-11-27 10:57:33.540  D  nan
+2024-11-27 10:57:33.541  I  Waiting 9.446661 seconds to get the next Tr data for analysis...
+2024-11-27 10:57:43.759  I  Value V: 0.0
+2024-11-27 10:57:43.759  I  Value Q: nan
+2024-11-27 10:57:43.760  I  Waiting 9.22773 seconds to get the next Tr data for analysis...
+2024-11-27 10:57:53.893  I  Value V: 0.0
+2024-11-27 10:57:53.894  I  Value Q: nan
+2024-11-27 10:57:53.894  I  Waiting 9.093888 seconds to get the next Tr data for analysis...
+2024-11-27 10:58:03.635  I  Value V: 0.0
+2024-11-27 10:58:03.636  I  Value Q: nan
+2024-11-27 10:58:03.636  D  daq={'V_MEAS': 0.0, 'V_TARGET': 126.0, 'Q_MEAS': nan, 'Q_TARGET': -2200.0, 'Q_TARGET_MIN': -2950.0, 'Q_TARGET_MAX': -1450.0, 'EVENT': 'Step P_TR_3', 'event': 'Step P'}
+2024-11-27 10:58:03.636  D  tr_iter=0
+2024-11-27 10:58:03.636  D  step_dict
+2024-11-27 10:58:03.636  D  tr_targ=124.2
+2024-11-27 10:58:03.637  I  X Value (V) = 0.0
+2024-11-27 10:58:03.637  D  function=VV
+2024-11-27 10:58:03.637  D  0.0
+2024-11-27 10:58:03.637  D  Q_TR_TARG_0
+2024-11-27 10:58:03.638  D  tr_target=-1100.0
+2024-11-27 10:58:03.638  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 10:58:03.638  D  tr_iter=1
+2024-11-27 10:58:03.638  D  step_dict
+2024-11-27 10:58:03.639  D  tr_targ=124.2
+2024-11-27 10:58:03.639  I  X Value (V) = 0.0
+2024-11-27 10:58:03.639  D  function=VV
+2024-11-27 10:58:03.639  D  0.0
+2024-11-27 10:58:03.639  D  Q_TR_TARG_1
+2024-11-27 10:58:03.640  D  tr_target=-1100.0
+2024-11-27 10:58:03.640  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 10:58:03.640  D  tr_iter=2
+2024-11-27 10:58:03.640  D  step_dict
+2024-11-27 10:58:03.640  D  tr_targ=124.2
+2024-11-27 10:58:03.641  I  X Value (V) = 0.0
+2024-11-27 10:58:03.641  D  function=VV
+2024-11-27 10:58:03.641  D  0.0
+2024-11-27 10:58:03.641  D  Q_TR_TARG_2
+2024-11-27 10:58:03.642  D  tr_target=-1100.0
+2024-11-27 10:58:03.642  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 10:58:03.642  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:58:03.642  D  y_target = nan, y_ss [-1100.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:58:03.642  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:58:03.643  D  RESULT_ACCURACY
+2024-11-27 10:58:03.643  I    Steady state Q(Tr_1) evaluation: -1850.0 <= nan <= -350.0  [Fail]
+2024-11-27 10:58:03.643  I    Steady state Q(Tr_2) evaluation: -1850.0 <= nan <= -350.0  [Fail]
+2024-11-27 10:58:03.643  I  Voltage step: setting Grid simulator voltage to 120.6 (Step Q)
+2024-11-27 10:58:04.194  D  0.0
+2024-11-27 10:58:04.194  D  nan
+2024-11-27 10:58:04.194  I  Waiting 9.449947 seconds to get the next Tr data for analysis...
+2024-11-27 10:58:14.408  I  Value V: 0.0
+2024-11-27 10:58:14.408  I  Value Q: nan
+2024-11-27 10:58:14.408  I  Waiting 9.235588 seconds to get the next Tr data for analysis...
+2024-11-27 10:58:24.651  I  Value V: 0.0
+2024-11-27 10:58:24.651  I  Value Q: nan
+2024-11-27 10:58:24.651  I  Waiting 8.993232 seconds to get the next Tr data for analysis...
+2024-11-27 10:58:34.383  I  Value V: 0.0
+2024-11-27 10:58:34.383  I  Value Q: nan
+2024-11-27 10:58:34.383  D  daq={'V_MEAS': 0.0, 'V_TARGET': 124.2, 'Q_MEAS': nan, 'Q_TARGET': -1100.0, 'Q_TARGET_MIN': -1850.0, 'Q_TARGET_MAX': -350.0, 'EVENT': 'Step Q_TR_3', 'event': 'Step Q'}
+2024-11-27 10:58:34.384  D  tr_iter=0
+2024-11-27 10:58:34.384  D  step_dict
+2024-11-27 10:58:34.384  D  tr_targ=120.6
+2024-11-27 10:58:34.384  I  X Value (V) = 0.0
+2024-11-27 10:58:34.385  D  function=VV
+2024-11-27 10:58:34.385  D  0.0
+2024-11-27 10:58:34.385  D  Q_TR_TARG_0
+2024-11-27 10:58:34.385  D  tr_target=0.0
+2024-11-27 10:58:34.386  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:58:34.386  D  tr_iter=1
+2024-11-27 10:58:34.386  D  step_dict
+2024-11-27 10:58:34.386  D  tr_targ=120.6
+2024-11-27 10:58:34.386  I  X Value (V) = 0.0
+2024-11-27 10:58:34.387  D  function=VV
+2024-11-27 10:58:34.387  D  0.0
+2024-11-27 10:58:34.387  D  Q_TR_TARG_1
+2024-11-27 10:58:34.387  D  tr_target=0.0
+2024-11-27 10:58:34.388  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:58:34.388  D  tr_iter=2
+2024-11-27 10:58:34.388  D  step_dict
+2024-11-27 10:58:34.388  D  tr_targ=120.6
+2024-11-27 10:58:34.388  I  X Value (V) = 0.0
+2024-11-27 10:58:34.389  D  function=VV
+2024-11-27 10:58:34.389  D  0.0
+2024-11-27 10:58:34.389  D  Q_TR_TARG_2
+2024-11-27 10:58:34.389  D  tr_target=0.0
+2024-11-27 10:58:34.389  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:58:34.390  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:58:34.390  D  y_target = nan, y_ss [0.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:58:34.390  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:58:34.390  D  RESULT_ACCURACY
+2024-11-27 10:58:34.391  I    Steady state Q(Tr_1) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:58:34.391  I    Steady state Q(Tr_2) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:58:34.391  I  Voltage step: setting Grid simulator voltage to 114.0 (Step R)
+2024-11-27 10:58:34.938  D  0.0
+2024-11-27 10:58:34.938  D  nan
+2024-11-27 10:58:34.939  I  Waiting 9.45199 seconds to get the next Tr data for analysis...
+2024-11-27 10:58:45.138  I  Value V: 0.0
+2024-11-27 10:58:45.139  I  Value Q: nan
+2024-11-27 10:58:45.139  I  Waiting 9.252222 seconds to get the next Tr data for analysis...
+2024-11-27 10:58:55.363  I  Value V: 0.0
+2024-11-27 10:58:55.363  I  Value Q: nan
+2024-11-27 10:58:55.363  I  Waiting 9.028225 seconds to get the next Tr data for analysis...
+2024-11-27 10:59:05.029  I  Value V: 0.0
+2024-11-27 10:59:05.029  I  Value Q: nan
+2024-11-27 10:59:05.029  D  daq={'V_MEAS': 0.0, 'V_TARGET': 120.6, 'Q_MEAS': nan, 'Q_TARGET': 0.0, 'Q_TARGET_MIN': -750.0, 'Q_TARGET_MAX': 750.0, 'EVENT': 'Step R_TR_3', 'event': 'Step R'}
+2024-11-27 10:59:05.030  D  tr_iter=0
+2024-11-27 10:59:05.030  D  step_dict
+2024-11-27 10:59:05.030  D  tr_targ=114.0
+2024-11-27 10:59:05.030  I  X Value (V) = 0.0
+2024-11-27 10:59:05.031  D  function=VV
+2024-11-27 10:59:05.031  D  0.0
+2024-11-27 10:59:05.031  D  Q_TR_TARG_0
+2024-11-27 10:59:05.032  D  tr_target=2200.0
+2024-11-27 10:59:05.032  I  Y Value (Q) = nan. Pass/fail bounds = [1450.0, 2950.0]
+2024-11-27 10:59:05.032  D  tr_iter=1
+2024-11-27 10:59:05.032  D  step_dict
+2024-11-27 10:59:05.032  D  tr_targ=114.0
+2024-11-27 10:59:05.033  I  X Value (V) = 0.0
+2024-11-27 10:59:05.033  D  function=VV
+2024-11-27 10:59:05.034  D  0.0
+2024-11-27 10:59:05.034  D  Q_TR_TARG_1
+2024-11-27 10:59:05.034  D  tr_target=2200.0
+2024-11-27 10:59:05.034  I  Y Value (Q) = nan. Pass/fail bounds = [1450.0, 2950.0]
+2024-11-27 10:59:05.035  D  tr_iter=2
+2024-11-27 10:59:05.035  D  step_dict
+2024-11-27 10:59:05.035  D  tr_targ=114.0
+2024-11-27 10:59:05.035  I  X Value (V) = 0.0
+2024-11-27 10:59:05.035  D  function=VV
+2024-11-27 10:59:05.035  D  0.0
+2024-11-27 10:59:05.035  D  Q_TR_TARG_2
+2024-11-27 10:59:05.035  D  tr_target=2200.0
+2024-11-27 10:59:05.035  I  Y Value (Q) = nan. Pass/fail bounds = [1450.0, 2950.0]
+2024-11-27 10:59:05.036  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:59:05.036  D  y_target = nan, y_ss [2200.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:59:05.036  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:59:05.036  D  RESULT_ACCURACY
+2024-11-27 10:59:05.037  I    Steady state Q(Tr_1) evaluation: 1450.0 <= nan <= 2950.0  [Fail]
+2024-11-27 10:59:05.037  I    Steady state Q(Tr_2) evaluation: 1450.0 <= nan <= 2950.0  [Fail]
+2024-11-27 10:59:05.037  I  Voltage step: setting Grid simulator voltage to 119.4 (Step S)
+2024-11-27 10:59:05.585  D  0.0
+2024-11-27 10:59:05.585  D  nan
+2024-11-27 10:59:05.585  I  Waiting 9.452188 seconds to get the next Tr data for analysis...
+2024-11-27 10:59:15.810  I  Value V: 0.0
+2024-11-27 10:59:15.810  I  Value Q: nan
+2024-11-27 10:59:15.811  I  Waiting 9.226464 seconds to get the next Tr data for analysis...
+2024-11-27 10:59:26.010  I  Value V: 0.0
+2024-11-27 10:59:26.011  I  Value Q: nan
+2024-11-27 10:59:26.011  I  Waiting 9.02668 seconds to get the next Tr data for analysis...
+2024-11-27 10:59:35.670  I  Value V: 0.0
+2024-11-27 10:59:35.671  I  Value Q: nan
+2024-11-27 10:59:35.671  D  daq={'V_MEAS': 0.0, 'V_TARGET': 114.0, 'Q_MEAS': nan, 'Q_TARGET': 2200.0, 'Q_TARGET_MIN': 1450.0, 'Q_TARGET_MAX': 2950.0, 'EVENT': 'Step S_TR_3', 'event': 'Step S'}
+2024-11-27 10:59:35.671  D  tr_iter=0
+2024-11-27 10:59:35.671  D  step_dict
+2024-11-27 10:59:35.672  D  tr_targ=119.4
+2024-11-27 10:59:35.672  I  X Value (V) = 0.0
+2024-11-27 10:59:35.672  D  function=VV
+2024-11-27 10:59:35.672  D  0.0
+2024-11-27 10:59:35.673  D  Q_TR_TARG_0
+2024-11-27 10:59:35.673  D  tr_target=0.0
+2024-11-27 10:59:35.673  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:59:35.673  D  tr_iter=1
+2024-11-27 10:59:35.673  D  step_dict
+2024-11-27 10:59:35.674  D  tr_targ=119.4
+2024-11-27 10:59:35.674  I  X Value (V) = 0.0
+2024-11-27 10:59:35.674  D  function=VV
+2024-11-27 10:59:35.674  D  0.0
+2024-11-27 10:59:35.674  D  Q_TR_TARG_1
+2024-11-27 10:59:35.675  D  tr_target=0.0
+2024-11-27 10:59:35.675  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:59:35.675  D  tr_iter=2
+2024-11-27 10:59:35.675  D  step_dict
+2024-11-27 10:59:35.676  D  tr_targ=119.4
+2024-11-27 10:59:35.676  I  X Value (V) = 0.0
+2024-11-27 10:59:35.676  D  function=VV
+2024-11-27 10:59:35.676  D  0.0
+2024-11-27 10:59:35.676  D  Q_TR_TARG_2
+2024-11-27 10:59:35.677  D  tr_target=0.0
+2024-11-27 10:59:35.677  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 10:59:35.677  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:59:35.677  D  y_target = nan, y_ss [0.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 10:59:35.677  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 10:59:35.678  D  RESULT_ACCURACY
+2024-11-27 10:59:35.678  I    Steady state Q(Tr_1) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:59:35.678  I    Steady state Q(Tr_2) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 10:59:35.678  I  Voltage step: setting Grid simulator voltage to 115.8 (Step T)
+2024-11-27 10:59:36.227  D  0.0
+2024-11-27 10:59:36.228  D  nan
+2024-11-27 10:59:36.228  I  Waiting 9.450855 seconds to get the next Tr data for analysis...
+2024-11-27 10:59:46.415  I  Value V: 0.0
+2024-11-27 10:59:46.415  I  Value Q: nan
+2024-11-27 10:59:46.415  I  Waiting 9.263963 seconds to get the next Tr data for analysis...
+2024-11-27 10:59:56.587  I  Value V: 0.0
+2024-11-27 10:59:56.587  I  Value Q: nan
+2024-11-27 10:59:56.587  I  Waiting 9.091498 seconds to get the next Tr data for analysis...
+2024-11-27 11:00:06.268  I  Value V: 0.0
+2024-11-27 11:00:06.269  I  Value Q: nan
+2024-11-27 11:00:06.269  D  daq={'V_MEAS': 0.0, 'V_TARGET': 119.4, 'Q_MEAS': nan, 'Q_TARGET': 0.0, 'Q_TARGET_MIN': -750.0, 'Q_TARGET_MAX': 750.0, 'EVENT': 'Step T_TR_3', 'event': 'Step T'}
+2024-11-27 11:00:06.269  D  tr_iter=0
+2024-11-27 11:00:06.270  D  step_dict
+2024-11-27 11:00:06.270  D  tr_targ=115.8
+2024-11-27 11:00:06.270  I  X Value (V) = 0.0
+2024-11-27 11:00:06.270  D  function=VV
+2024-11-27 11:00:06.270  D  0.0
+2024-11-27 11:00:06.271  D  Q_TR_TARG_0
+2024-11-27 11:00:06.271  D  tr_target=1100.0
+2024-11-27 11:00:06.271  I  Y Value (Q) = nan. Pass/fail bounds = [350.0, 1850.0]
+2024-11-27 11:00:06.271  D  tr_iter=1
+2024-11-27 11:00:06.271  D  step_dict
+2024-11-27 11:00:06.272  D  tr_targ=115.8
+2024-11-27 11:00:06.272  I  X Value (V) = 0.0
+2024-11-27 11:00:06.272  D  function=VV
+2024-11-27 11:00:06.272  D  0.0
+2024-11-27 11:00:06.273  D  Q_TR_TARG_1
+2024-11-27 11:00:06.273  D  tr_target=1100.0
+2024-11-27 11:00:06.273  I  Y Value (Q) = nan. Pass/fail bounds = [350.0, 1850.0]
+2024-11-27 11:00:06.273  D  tr_iter=2
+2024-11-27 11:00:06.273  D  step_dict
+2024-11-27 11:00:06.273  D  tr_targ=115.8
+2024-11-27 11:00:06.273  I  X Value (V) = 0.0
+2024-11-27 11:00:06.273  D  function=VV
+2024-11-27 11:00:06.274  D  0.0
+2024-11-27 11:00:06.274  D  Q_TR_TARG_2
+2024-11-27 11:00:06.274  D  tr_target=1100.0
+2024-11-27 11:00:06.274  I  Y Value (Q) = nan. Pass/fail bounds = [350.0, 1850.0]
+2024-11-27 11:00:06.275  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 11:00:06.275  D  y_target = nan, y_ss [1100.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 11:00:06.275  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 11:00:06.275  D  RESULT_ACCURACY
+2024-11-27 11:00:06.276  I    Steady state Q(Tr_1) evaluation: 350.0 <= nan <= 1850.0  [Fail]
+2024-11-27 11:00:06.276  I    Steady state Q(Tr_2) evaluation: 350.0 <= nan <= 1850.0  [Fail]
+2024-11-27 11:00:06.276  I  Voltage step: setting Grid simulator voltage to 114.0 (Step U)
+2024-11-27 11:00:06.833  D  0.0
+2024-11-27 11:00:06.834  D  nan
+2024-11-27 11:00:06.834  I  Waiting 9.442613 seconds to get the next Tr data for analysis...
+2024-11-27 11:00:17.083  I  Value V: 0.0
+2024-11-27 11:00:17.084  I  Value Q: nan
+2024-11-27 11:00:17.084  I  Waiting 9.192578 seconds to get the next Tr data for analysis...
+2024-11-27 11:00:27.312  I  Value V: 0.0
+2024-11-27 11:00:27.312  I  Value Q: nan
+2024-11-27 11:00:27.313  I  Waiting 8.964038 seconds to get the next Tr data for analysis...
+2024-11-27 11:00:29.367  I  message: {'op': 'cmd', 'cmd': 'stop'}
+2024-11-27 11:00:29.367  I  Saving file: VV_1_PWR_100_vref_95.csv
+2024-11-27 11:00:29.586  E  Test script exception: Traceback (most recent call last):
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Scripts\VV.py", line 326, in volt_vars_mode
+    ActiveFunction.record_timeresponse(daq=daq)
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\p1547.py", line 605, in record_timeresponse
+    self.ts.sleep(time_to_sleep.total_seconds())
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\app.py", line 561, in sleep
+    raise script.ScriptError('Commanded stop')
+script.ScriptError: Commanded stop
+
+2024-11-27 11:00:29.587  I  Stopping/Resetting simulation. Current State: Model Running
+2024-11-27 11:00:47.077  I  Model state is now: Model Loadable
+2024-11-27 11:00:47.317  I  Test result - Complete

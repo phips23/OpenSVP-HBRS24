@@ -1,0 +1,122 @@
+2024-11-27 12:54:01.118  D  
+2024-11-27 12:54:01.118  D  **************  Starting VV_1  **************
+2024-11-27 12:54:01.118  D  Script: VV.py 1.4.3
+2024-11-27 12:54:01.119  I  Test Parameters:
+2024-11-27 12:54:01.119  I      Volt-Var mode = Normal
+2024-11-27 12:54:01.119  I      Characteristic 1 curve = Enabled
+2024-11-27 12:54:01.119  I      Response time (s) for curve 1 = 10.0
+2024-11-27 12:54:01.120  I      Characteristic 2 curve = Disabled
+2024-11-27 12:54:01.120  I      Characteristic 3 curve = Disabled
+2024-11-27 12:54:01.120  I      Power Levels iteration = 100%
+2024-11-27 12:54:01.121  I      Voltage reference iteration = All
+2024-11-27 12:54:01.121  I  EUT Parameters:
+2024-11-27 12:54:01.121  I      Phases = Three phase
+2024-11-27 12:54:01.129  I      Apparent power rating (VA) = 10000.0
+2024-11-27 12:54:01.129  I      Output power rating (W) = 8000.0
+2024-11-27 12:54:01.129  I      Minimum Power Rating(W) = 1000.0
+2024-11-27 12:54:01.130  I      Output var rating (vars) = 2000.0
+2024-11-27 12:54:01.130  I      Nominal AC voltage (V) = 120.0
+2024-11-27 12:54:01.130  I      Minimum AC voltage (V) = 105.6
+2024-11-27 12:54:01.131  I      Maximum AC voltage (V) = 132.0
+2024-11-27 12:54:01.132  I      V_in_nom: Nominal input voltage (Vdc) = 400
+2024-11-27 12:54:01.132  I      Nominal AC frequency (Hz) = 60.0
+2024-11-27 12:54:01.132  I      Maximum frequency in the continuous operating region (Hz) = 66.0
+2024-11-27 12:54:01.132  I      Minimum frequency in the continuous operating region (Hz) = 56.0
+2024-11-27 12:54:01.133  I      EUT response to phase imbalance is calculated by: = EUT response to the average of the three-phase effective (RMS)
+2024-11-27 12:54:01.133  I  DER Parameters:
+2024-11-27 12:54:01.133  I      DER Mode = Disabled
+2024-11-27 12:54:01.133  I  Grid Simulator Parameters:
+2024-11-27 12:54:01.134  I      Mode = Opal
+2024-11-27 12:54:01.134  I      Configure grid simulator at beginning of test = Enabled
+2024-11-27 12:54:01.134  I      Opal Parameters:
+2024-11-27 12:54:01.134  I          Phases = 3
+2024-11-27 12:54:01.135  I          Nominal voltage for all phases = 230.0
+2024-11-27 12:54:01.135  I          Frequency = 50.0
+2024-11-27 12:54:01.135  I          Max Voltage = 250.0
+2024-11-27 12:54:01.136  I          Max Frequency = 70.0
+2024-11-27 12:54:01.136  I          Min Frequency = 45.0
+2024-11-27 12:54:01.136  I  PV Simulator Parameters:
+2024-11-27 12:54:01.136  I      Mode = Disabled
+2024-11-27 12:54:01.137  I  Data Acquisition System Parameters:
+2024-11-27 12:54:01.137  I      Mode = Opal
+2024-11-27 12:54:01.137  I      Opal Parameters:
+2024-11-27 12:54:01.137  I          Sample Interval (ms) = 1000
+2024-11-27 12:54:01.138  I          Opal Analog Channel Map (e.g. simulinks blocks, etc,.) = Opal_Phase_Jump
+2024-11-27 12:54:01.138  I          Waveform Directory = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\models\IEEE_1547_Testing\ieee_1547_testing_sm_source\OpREDHAWK64target
+2024-11-27 12:54:01.138  I          Waveform Channel List = PhaseJump
+2024-11-27 12:54:01.139  I          Waveform Data File Name (.mat) = Data.mat
+2024-11-27 12:54:01.139  I          Capture data from the console? = No
+2024-11-27 12:54:01.139  I  HIL Parameters:
+2024-11-27 12:54:01.140  I      Mode = Opal-RT
+2024-11-27 12:54:01.140  I      Opal-RT Parameters:
+2024-11-27 12:54:01.140  I          Target name in RT-LAB = Microgrid_Testbench
+2024-11-27 12:54:01.140  I          Project Directory Loacation = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:54:01.141  I          RT-LAB model name (.mdl or .slx) = IEEE_1547_Testing
+2024-11-27 12:54:01.318  I          Real-Time simulation mode = Hardware
+2024-11-27 12:54:01.319  I          Configure HIL in init = False
+2024-11-27 12:54:01.321  I          Stop Time = 3600.0
+2024-11-27 12:54:01.321  I  Functions to be activated in this test script = ['VV']
+2024-11-27 12:54:01.322  D  Sc points: ['V_MEAS', 'V_TARGET', 'Q_MEAS', 'Q_TARGET', 'Q_TARGET_MIN', 'Q_TARGET_MAX', 'EVENT']
+2024-11-27 12:54:01.322  D  summary column=90%_BY_TR=1,WITHIN_BOUNDS_BY_TR=1,WITHIN_BOUNDS_BY_LAST_TR,V_MEAS,V_TARGET,Q_MEAS,Q_TARGET,Q_TARGET_MIN,Q_TARGET_MAX,STEP,FILENAME
+2024-11-27 12:54:01.323  D  1547.1 Library configured for UNDEFINED IN TEST CLASS
+2024-11-27 12:54:01.324  D  y_variables={'Q': 'VV'}
+2024-11-27 12:54:01.324  D  y_temp: Q
+2024-11-27 12:54:01.523  D  y_points: ['AC_Q_1,AC_Q_2,AC_Q_3']
+2024-11-27 12:54:01.525  D  y2_variable for result: V
+2024-11-27 12:54:01.527  D  {'plot.title': 'title_name', 'plot.x.title': 'Time (sec)', 'plot.x.points': 'TIME', 'plot.y.points': 'AC_Q_1,AC_Q_2,AC_Q_3', 'plot.y.title': 'Reactive Power', 'plot.y2.points': 'AC_VRMS_1,AC_VRMS_2,AC_VRMS_3', 'plot.y2.title': 'Voltage', 'plot.Q_TARGET.min_error': 'Q_TARGET_MIN', 'plot.Q_TARGET.max_error': 'Q_TARGET_MAX'}
+2024-11-27 12:54:01.535  D  ***************HIL initialization***************
+2024-11-27 12:54:01.537  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:54:01.540  I  Assuming project name is an absolute path to .llp file
+2024-11-27 12:54:01.542  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:54:01.757  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:54:01.758  D  info(), self.target_name = Microgrid_Testbench
+2024-11-27 12:54:01.817  I  OPAL-RT - Platform version OPAL-RTLinux 3.5.4 (4.19.80-opalrtlinux) (IP address : 192.168.10.102)
+2024-11-27 12:54:01.817  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:54:01.817  I  Assuming project name is an absolute path to .llp file
+2024-11-27 12:54:01.818  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:54:01.821  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:54:01.822  I  Setting the simulation stop time for 3600.0 to run experiment.
+2024-11-27 12:54:01.931  W  Stop time already set to 3600.0
+2024-11-27 12:54:01.933  D  ***************PVSIM initialization***************
+2024-11-27 12:54:01.934  D  ***************DAS initialization***************
+2024-11-27 12:54:01.936  D  DAS connected to with HIL: <svpelab.hil_opal.HIL object at 0x0000020537D18AC8>, DC meas: None, and gridsim: None
+2024-11-27 12:54:01.968  I  DAS device: OPAL-RT - Platform version OPAL-RTLinux 3.5.4 (4.19.80-opalrtlinux) (IP address : 192.168.10.102)
+2024-11-27 12:54:01.969  D  ***************EUT initialization***************
+2024-11-27 12:54:01.969  D  Set L/HVRT and trip parameters set to the widest range of adjustability possible.
+2024-11-27 12:54:01.969  D  ***************GRIDSIM initialization***************
+2024-11-27 12:54:02.125  D  info(), self.target_name = Microgrid_Testbench
+2024-11-27 12:54:02.170  D  Configuring gridsim with Opal hil parameters...using OPAL-RT - Platform version OPAL-RTLinux 3.5.4 (4.19.80-opalrtlinux) (IP address : 192.168.10.102)
+2024-11-27 12:54:02.171  D  hil object : <svpelab.hil_opal.HIL object at 0x0000020537D18AC8>
+2024-11-27 12:54:02.171  I  Configuring the Grid Simulator.
+2024-11-27 12:54:02.171  I  Configuring phase angles, frequencies, and voltages for gridsim
+2024-11-27 12:54:02.185  D  matlab variable PHASE_PHA was already configured to 0 
+2024-11-27 12:54:02.196  D  matlab variable PHASE_PHB was already configured to -120 
+2024-11-27 12:54:02.207  D  matlab variable PHASE_PHC was already configured to 120 
+2024-11-27 12:54:02.245  D  matlab variable FREQUENCY was already configured to 50.0 
+2024-11-27 12:54:02.358  D  matlab variable VOLT_PHA was already configured to 1.0 
+2024-11-27 12:54:02.368  D  matlab variable VOLT_PHB was already configured to 1.0 
+2024-11-27 12:54:02.377  D  matlab variable VOLT_PHC was already configured to 1.0 
+2024-11-27 12:54:02.413  D  Setting matlab variable FREQUENCY_MAX_LIMIT to 70.0 instead of 55.0 
+2024-11-27 12:54:02.918  E  Test script exception: Traceback (most recent call last):
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Scripts\VV.py", line 202, in volt_vars_mode
+    grid = gridsim.gridsim_init(ts,support_interfaces={'hil': chil})  # Turn on AC so the EUT can be initialized
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\gridsim.py", line 87, in gridsim_init
+    sim = sim_module.GridSim(ts, group_name, support_interfaces=support_interfaces)
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\gridsim_opal.py", line 110, in __init__
+    self.config()
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\gridsim_opal.py", line 129, in config
+    self.frequency_max(frequency=self.f_max)
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\gridsim_opal.py", line 367, in frequency_max
+    self.hil.set_matlab_variables(parameters)
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\hil_opal.py", line 930, in set_matlab_variables
+    self.set_matlab_variable_value(variable, value)
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\hil_opal.py", line 685, in set_matlab_variable_value
+    RtlabApi.SetAttribute(attributeNumber, RtlabApi.ATT_MATRIX_VALUE, valueToSet)
+  File "c:\opal-rt\rt-lab\v2024.3.3.51\common\python\rtlab\util\functions_generated.py", line 246, in SetAttribute
+    return SetAttributes((id,),(attribute,),(value,))
+OpalApiPy.Exception: (22, 'Error 22: Could not complete command because the model is not loaded. \n\n(The model may have been reset by another process).')
+
+2024-11-27 12:54:02.938  I  Stopping/Resetting simulation. Current State: Model Loadable
+2024-11-27 12:54:02.938  I  Model already stopped.
+2024-11-27 12:54:02.938  I  Model state is now: Model Loadable
+2024-11-27 12:54:03.468  I  Test result - Fail

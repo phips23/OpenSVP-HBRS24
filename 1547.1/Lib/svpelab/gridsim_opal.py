@@ -131,6 +131,8 @@ class GridSim(gridsim.GridSim):
         self.voltage_max(voltage=self.v_max)
         self.voltage_min(voltage=0.0)
 
+        
+
     def config_phase_angles(self):
 
         """
@@ -268,7 +270,7 @@ class GridSim(gridsim.GridSim):
         :param : "ROCOM_INIT" is for ROCOF initialisation value. Default value 60
         :param : "ROCOM_START_TIME" is for ROCOF initialisation value. Default value 60
         :param : "ROCOM_END_TIME" is for ROCOF initialisation value. Default value 60
-
+        """
 
         if param is not None:
             parameters = []

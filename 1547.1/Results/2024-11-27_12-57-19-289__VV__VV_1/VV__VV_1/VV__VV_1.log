@@ -1,0 +1,340 @@
+2024-11-27 12:57:21.119  D  
+2024-11-27 12:57:21.120  D  **************  Starting VV_1  **************
+2024-11-27 12:57:21.120  D  Script: VV.py 1.4.3
+2024-11-27 12:57:21.120  I  Test Parameters:
+2024-11-27 12:57:21.120  I      Volt-Var mode = Normal
+2024-11-27 12:57:21.120  I      Characteristic 1 curve = Enabled
+2024-11-27 12:57:21.121  I      Response time (s) for curve 1 = 10.0
+2024-11-27 12:57:21.121  I      Characteristic 2 curve = Disabled
+2024-11-27 12:57:21.121  I      Characteristic 3 curve = Disabled
+2024-11-27 12:57:21.122  I      Power Levels iteration = 100%
+2024-11-27 12:57:21.122  I      Voltage reference iteration = All
+2024-11-27 12:57:21.122  I  EUT Parameters:
+2024-11-27 12:57:21.122  I      Phases = Three phase
+2024-11-27 12:57:21.123  I      Apparent power rating (VA) = 10000.0
+2024-11-27 12:57:21.123  I      Output power rating (W) = 8000.0
+2024-11-27 12:57:21.123  I      Minimum Power Rating(W) = 1000.0
+2024-11-27 12:57:21.123  I      Output var rating (vars) = 2000.0
+2024-11-27 12:57:21.124  I      Nominal AC voltage (V) = 120.0
+2024-11-27 12:57:21.124  I      Minimum AC voltage (V) = 105.6
+2024-11-27 12:57:21.124  I      Maximum AC voltage (V) = 132.0
+2024-11-27 12:57:21.124  I      V_in_nom: Nominal input voltage (Vdc) = 400
+2024-11-27 12:57:21.125  I      Nominal AC frequency (Hz) = 60.0
+2024-11-27 12:57:21.125  I      Maximum frequency in the continuous operating region (Hz) = 66.0
+2024-11-27 12:57:21.125  I      Minimum frequency in the continuous operating region (Hz) = 56.0
+2024-11-27 12:57:21.125  I      EUT response to phase imbalance is calculated by: = EUT response to the average of the three-phase effective (RMS)
+2024-11-27 12:57:21.125  I  DER Parameters:
+2024-11-27 12:57:21.126  I      DER Mode = Disabled
+2024-11-27 12:57:21.126  I  Grid Simulator Parameters:
+2024-11-27 12:57:21.126  I      Mode = Opal
+2024-11-27 12:57:21.126  I      Configure grid simulator at beginning of test = Disabled
+2024-11-27 12:57:21.127  I      Opal Parameters:
+2024-11-27 12:57:21.127  I          Phases = 3
+2024-11-27 12:57:21.127  I          Nominal voltage for all phases = 230.0
+2024-11-27 12:57:21.128  I          Frequency = 50.0
+2024-11-27 12:57:21.128  I          Max Voltage = 250.0
+2024-11-27 12:57:21.128  I          Max Frequency = 70.0
+2024-11-27 12:57:21.128  I          Min Frequency = 45.0
+2024-11-27 12:57:21.129  I  PV Simulator Parameters:
+2024-11-27 12:57:21.129  I      Mode = Disabled
+2024-11-27 12:57:21.129  I  Data Acquisition System Parameters:
+2024-11-27 12:57:21.130  I      Mode = Opal
+2024-11-27 12:57:21.130  I      Opal Parameters:
+2024-11-27 12:57:21.130  I          Sample Interval (ms) = 1000
+2024-11-27 12:57:21.130  I          Opal Analog Channel Map (e.g. simulinks blocks, etc,.) = Opal_Phase_Jump
+2024-11-27 12:57:21.131  I          Waveform Directory = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\models\IEEE_1547_Testing\ieee_1547_testing_sm_source\OpREDHAWK64target
+2024-11-27 12:57:21.131  I          Waveform Channel List = PhaseJump
+2024-11-27 12:57:21.131  I          Waveform Data File Name (.mat) = Data.mat
+2024-11-27 12:57:21.132  I          Capture data from the console? = No
+2024-11-27 12:57:21.132  I  HIL Parameters:
+2024-11-27 12:57:21.132  I      Mode = Opal-RT
+2024-11-27 12:57:21.132  I      Opal-RT Parameters:
+2024-11-27 12:57:21.133  I          Target name in RT-LAB = Microgrid_Testbench
+2024-11-27 12:57:21.133  I          Project Directory Loacation = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:57:21.133  I          RT-LAB model name (.mdl or .slx) = IEEE_1547_Testing
+2024-11-27 12:57:21.309  I          Real-Time simulation mode = Hardware
+2024-11-27 12:57:21.311  I          Configure HIL in init = False
+2024-11-27 12:57:21.313  I          Stop Time = 3600.0
+2024-11-27 12:57:21.313  I  Functions to be activated in this test script = ['VV']
+2024-11-27 12:57:21.314  D  Sc points: ['V_MEAS', 'V_TARGET', 'Q_MEAS', 'Q_TARGET', 'Q_TARGET_MIN', 'Q_TARGET_MAX', 'EVENT']
+2024-11-27 12:57:21.314  D  summary column=90%_BY_TR=1,WITHIN_BOUNDS_BY_TR=1,WITHIN_BOUNDS_BY_LAST_TR,V_MEAS,V_TARGET,Q_MEAS,Q_TARGET,Q_TARGET_MIN,Q_TARGET_MAX,STEP,FILENAME
+2024-11-27 12:57:21.315  D  1547.1 Library configured for UNDEFINED IN TEST CLASS
+2024-11-27 12:57:21.316  D  y_variables={'Q': 'VV'}
+2024-11-27 12:57:21.316  D  y_temp: Q
+2024-11-27 12:57:21.515  D  y_points: ['AC_Q_1,AC_Q_2,AC_Q_3']
+2024-11-27 12:57:21.517  D  y2_variable for result: V
+2024-11-27 12:57:21.519  D  {'plot.title': 'title_name', 'plot.x.title': 'Time (sec)', 'plot.x.points': 'TIME', 'plot.y.points': 'AC_Q_1,AC_Q_2,AC_Q_3', 'plot.y.title': 'Reactive Power', 'plot.y2.points': 'AC_VRMS_1,AC_VRMS_2,AC_VRMS_3', 'plot.y2.title': 'Voltage', 'plot.Q_TARGET.min_error': 'Q_TARGET_MIN', 'plot.Q_TARGET.max_error': 'Q_TARGET_MAX'}
+2024-11-27 12:57:21.523  D  ***************HIL initialization***************
+2024-11-27 12:57:21.524  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:57:21.524  I  Assuming project name is an absolute path to .llp file
+2024-11-27 12:57:21.525  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:57:21.765  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:57:21.766  D  info(), self.target_name = Microgrid_Testbench
+2024-11-27 12:57:21.785  I  OPAL-RT - Platform version OPAL-RTLinux 3.5.4 (4.19.80-opalrtlinux) (IP address : 192.168.10.102)
+2024-11-27 12:57:21.785  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:57:21.786  I  Assuming project name is an absolute path to .llp file
+2024-11-27 12:57:21.786  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:57:21.789  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 12:57:21.789  I  Setting the simulation stop time for 3600.0 to run experiment.
+2024-11-27 12:57:21.922  W  Stop time already set to 3600.0
+2024-11-27 12:57:21.924  D  ***************PVSIM initialization***************
+2024-11-27 12:57:21.925  D  ***************DAS initialization***************
+2024-11-27 12:57:21.926  D  DAS connected to with HIL: <svpelab.hil_opal.HIL object at 0x000001DDC8B78CC8>, DC meas: None, and gridsim: None
+2024-11-27 12:57:21.958  I  DAS device: OPAL-RT - Platform version OPAL-RTLinux 3.5.4 (4.19.80-opalrtlinux) (IP address : 192.168.10.102)
+2024-11-27 12:57:21.959  D  ***************EUT initialization***************
+2024-11-27 12:57:21.959  D  Set L/HVRT and trip parameters set to the widest range of adjustability possible.
+2024-11-27 12:57:21.959  D  ***************GRIDSIM initialization***************
+2024-11-27 12:57:22.112  D  info(), self.target_name = Microgrid_Testbench
+2024-11-27 12:57:22.149  D  Configuring gridsim with Opal hil parameters...using OPAL-RT - Platform version OPAL-RTLinux 3.5.4 (4.19.80-opalrtlinux) (IP address : 192.168.10.102)
+2024-11-27 12:57:22.150  D  hil object : <svpelab.hil_opal.HIL object at 0x000001DDC8B78CC8>
+2024-11-27 12:57:22.163  D  Setting matlab variable VOLT_PHA to 0.5217391304347826 instead of 1.0 
+2024-11-27 12:57:22.741  D  Setting matlab variable VOLT_PHB to 0.5217391304347826 instead of 1.0 
+2024-11-27 12:57:23.312  D  Setting matlab variable VOLT_PHC to 0.5217391304347826 instead of 1.0 
+2024-11-27 12:57:23.886  I  Configuring phase angles, frequencies, and voltages for gridsim
+2024-11-27 12:57:23.896  D  matlab variable PHASE_PHA was already configured to 0 
+2024-11-27 12:57:23.905  D  matlab variable PHASE_PHB was already configured to -120 
+2024-11-27 12:57:23.915  D  matlab variable PHASE_PHC was already configured to 120 
+2024-11-27 12:57:23.954  D  matlab variable FREQUENCY was already configured to 50.0 
+2024-11-27 12:57:23.973  D  Setting matlab variable VOLT_PHA to 1.0 instead of 0.5217391304347826 
+2024-11-27 12:57:24.541  D  Setting matlab variable VOLT_PHB to 1.0 instead of 0.5217391304347826 
+2024-11-27 12:57:25.099  D  Setting matlab variable VOLT_PHC to 1.0 instead of 0.5217391304347826 
+2024-11-27 12:57:25.697  D  Setting matlab variable FREQUENCY_MAX_LIMIT to 70.0 instead of 55.0 
+2024-11-27 12:57:26.280  D  matlab variable FREQUENCY_MIN_LIMIT was already configured to 45.0 
+2024-11-27 12:57:26.297  D  Setting matlab variable VOLTAGE_MAX_LIMIT to 1.0869565217391304 instead of 1.2 
+2024-11-27 12:57:26.882  D  matlab variable VOLTAGE_MIN_LIMIT was already configured to 0.0 
+2024-11-27 12:57:27.108  I  Starting test with characteristic curve 1
+2024-11-27 12:57:27.110  D  P1547 Librairy curve has been set 1
+2024-11-27 12:57:27.110  D  P1547 Time response has been set to 10.0 seconds
+2024-11-27 12:57:27.111  D  P1547 Number of Time response has been set to 2 cycles
+2024-11-27 12:57:27.111  D  P1547 Librairy power level has been set 100%
+2024-11-27 12:57:27.111  I  Setting v_ref at 100 % of v_nom
+2024-11-27 12:57:27.122  D  Setting matlab variable VOLT_PHA to 0.5217391304347826 instead of 1.0 
+2024-11-27 12:57:27.678  D  Setting matlab variable VOLT_PHB to 0.5217391304347826 instead of 1.0 
+2024-11-27 12:57:28.242  D  Setting matlab variable VOLT_PHC to 0.5217391304347826 instead of 1.0 
+2024-11-27 12:57:28.819  I  Start simulation of CHIL
+2024-11-27 12:57:28.819  W  Model was not loaded because the status is:  Model Paused
+2024-11-27 12:57:28.820  I  Simulation started.
+2024-11-27 12:57:29.012  D  OrderedDict([('Step G', 120.6), ('Step H', 124.2), ('Step I', 126.0), ('Step J', 127.8), ('Step K', 131.4), ('Step L', 130.2), ('Step M', 131.4), ('Step N', 127.8), ('Step O', 126.0), ('Step P', 124.2), ('Step Q', 120.6), ('Step R', 120.0), ('Step S', 119.4), ('Step T', 115.8), ('Step U', 114.0), ('Step V', 112.2), ('Step W', 108.6), ('Step X', 107.4), ('Step Y', 108.6), ('Step Z', 112.2), ('Step AA', 114.0), ('Step BB', 115.8), ('Step CC', 119.4), ('Step DD', 120.0)])
+2024-11-27 12:57:29.013  I  Voltage step: setting Grid simulator voltage to 120.6 (Step G)
+2024-11-27 12:57:29.563  D  0.0
+2024-11-27 12:57:29.563  D  nan
+2024-11-27 12:57:29.575  D  Setting matlab variable VOLT_PHA to 0.5243478260869565 instead of 0.5217391304347826 
+2024-11-27 12:57:30.119  D  Setting matlab variable VOLT_PHB to 0.5243478260869565 instead of 0.5217391304347826 
+2024-11-27 12:57:30.647  D  Setting matlab variable VOLT_PHC to 0.5243478260869565 instead of 0.5217391304347826 
+2024-11-27 12:57:31.210  I  Waiting 7.80295 seconds to get the next Tr data for analysis...
+2024-11-27 12:57:39.893  I  Value V: 0.0
+2024-11-27 12:57:39.893  I  Value Q: nan
+2024-11-27 12:57:39.893  I  Waiting 9.120877 seconds to get the next Tr data for analysis...
+2024-11-27 12:57:49.641  I  Value V: 0.0
+2024-11-27 12:57:49.641  I  Value Q: nan
+2024-11-27 12:57:49.641  I  Waiting 9.372318 seconds to get the next Tr data for analysis...
+2024-11-27 12:57:59.780  I  Value V: 0.0
+2024-11-27 12:57:59.780  I  Value Q: nan
+2024-11-27 12:57:59.781  D  daq={'V_MEAS': 0.0, 'V_TARGET': 120.0, 'Q_MEAS': nan, 'Q_TARGET': 100, 'Q_TARGET_MIN': 100, 'Q_TARGET_MAX': 100, 'EVENT': 'Step G_TR_3', 'event': 'Step G'}
+2024-11-27 12:57:59.782  D  tr_iter=0
+2024-11-27 12:57:59.782  D  step_dict
+2024-11-27 12:57:59.782  D  tr_targ=120.6
+2024-11-27 12:57:59.783  I  X Value (V) = 0.0
+2024-11-27 12:57:59.783  D  function=VV
+2024-11-27 12:57:59.783  D  0.0
+2024-11-27 12:57:59.783  D  Q_TR_TARG_0
+2024-11-27 12:57:59.784  D  tr_target=0.0
+2024-11-27 12:57:59.784  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 12:57:59.784  D  tr_iter=1
+2024-11-27 12:57:59.784  D  step_dict
+2024-11-27 12:57:59.785  D  tr_targ=120.6
+2024-11-27 12:57:59.785  I  X Value (V) = 0.0
+2024-11-27 12:57:59.785  D  function=VV
+2024-11-27 12:57:59.785  D  0.0
+2024-11-27 12:57:59.786  D  Q_TR_TARG_1
+2024-11-27 12:57:59.786  D  tr_target=0.0
+2024-11-27 12:57:59.786  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 12:57:59.786  D  tr_iter=2
+2024-11-27 12:57:59.786  D  step_dict
+2024-11-27 12:57:59.787  D  tr_targ=120.6
+2024-11-27 12:57:59.787  I  X Value (V) = 0.0
+2024-11-27 12:57:59.787  D  function=VV
+2024-11-27 12:57:59.787  D  0.0
+2024-11-27 12:57:59.787  D  Q_TR_TARG_2
+2024-11-27 12:57:59.788  D  tr_target=0.0
+2024-11-27 12:57:59.788  I  Y Value (Q) = nan. Pass/fail bounds = [-750.0, 750.0]
+2024-11-27 12:57:59.788  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 12:57:59.788  D  y_target = nan, y_ss [0.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 12:57:59.789  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 12:57:59.789  D  RESULT_ACCURACY
+2024-11-27 12:57:59.789  I    Steady state Q(Tr_1) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 12:57:59.789  I    Steady state Q(Tr_2) evaluation: -750.0 <= nan <= 750.0  [Fail]
+2024-11-27 12:57:59.790  I  Voltage step: setting Grid simulator voltage to 124.2 (Step H)
+2024-11-27 12:58:00.392  D  0.0
+2024-11-27 12:58:00.392  D  nan
+2024-11-27 12:58:00.404  D  Setting matlab variable VOLT_PHA to 0.54 instead of 0.5243478260869565 
+2024-11-27 12:58:00.941  D  Setting matlab variable VOLT_PHB to 0.54 instead of 0.5243478260869565 
+2024-11-27 12:58:01.481  D  Setting matlab variable VOLT_PHC to 0.54 instead of 0.5243478260869565 
+2024-11-27 12:58:02.048  I  Waiting 7.742137 seconds to get the next Tr data for analysis...
+2024-11-27 12:58:10.713  I  Value V: 0.0
+2024-11-27 12:58:10.714  I  Value Q: nan
+2024-11-27 12:58:10.714  I  Waiting 9.076387 seconds to get the next Tr data for analysis...
+2024-11-27 12:58:20.360  I  Value V: 0.0
+2024-11-27 12:58:20.360  I  Value Q: nan
+2024-11-27 12:58:20.361  I  Waiting 9.428806 seconds to get the next Tr data for analysis...
+2024-11-27 12:58:30.482  I  Value V: 0.0
+2024-11-27 12:58:30.482  I  Value Q: nan
+2024-11-27 12:58:30.482  D  daq={'V_MEAS': 0.0, 'V_TARGET': 120.6, 'Q_MEAS': nan, 'Q_TARGET': 0.0, 'Q_TARGET_MIN': -750.0, 'Q_TARGET_MAX': 750.0, 'EVENT': 'Step H_TR_3', 'event': 'Step H'}
+2024-11-27 12:58:30.484  D  tr_iter=0
+2024-11-27 12:58:30.484  D  step_dict
+2024-11-27 12:58:30.484  D  tr_targ=124.2
+2024-11-27 12:58:30.484  I  X Value (V) = 0.0
+2024-11-27 12:58:30.484  D  function=VV
+2024-11-27 12:58:30.484  D  0.0
+2024-11-27 12:58:30.484  D  Q_TR_TARG_0
+2024-11-27 12:58:30.485  D  tr_target=-1100.0
+2024-11-27 12:58:30.485  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 12:58:30.485  D  tr_iter=1
+2024-11-27 12:58:30.486  D  step_dict
+2024-11-27 12:58:30.486  D  tr_targ=124.2
+2024-11-27 12:58:30.486  I  X Value (V) = 0.0
+2024-11-27 12:58:30.486  D  function=VV
+2024-11-27 12:58:30.486  D  0.0
+2024-11-27 12:58:30.487  D  Q_TR_TARG_1
+2024-11-27 12:58:30.487  D  tr_target=-1100.0
+2024-11-27 12:58:30.487  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 12:58:30.487  D  tr_iter=2
+2024-11-27 12:58:30.488  D  step_dict
+2024-11-27 12:58:30.488  D  tr_targ=124.2
+2024-11-27 12:58:30.488  I  X Value (V) = 0.0
+2024-11-27 12:58:30.488  D  function=VV
+2024-11-27 12:58:30.489  D  0.0
+2024-11-27 12:58:30.489  D  Q_TR_TARG_2
+2024-11-27 12:58:30.489  D  tr_target=-1100.0
+2024-11-27 12:58:30.489  I  Y Value (Q) = nan. Pass/fail bounds = [-1850.0, -350.0]
+2024-11-27 12:58:30.489  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 12:58:30.490  D  y_target = nan, y_ss [-1100.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 12:58:30.490  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 12:58:30.490  D  RESULT_ACCURACY
+2024-11-27 12:58:30.490  I    Steady state Q(Tr_1) evaluation: -1850.0 <= nan <= -350.0  [Fail]
+2024-11-27 12:58:30.490  I    Steady state Q(Tr_2) evaluation: -1850.0 <= nan <= -350.0  [Fail]
+2024-11-27 12:58:30.491  I  Voltage step: setting Grid simulator voltage to 126.0 (Step I)
+2024-11-27 12:58:31.044  D  0.0
+2024-11-27 12:58:31.045  D  nan
+2024-11-27 12:58:31.058  D  Setting matlab variable VOLT_PHA to 0.5478260869565217 instead of 0.54 
+2024-11-27 12:58:31.592  D  Setting matlab variable VOLT_PHB to 0.5478260869565217 instead of 0.54 
+2024-11-27 12:58:32.134  D  Setting matlab variable VOLT_PHC to 0.5478260869565217 instead of 0.54 
+2024-11-27 12:58:32.688  I  Waiting 7.803073 seconds to get the next Tr data for analysis...
+2024-11-27 12:58:41.354  I  Value V: 0.0
+2024-11-27 12:58:41.354  I  Value Q: nan
+2024-11-27 12:58:41.354  I  Waiting 9.137256 seconds to get the next Tr data for analysis...
+2024-11-27 12:58:51.550  I  Value V: 0.0
+2024-11-27 12:58:51.550  I  Value Q: nan
+2024-11-27 12:58:51.550  I  Waiting 8.940881 seconds to get the next Tr data for analysis...
+2024-11-27 12:59:01.267  I  Value V: 0.0
+2024-11-27 12:59:01.267  I  Value Q: nan
+2024-11-27 12:59:01.268  D  daq={'V_MEAS': 0.0, 'V_TARGET': 124.2, 'Q_MEAS': nan, 'Q_TARGET': -1100.0, 'Q_TARGET_MIN': -1850.0, 'Q_TARGET_MAX': -350.0, 'EVENT': 'Step I_TR_3', 'event': 'Step I'}
+2024-11-27 12:59:01.268  D  tr_iter=0
+2024-11-27 12:59:01.268  D  step_dict
+2024-11-27 12:59:01.269  D  tr_targ=126.0
+2024-11-27 12:59:01.269  I  X Value (V) = 0.0
+2024-11-27 12:59:01.269  D  function=VV
+2024-11-27 12:59:01.269  D  0.0
+2024-11-27 12:59:01.270  D  Q_TR_TARG_0
+2024-11-27 12:59:01.270  D  tr_target=-2200.0
+2024-11-27 12:59:01.270  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 12:59:01.270  D  tr_iter=1
+2024-11-27 12:59:01.271  D  step_dict
+2024-11-27 12:59:01.271  D  tr_targ=126.0
+2024-11-27 12:59:01.271  I  X Value (V) = 0.0
+2024-11-27 12:59:01.271  D  function=VV
+2024-11-27 12:59:01.272  D  0.0
+2024-11-27 12:59:01.272  D  Q_TR_TARG_1
+2024-11-27 12:59:01.272  D  tr_target=-2200.0
+2024-11-27 12:59:01.272  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 12:59:01.272  D  tr_iter=2
+2024-11-27 12:59:01.273  D  step_dict
+2024-11-27 12:59:01.273  D  tr_targ=126.0
+2024-11-27 12:59:01.273  I  X Value (V) = 0.0
+2024-11-27 12:59:01.273  D  function=VV
+2024-11-27 12:59:01.274  D  0.0
+2024-11-27 12:59:01.274  D  Q_TR_TARG_2
+2024-11-27 12:59:01.274  D  tr_target=-2200.0
+2024-11-27 12:59:01.274  I  Y Value (Q) = nan. Pass/fail bounds = [-2950.0, -1450.0]
+2024-11-27 12:59:01.275  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 12:59:01.275  D  y_target = nan, y_ss [-2200.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 12:59:01.275  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 12:59:01.275  D  RESULT_ACCURACY
+2024-11-27 12:59:01.276  I    Steady state Q(Tr_1) evaluation: -2950.0 <= nan <= -1450.0  [Fail]
+2024-11-27 12:59:01.276  I    Steady state Q(Tr_2) evaluation: -2950.0 <= nan <= -1450.0  [Fail]
+2024-11-27 12:59:01.276  I  Voltage step: setting Grid simulator voltage to 127.8 (Step J)
+2024-11-27 12:59:01.827  D  0.0
+2024-11-27 12:59:01.827  D  nan
+2024-11-27 12:59:01.844  D  Setting matlab variable VOLT_PHA to 0.5556521739130434 instead of 0.5478260869565217 
+2024-11-27 12:59:02.398  D  Setting matlab variable VOLT_PHB to 0.5556521739130434 instead of 0.5478260869565217 
+2024-11-27 12:59:02.941  D  Setting matlab variable VOLT_PHC to 0.5556521739130434 instead of 0.5478260869565217 
+2024-11-27 12:59:03.485  I  Waiting 7.791458 seconds to get the next Tr data for analysis...
+2024-11-27 12:59:12.174  I  Value V: 0.0
+2024-11-27 12:59:12.174  I  Value Q: nan
+2024-11-27 12:59:12.175  I  Waiting 9.101237 seconds to get the next Tr data for analysis...
+2024-11-27 12:59:22.325  I  Value V: 0.0
+2024-11-27 12:59:22.326  I  Value Q: nan
+2024-11-27 12:59:22.326  I  Waiting 8.950031 seconds to get the next Tr data for analysis...
+2024-11-27 12:59:32.027  I  Value V: 0.0
+2024-11-27 12:59:32.028  I  Value Q: nan
+2024-11-27 12:59:32.028  D  daq={'V_MEAS': 0.0, 'V_TARGET': 126.0, 'Q_MEAS': nan, 'Q_TARGET': -2200.0, 'Q_TARGET_MIN': -2950.0, 'Q_TARGET_MAX': -1450.0, 'EVENT': 'Step J_TR_3', 'event': 'Step J'}
+2024-11-27 12:59:32.028  D  tr_iter=0
+2024-11-27 12:59:32.029  D  step_dict
+2024-11-27 12:59:32.029  D  tr_targ=127.8
+2024-11-27 12:59:32.029  I  X Value (V) = 0.0
+2024-11-27 12:59:32.029  D  function=VV
+2024-11-27 12:59:32.030  D  0.0
+2024-11-27 12:59:32.030  D  Q_TR_TARG_0
+2024-11-27 12:59:32.030  D  tr_target=-3300.0
+2024-11-27 12:59:32.031  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 12:59:32.031  D  tr_iter=1
+2024-11-27 12:59:32.031  D  step_dict
+2024-11-27 12:59:32.031  D  tr_targ=127.8
+2024-11-27 12:59:32.031  I  X Value (V) = 0.0
+2024-11-27 12:59:32.032  D  function=VV
+2024-11-27 12:59:32.032  D  0.0
+2024-11-27 12:59:32.032  D  Q_TR_TARG_1
+2024-11-27 12:59:32.032  D  tr_target=-3300.0
+2024-11-27 12:59:32.033  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 12:59:32.033  D  tr_iter=2
+2024-11-27 12:59:32.033  D  step_dict
+2024-11-27 12:59:32.033  D  tr_targ=127.8
+2024-11-27 12:59:32.034  I  X Value (V) = 0.0
+2024-11-27 12:59:32.034  D  function=VV
+2024-11-27 12:59:32.034  D  0.0
+2024-11-27 12:59:32.034  D  Q_TR_TARG_2
+2024-11-27 12:59:32.035  D  tr_target=-3300.0
+2024-11-27 12:59:32.035  I  Y Value (Q) = nan. Pass/fail bounds = [-4050.0, -2550.0]
+2024-11-27 12:59:32.035  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 12:59:32.035  D  y_target = nan, y_ss [-3300.00], y_start [nan], duration = 10.0, tr=1
+2024-11-27 12:59:32.035  D  Transient y_targ =nan, y_min [nan] <= y_meas [nan] <= y_max [nan] = Fail
+2024-11-27 12:59:32.036  D  RESULT_ACCURACY
+2024-11-27 12:59:32.036  I    Steady state Q(Tr_1) evaluation: -4050.0 <= nan <= -2550.0  [Fail]
+2024-11-27 12:59:32.036  I    Steady state Q(Tr_2) evaluation: -4050.0 <= nan <= -2550.0  [Fail]
+2024-11-27 12:59:32.036  I  Voltage step: setting Grid simulator voltage to 131.4 (Step K)
+2024-11-27 12:59:32.598  D  0.0
+2024-11-27 12:59:32.598  D  nan
+2024-11-27 12:59:32.608  D  Setting matlab variable VOLT_PHA to 0.571304347826087 instead of 0.5556521739130434 
+2024-11-27 12:59:33.145  D  Setting matlab variable VOLT_PHB to 0.571304347826087 instead of 0.5556521739130434 
+2024-11-27 12:59:33.693  D  Setting matlab variable VOLT_PHC to 0.571304347826087 instead of 0.5556521739130434 
+2024-11-27 12:59:34.265  I  Waiting 7.771196 seconds to get the next Tr data for analysis...
+2024-11-27 12:59:42.948  I  Value V: 0.0
+2024-11-27 12:59:42.948  I  Value Q: nan
+2024-11-27 12:59:42.948  I  Waiting 9.088209 seconds to get the next Tr data for analysis...
+2024-11-27 12:59:45.509  I  message: {'op': 'cmd', 'cmd': 'stop'}
+2024-11-27 12:59:45.509  I  Saving file: VV_1_PWR_100_vref_100.csv
+2024-11-27 12:59:45.740  E  Test script exception: Traceback (most recent call last):
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Scripts\VV.py", line 326, in volt_vars_mode
+    ActiveFunction.record_timeresponse(daq=daq)
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\p1547.py", line 605, in record_timeresponse
+    self.ts.sleep(time_to_sleep.total_seconds())
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\app.py", line 561, in sleep
+    raise script.ScriptError('Commanded stop')
+script.ScriptError: Commanded stop
+
+2024-11-27 12:59:45.752  D  Setting matlab variable VOLT_PHA to 0.5217391304347826 instead of 0.571304347826087 
+2024-11-27 12:59:46.289  D  Setting matlab variable VOLT_PHB to 0.5217391304347826 instead of 0.571304347826087 
+2024-11-27 12:59:46.822  D  Setting matlab variable VOLT_PHC to 0.5217391304347826 instead of 0.571304347826087 
+2024-11-27 12:59:47.372  I  Stopping/Resetting simulation. Current State: Model Running
+2024-11-27 13:00:05.803  I  Model state is now: Model Loadable
+2024-11-27 13:00:06.032  I  Test result - Fail

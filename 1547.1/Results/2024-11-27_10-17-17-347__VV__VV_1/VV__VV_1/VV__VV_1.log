@@ -1,0 +1,175 @@
+2024-11-27 10:17:19.189  D  
+2024-11-27 10:17:19.190  D  **************  Starting VV_1  **************
+2024-11-27 10:17:19.190  D  Script: VV.py 1.4.3
+2024-11-27 10:17:19.190  I  Test Parameters:
+2024-11-27 10:17:19.191  I      Volt-Var mode = Normal
+2024-11-27 10:17:19.191  I      Characteristic 1 curve = Enabled
+2024-11-27 10:17:19.191  I      Response time (s) for curve 1 = 10.0
+2024-11-27 10:17:19.191  I      Characteristic 2 curve = Disabled
+2024-11-27 10:17:19.192  I      Characteristic 3 curve = Disabled
+2024-11-27 10:17:19.192  I      Power Levels iteration = 100%
+2024-11-27 10:17:19.192  I      Voltage reference iteration = All
+2024-11-27 10:17:19.192  I  EUT Parameters:
+2024-11-27 10:17:19.193  I      Phases = Three phase
+2024-11-27 10:17:19.201  I      Apparent power rating (VA) = 10000.0
+2024-11-27 10:17:19.201  I      Output power rating (W) = 8000.0
+2024-11-27 10:17:19.201  I      Minimum Power Rating(W) = 1000.0
+2024-11-27 10:17:19.201  I      Output var rating (vars) = 2000.0
+2024-11-27 10:17:19.202  I      Nominal AC voltage (V) = 120.0
+2024-11-27 10:17:19.202  I      Minimum AC voltage (V) = 105.6
+2024-11-27 10:17:19.202  I      Maximum AC voltage (V) = 132.0
+2024-11-27 10:17:19.202  I      V_in_nom: Nominal input voltage (Vdc) = 400
+2024-11-27 10:17:19.202  I      Nominal AC frequency (Hz) = 60.0
+2024-11-27 10:17:19.202  I      Maximum frequency in the continuous operating region (Hz) = 66.0
+2024-11-27 10:17:19.202  I      Minimum frequency in the continuous operating region (Hz) = 56.0
+2024-11-27 10:17:19.203  I      EUT response to phase imbalance is calculated by: = EUT response to the average of the three-phase effective (RMS)
+2024-11-27 10:17:19.203  I  DER Parameters:
+2024-11-27 10:17:19.203  I      DER Mode = Disabled
+2024-11-27 10:17:19.203  I  Grid Simulator Parameters:
+2024-11-27 10:17:19.204  I      Mode = Disabled
+2024-11-27 10:17:19.204  I      Configure grid simulator at beginning of test = Disabled
+2024-11-27 10:17:19.204  I  PV Simulator Parameters:
+2024-11-27 10:17:19.205  I      Mode = Disabled
+2024-11-27 10:17:19.205  I  Data Acquisition System Parameters:
+2024-11-27 10:17:19.205  I      Mode = Opal
+2024-11-27 10:17:19.205  I      Opal Parameters:
+2024-11-27 10:17:19.206  I          Sample Interval (ms) = 1000
+2024-11-27 10:17:19.206  I          Opal Analog Channel Map (e.g. simulinks blocks, etc,.) = Opal_Phase_Jump
+2024-11-27 10:17:19.206  I          Waveform Directory = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\models\IEEE_1547_Testing\ieee_1547_testing_sm_source\OpREDHAWK64target
+2024-11-27 10:17:19.207  I          Waveform Channel List = PhaseJump
+2024-11-27 10:17:19.207  I          Waveform Data File Name (.mat) = Data.mat
+2024-11-27 10:17:19.207  I          Capture data from the console? = No
+2024-11-27 10:17:19.207  I  HIL Parameters:
+2024-11-27 10:17:19.208  I      Mode = Opal-RT
+2024-11-27 10:17:19.208  I      Opal-RT Parameters:
+2024-11-27 10:17:19.208  I          Target name in RT-LAB = Microgrid_Testbench
+2024-11-27 10:17:19.208  I          Project Directory Loacation = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:17:19.209  I          RT-LAB model name (.mdl or .slx) = IEEE_1547_Testing
+2024-11-27 10:17:19.209  I          Real-Time simulation mode = Hardware
+2024-11-27 10:17:19.209  I          Configure HIL in init = False
+2024-11-27 10:17:19.210  I          Stop Time = 3600.0
+2024-11-27 10:17:19.210  I  Functions to be activated in this test script = ['VV']
+2024-11-27 10:17:19.210  D  Sc points: ['V_MEAS', 'V_TARGET', 'Q_MEAS', 'Q_TARGET', 'Q_TARGET_MIN', 'Q_TARGET_MAX', 'EVENT']
+2024-11-27 10:17:19.211  D  summary column=90%_BY_TR=1,WITHIN_BOUNDS_BY_TR=1,WITHIN_BOUNDS_BY_LAST_TR,V_MEAS,V_TARGET,Q_MEAS,Q_TARGET,Q_TARGET_MIN,Q_TARGET_MAX,STEP,FILENAME
+2024-11-27 10:17:19.354  D  1547.1 Library configured for UNDEFINED IN TEST CLASS
+2024-11-27 10:17:19.355  D  y_variables={'Q': 'VV'}
+2024-11-27 10:17:19.355  D  y_temp: Q
+2024-11-27 10:17:19.356  D  y_points: ['AC_Q_1,AC_Q_2,AC_Q_3']
+2024-11-27 10:17:19.356  D  y2_variable for result: V
+2024-11-27 10:17:19.357  D  {'plot.title': 'title_name', 'plot.x.title': 'Time (sec)', 'plot.x.points': 'TIME', 'plot.y.points': 'AC_Q_1,AC_Q_2,AC_Q_3', 'plot.y.title': 'Reactive Power', 'plot.y2.points': 'AC_VRMS_1,AC_VRMS_2,AC_VRMS_3', 'plot.y2.title': 'Voltage', 'plot.Q_TARGET.min_error': 'Q_TARGET_MIN', 'plot.Q_TARGET.max_error': 'Q_TARGET_MAX'}
+2024-11-27 10:17:19.358  D  ***************HIL initialization***************
+2024-11-27 10:17:19.553  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:17:19.554  I  Assuming project name is an absolute path to .llp file
+2024-11-27 10:17:19.554  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:17:19.583  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:17:19.584  D  info(), self.target_name = Microgrid_Testbench
+2024-11-27 10:17:19.643  I  OPAL-RT - Platform version OPAL-RTLinux 3.5.4 (4.19.80-opalrtlinux) (IP address : 192.168.10.102)
+2024-11-27 10:17:19.644  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:17:19.644  I  Assuming project name is an absolute path to .llp file
+2024-11-27 10:17:19.760  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:17:19.766  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2024-11-27 10:17:19.767  I  Setting the simulation stop time for 3600.0 to run experiment.
+2024-11-27 10:17:19.767  W  Stop time already set to 3600.0
+2024-11-27 10:17:19.767  D  ***************PVSIM initialization***************
+2024-11-27 10:17:19.768  D  ***************DAS initialization***************
+2024-11-27 10:17:19.768  D  DAS connected to with HIL: <svpelab.hil_opal.HIL object at 0x000001A5916CCA48>, DC meas: None, and gridsim: None
+2024-11-27 10:17:19.786  I  DAS device: OPAL-RT - Platform version OPAL-RTLinux 3.5.4 (4.19.80-opalrtlinux) (IP address : 192.168.10.102)
+2024-11-27 10:17:19.961  D  ***************EUT initialization***************
+2024-11-27 10:17:19.963  D  Set L/HVRT and trip parameters set to the widest range of adjustability possible.
+2024-11-27 10:17:19.964  D  ***************GRIDSIM initialization***************
+2024-11-27 10:17:20.836  I  Starting test with characteristic curve 1
+2024-11-27 10:17:20.836  D  P1547 Librairy curve has been set 1
+2024-11-27 10:17:20.836  D  P1547 Time response has been set to 10.0 seconds
+2024-11-27 10:17:20.836  D  P1547 Number of Time response has been set to 2 cycles
+2024-11-27 10:17:20.837  D  P1547 Librairy power level has been set 100%
+2024-11-27 10:17:20.837  I  Setting v_ref at 100 % of v_nom
+2024-11-27 10:17:20.837  I  Start simulation of CHIL
+2024-11-27 10:17:20.837  I  Loading Model.  This may take a while...
+2024-11-27 10:17:20.838  I  The realtimemod : HARD_SYNC_MODE(0)
+2024-11-27 10:17:44.472  I  Simulation started.
+2024-11-27 10:17:44.671  D  OrderedDict([('Step G', 120.6), ('Step H', 124.2), ('Step I', 126.0), ('Step J', 127.8), ('Step K', 131.4), ('Step L', 130.2), ('Step M', 131.4), ('Step N', 127.8), ('Step O', 126.0), ('Step P', 124.2), ('Step Q', 120.6), ('Step R', 120.0), ('Step S', 119.4), ('Step T', 115.8), ('Step U', 114.0), ('Step V', 112.2), ('Step W', 108.6), ('Step X', 107.4), ('Step Y', 108.6), ('Step Z', 112.2), ('Step AA', 114.0), ('Step BB', 115.8), ('Step CC', 119.4), ('Step DD', 120.0)])
+2024-11-27 10:17:44.672  I  Voltage step: setting Grid simulator voltage to 120.6 (Step G)
+2024-11-27 10:17:44.719  D  Could not get data. Simulation likely completed. Error: (22, 'Error 22: The signal IEEE_1547_Testing/SM_Source/RMS4/Switch/port1 does not exist.')
+2024-11-27 10:17:44.719  D  None
+2024-11-27 10:17:44.719  E  Inverter phase parameter not set correctly.
+2024-11-27 10:17:44.720  E  phases=Three phase
+2024-11-27 10:17:44.721  D  None
+2024-11-27 10:17:44.721  E  Inverter phase parameter not set correctly.
+2024-11-27 10:17:44.721  E  phases=Three phase
+2024-11-27 10:17:44.721  I  Waiting 9.951228 seconds to get the next Tr data for analysis...
+2024-11-27 10:17:54.908  D  Could not get data. Simulation likely completed. Error: (22, 'Error 22: The signal IEEE_1547_Testing/SM_Source/RMS4/Switch/port1 does not exist.')
+2024-11-27 10:17:54.909  I  Value V: None
+2024-11-27 10:17:54.909  I  Value Q: None
+2024-11-27 10:17:54.909  I  Waiting 9.763104 seconds to get the next Tr data for analysis...
+2024-11-27 10:18:05.111  D  Could not get data. Simulation likely completed. Error: (22, 'Error 22: The signal IEEE_1547_Testing/SM_Source/RMS4/Switch/port1 does not exist.')
+2024-11-27 10:18:05.111  I  Value V: None
+2024-11-27 10:18:05.111  I  Value Q: None
+2024-11-27 10:18:05.112  I  Waiting 9.560075 seconds to get the next Tr data for analysis...
+2024-11-27 10:18:14.831  D  Could not get data. Simulation likely completed. Error: (22, 'Error 22: The signal IEEE_1547_Testing/SM_Source/RMS4/Switch/port1 does not exist.')
+2024-11-27 10:18:14.832  I  Value V: None
+2024-11-27 10:18:14.832  I  Value Q: None
+2024-11-27 10:18:14.832  D  daq={'V_MEAS': None, 'V_TARGET': 120.0, 'Q_MEAS': None, 'Q_TARGET': 100, 'Q_TARGET_MIN': 100, 'Q_TARGET_MAX': 100, 'EVENT': 'Step G_TR_3', 'event': 'Step G'}
+2024-11-27 10:18:14.833  D  tr_iter=0
+2024-11-27 10:18:14.833  D  step_dict
+2024-11-27 10:18:14.833  D  tr_targ=120.6
+2024-11-27 10:18:14.833  I  X Value (V) = None
+2024-11-27 10:18:14.833  D  function=VV
+2024-11-27 10:18:14.833  D  None
+2024-11-27 10:18:14.833  E  Inverter phase parameter not set correctly.
+2024-11-27 10:18:14.834  E  phases=Three phase
+2024-11-27 10:18:14.834  E  Test script exception: Traceback (most recent call last):
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\p1547.py", line 685, in define_target
+    self.calculate_min_max_values(function=y_criteria[meas_value])
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\p1547.py", line 807, in calculate_min_max_values
+    target_min = self.update_target_value(value=v_meas + self.MRA['V'] * 1.5, function=VV) - (
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'float'
+
+2024-11-27 10:18:14.835  D  Measured value (Q) not recorded: unsupported operand type(s) for +: 'NoneType' and 'float'
+2024-11-27 10:18:14.835  D  tr_iter=1
+2024-11-27 10:18:14.835  D  step_dict
+2024-11-27 10:18:14.835  D  tr_targ=120.6
+2024-11-27 10:18:14.836  I  X Value (V) = None
+2024-11-27 10:18:14.836  D  function=VV
+2024-11-27 10:18:14.836  D  None
+2024-11-27 10:18:14.836  E  Inverter phase parameter not set correctly.
+2024-11-27 10:18:14.836  E  phases=Three phase
+2024-11-27 10:18:14.837  E  Test script exception: Traceback (most recent call last):
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\p1547.py", line 685, in define_target
+    self.calculate_min_max_values(function=y_criteria[meas_value])
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\p1547.py", line 807, in calculate_min_max_values
+    target_min = self.update_target_value(value=v_meas + self.MRA['V'] * 1.5, function=VV) - (
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'float'
+
+2024-11-27 10:18:14.837  D  Measured value (Q) not recorded: unsupported operand type(s) for +: 'NoneType' and 'float'
+2024-11-27 10:18:14.837  D  tr_iter=2
+2024-11-27 10:18:14.837  D  step_dict
+2024-11-27 10:18:14.838  D  tr_targ=120.6
+2024-11-27 10:18:14.838  I  X Value (V) = None
+2024-11-27 10:18:14.838  D  function=VV
+2024-11-27 10:18:14.838  D  None
+2024-11-27 10:18:14.839  E  Inverter phase parameter not set correctly.
+2024-11-27 10:18:14.839  E  phases=Three phase
+2024-11-27 10:18:14.839  E  Test script exception: Traceback (most recent call last):
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\p1547.py", line 685, in define_target
+    self.calculate_min_max_values(function=y_criteria[meas_value])
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\p1547.py", line 807, in calculate_min_max_values
+    target_min = self.update_target_value(value=v_meas + self.MRA['V'] * 1.5, function=VV) - (
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'float'
+
+2024-11-27 10:18:14.839  D  Measured value (Q) not recorded: unsupported operand type(s) for +: 'NoneType' and 'float'
+2024-11-27 10:18:14.840  I  Calculating pass/fail for Tr = 10.0 sec, with a target of 1 sec
+2024-11-27 10:18:14.840  I  Saving file: VV_1_PWR_100_vref_100.csv
+2024-11-27 10:18:15.486  E  Test script exception: Traceback (most recent call last):
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Scripts\VV.py", line 327, in volt_vars_mode
+    ActiveFunction.evaluate_criterias(daq=daq, step_dict=step_dict)
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\p1547.py", line 859, in evaluate_criterias
+    self.open_loop_resp_criteria()
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\p1547.py", line 919, in open_loop_resp_criteria
+    y_target = self.calculate_open_loop_value(y0=y_start, y_ss=y_ss, duration=duration, tr=tr)  # 90%
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\p1547.py", line 882, in calculate_open_loop_value
+    resp = (y_ss - y0) * resp_fraction + y0  # expand to y units
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'NoneType'
+
+2024-11-27 10:18:15.486  I  Stopping/Resetting simulation. Current State: Model Running
+2024-11-27 10:18:21.551  I  Model state is now: Model Loadable
+2024-11-27 10:18:21.782  I  Test result - Fail

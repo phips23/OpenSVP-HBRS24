@@ -61,6 +61,14 @@ opalrt_info = {
     'mode': 'Opal-RT'
 }
 
+# DC-Sources Settings for Inbuild DC-Sources in OPAL-RT OP1400 Power Amplifier
+dc_1_ip = "192.168.10.105"
+dc_2_ip = "192.168.10.106"
+dc_3_ip = "192.168.10.107"
+dc_telnet_port = 23
+dc_voltage = 500    
+dc_min_current = -10
+dc_max_current = 10
 
 def params(info, group_name=None):
     gname = lambda name: group_name + '.' + name
