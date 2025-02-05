@@ -29,30 +29,74 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Questions can be directed to philipp.schmitz@h-brs.de or marco.jung@h-brs.de
 """
-import telnetlib
-import time
+import pyvisa
 
-class IT6006C(object)
+class IT6006C(object):
     
-    def __init__(self, ip="127.0.0.1", port=23):
-        self.ip = ip
-        self.port = port
-        self.timeout = 0.5
+    def __init__(self, ip):
+        resource = "TCPIP0::"+ip+"::INSTR"
+        rm = pyvisa.ResourceManager()
+        self.inst = rm.open_resource(resource)
+        self.inst.write_termination = '\n'
+        self.inst.read_termination = '\n'
+        self.inst.timeout = 5000
 
-    def cmd(self, cmd):
-        self.connect()
-        command = cmd + "\n"
-        self.tn.write(command.encode("ascii"))
-        time.sleep(self.timeout)
-        self.disconnect()
+    def send_command(self, command):
+        self.inst.write(command)
+        #print(f"Gesendet: {command}")
 
-    def request(self, cmd):
-        self.connect()
-        command = cmd + "\n"
+    def query_device(self, command):
+        response = self.inst.query(command)
+        #print(f"Antwort: {response.strip()}")
+        return response.strip()
+    
+    def setVoltage(self, v):
+        self.send_command("VOLT "+str(v))
 
-    def connect(self):
-        self.tn = telnetlib.Telnet(self.ip, self.port)
-        time.sleep(self.timeout)
+    def setPosCurrent(self, i):
+        self.send_command("CURR:LIM:POS "+str(i))
 
-    def disconnect(self):
-        self.tn.close()
+    def setNegCurrent(self, i):
+        self.send_command("CURR:LIM:NEG "+str(i))
+
+    def getVoltage(self):
+        return self.query_device("VOLT?")
+
+    def getMeasVoltage(self):
+        return self.query_device("MEAS:VOLT?")
+
+    def getPosCurrent(self):
+        return self.query_device("CURR:LIM:POS?")
+
+    def getNegCurrent(self):
+        return self.query_device("CURR:LIM:NEG?")
+
+    def getMeasCurrent(self):
+        return self.query_device("MEAS:CURR?")
+
+    def outputOn(self):
+        self.send_command("OUTP ON")
+
+    def outputOff(self):
+        self.send_command("OUTP OFF") 
+
+def main():
+    try:
+        dc = IT6006C(ip='192.168.10.105')
+        print("test")
+        dc.setVoltage(500)
+        #print(dc.getVoltage)
+        print(dc.getVoltage())
+        dc.setNegCurrent(-10)
+        print("Vorgabe minimaler Strom:"+dc.getNegCurrent())
+        dc.setPosCurrent(10)
+        print("Vorgabe maximaler Strom:"+dc.getPosCurrent())
+        print("Aktuelle Spannung:"+dc.getMeasVoltage())
+        print("Aktueller Strom:"+dc.getMeasCurrent())
+        dc.outputOff()
+
+    except Exception as e:
+        print(f"Fehler: {e}")
+
+if __name__ == "__main__":
+    main()
