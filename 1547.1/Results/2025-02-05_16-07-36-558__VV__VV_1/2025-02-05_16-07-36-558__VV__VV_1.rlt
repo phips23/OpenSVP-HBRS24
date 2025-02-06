@@ -1,0 +1,32 @@
+<result name="2025-02-05_16-07-36-558__VV__VV_1" type="result">
+  <params />
+  <results>
+    <result filename="VV__VV_1\VV__VV_1.log" name="VV/VV_1" status="Stopped" type="test">
+      <params />
+      <results>
+        <result filename="VV__VV_1\result_summary.csv" name="result_summary.csv" type="file">
+          <params />
+          <results />
+        </result>
+        <result filename="VV__VV_1\VV_1_PWR_100_vref_100.csv" name="VV_1_PWR_100_vref_100.csv" type="file">
+          <params>
+            <param name="plot.y.points" type="string">AC_Q_1,AC_Q_2,AC_Q_3</param>
+            <param name="plot.y2.points" type="string">AC_VRMS_1,AC_VRMS_2,AC_VRMS_3</param>
+            <param name="plot.Q_TARGET.max_error" type="string">Q_TARGET_MAX</param>
+            <param name="plot.Q_TARGET.min_error" type="string">Q_TARGET_MIN</param>
+            <param name="plot.y.title" type="string">Reactive Power</param>
+            <param name="plot.x.points" type="string">TIME</param>
+            <param name="plot.x.title" type="string">Time (sec)</param>
+            <param name="plot.title" type="string">VV_1_PWR_100_vref_100</param>
+            <param name="plot.y2.title" type="string">Voltage</param>
+          </params>
+          <results />
+        </result>
+        <result filename="VV__VV_1\VV_1.xlsx" name="VV_1.xlsx" type="file">
+          <params />
+          <results />
+        </result>
+      </results>
+    </result>
+  </results>
+</result>

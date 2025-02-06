@@ -1,0 +1,84 @@
+2025-02-05 16:12:04.757  D  
+2025-02-05 16:12:04.757  D  **************  Starting VV_1  **************
+2025-02-05 16:12:04.758  D  Script: VV.py 1.4.3
+2025-02-05 16:12:04.758  I  Test Parameters:
+2025-02-05 16:12:04.758  I      Volt-Var mode = Normal
+2025-02-05 16:12:04.759  I      Characteristic 1 curve = Enabled
+2025-02-05 16:12:04.759  I      Response time (s) for curve 1 = 10.0
+2025-02-05 16:12:04.759  I      Characteristic 2 curve = Disabled
+2025-02-05 16:12:04.759  I      Characteristic 3 curve = Disabled
+2025-02-05 16:12:04.760  I      Power Levels iteration = 100%
+2025-02-05 16:12:04.760  I      Voltage reference iteration = All
+2025-02-05 16:12:04.760  I  EUT Parameters:
+2025-02-05 16:12:04.760  I      Phases = Three phase
+2025-02-05 16:12:04.761  I      Apparent power rating (VA) = 10000.0
+2025-02-05 16:12:04.761  I      Output power rating (W) = 8000.0
+2025-02-05 16:12:04.762  I      Minimum Power Rating(W) = 1000.0
+2025-02-05 16:12:04.762  I      Output var rating (vars) = 2000.0
+2025-02-05 16:12:04.762  I      Nominal AC voltage (V) = 120.0
+2025-02-05 16:12:04.762  I      Minimum AC voltage (V) = 105.6
+2025-02-05 16:12:04.763  I      Maximum AC voltage (V) = 132.0
+2025-02-05 16:12:04.763  I      V_in_nom: Nominal input voltage (Vdc) = 400
+2025-02-05 16:12:04.763  I      Nominal AC frequency (Hz) = 60.0
+2025-02-05 16:12:04.763  I      Maximum frequency in the continuous operating region (Hz) = 66.0
+2025-02-05 16:12:04.763  I      Minimum frequency in the continuous operating region (Hz) = 56.0
+2025-02-05 16:12:04.764  I      EUT response to phase imbalance is calculated by: = EUT response to the average of the three-phase effective (RMS)
+2025-02-05 16:12:04.764  I  DER Parameters:
+2025-02-05 16:12:04.764  I      DER Mode = Disabled
+2025-02-05 16:12:04.764  I  Grid Simulator Parameters:
+2025-02-05 16:12:04.765  I      Mode = Opal
+2025-02-05 16:12:04.765  I      Configure grid simulator at beginning of test = Enabled
+2025-02-05 16:12:04.765  I      Opal Parameters:
+2025-02-05 16:12:04.765  I          Phases = 3
+2025-02-05 16:12:04.766  I          Nominal voltage for all phases = 230.0
+2025-02-05 16:12:04.766  I          Frequency = 50.0
+2025-02-05 16:12:04.766  I          Max Voltage = 250.0
+2025-02-05 16:12:04.767  I          Max Frequency = 70.0
+2025-02-05 16:12:04.767  I          Min Frequency = 45.0
+2025-02-05 16:12:04.767  I  PV Simulator Parameters:
+2025-02-05 16:12:04.767  I      Mode = Disabled
+2025-02-05 16:12:04.768  I  Data Acquisition System Parameters:
+2025-02-05 16:12:04.768  I      Mode = Opal
+2025-02-05 16:12:04.768  I      Opal Parameters:
+2025-02-05 16:12:04.769  I          Sample Interval (ms) = 1000
+2025-02-05 16:12:04.769  I          Opal Analog Channel Map (e.g. simulinks blocks, etc,.) = Opal_Phase_Jump
+2025-02-05 16:12:04.769  I          Waveform Directory = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\models\IEEE_1547_Testing\ieee_1547_testing_sm_source\OpREDHAWK64target
+2025-02-05 16:12:04.769  I          Waveform Channel List = PhaseJump
+2025-02-05 16:12:04.770  I          Waveform Data File Name (.mat) = Data.mat
+2025-02-05 16:12:04.770  I          Capture data from the console? = No
+2025-02-05 16:12:04.770  I  HIL Parameters:
+2025-02-05 16:12:04.771  I      Mode = Opal-RT
+2025-02-05 16:12:04.771  I      Opal-RT Parameters:
+2025-02-05 16:12:04.771  I          Target name in RT-LAB = Microgrid_Testbench
+2025-02-05 16:12:04.772  I          Project Directory Loacation = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2025-02-05 16:12:04.772  I          RT-LAB model name (.mdl or .slx) = IEEE_1547_Testing
+2025-02-05 16:12:04.836  I          Real-Time simulation mode = Hardware
+2025-02-05 16:12:04.837  I          Configure HIL in init = False
+2025-02-05 16:12:04.838  I          Stop Time = 3600.0
+2025-02-05 16:12:04.838  I  Functions to be activated in this test script = ['VV']
+2025-02-05 16:12:04.838  D  Sc points: ['V_MEAS', 'V_TARGET', 'Q_MEAS', 'Q_TARGET', 'Q_TARGET_MIN', 'Q_TARGET_MAX', 'EVENT']
+2025-02-05 16:12:04.839  D  summary column=90%_BY_TR=1,WITHIN_BOUNDS_BY_TR=1,WITHIN_BOUNDS_BY_LAST_TR,V_MEAS,V_TARGET,Q_MEAS,Q_TARGET,Q_TARGET_MIN,Q_TARGET_MAX,STEP,FILENAME
+2025-02-05 16:12:04.839  D  1547.1 Library configured for UNDEFINED IN TEST CLASS
+2025-02-05 16:12:04.840  D  y_variables={'Q': 'VV'}
+2025-02-05 16:12:04.840  D  y_temp: Q
+2025-02-05 16:12:05.053  D  y_points: ['AC_Q_1,AC_Q_2,AC_Q_3']
+2025-02-05 16:12:05.054  D  y2_variable for result: V
+2025-02-05 16:12:05.055  D  {'plot.title': 'title_name', 'plot.x.title': 'Time (sec)', 'plot.x.points': 'TIME', 'plot.y.points': 'AC_Q_1,AC_Q_2,AC_Q_3', 'plot.y.title': 'Reactive Power', 'plot.y2.points': 'AC_VRMS_1,AC_VRMS_2,AC_VRMS_3', 'plot.y2.title': 'Voltage', 'plot.Q_TARGET.min_error': 'Q_TARGET_MIN', 'plot.Q_TARGET.max_error': 'Q_TARGET_MAX'}
+2025-02-05 16:12:05.056  D  ***************HIL initialization***************
+2025-02-05 16:12:05.057  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2025-02-05 16:12:05.057  I  Assuming project name is an absolute path to .llp file
+2025-02-05 16:12:05.058  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2025-02-05 16:12:05.277  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2025-02-05 16:12:05.278  E  Test script exception: Traceback (most recent call last):
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Scripts\VV.py", line 117, in volt_vars_mode
+    chil = hil.hil_init(ts)
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\hil.py", line 102, in hil_init
+    sim = sim_module.HIL(ts, group_name)
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\hil_opal.py", line 132, in __init__
+    self.open()
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\hil_opal.py", line 290, in open
+    RtlabApi.GetParameterControl(1)
+  File "<string>", line 4, in GetParameterControl
+OpalApiPy.Exception: (1, 'Error 1: Permission not granted. \nThe control of parameters has already \nbeen given to user with higher priority: \n\nuser\t\t: Philipp Schmitz\ncomputer\t\t: DESKTOP-OMM1JBD \nip address\t: 127.0.0.1 \npriority\t\t: 127')
+
+2025-02-05 16:12:06.281  I  Test result - Fail

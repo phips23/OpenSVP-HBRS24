@@ -1,0 +1,86 @@
+2025-02-05 10:40:45.017  D  
+2025-02-05 10:40:45.018  D  **************  Starting VV_1  **************
+2025-02-05 10:40:45.018  D  Script: VV.py 1.4.3
+2025-02-05 10:40:45.019  I  Test Parameters:
+2025-02-05 10:40:45.019  I      Volt-Var mode = Normal
+2025-02-05 10:40:45.019  I      Characteristic 1 curve = Enabled
+2025-02-05 10:40:45.020  I      Response time (s) for curve 1 = 10.0
+2025-02-05 10:40:45.020  I      Characteristic 2 curve = Disabled
+2025-02-05 10:40:45.020  I      Characteristic 3 curve = Disabled
+2025-02-05 10:40:45.020  I      Power Levels iteration = 100%
+2025-02-05 10:40:45.021  I      Voltage reference iteration = All
+2025-02-05 10:40:45.021  I  EUT Parameters:
+2025-02-05 10:40:45.021  I      Phases = Three phase
+2025-02-05 10:40:45.026  I      Apparent power rating (VA) = 10000.0
+2025-02-05 10:40:45.026  I      Output power rating (W) = 8000.0
+2025-02-05 10:40:45.026  I      Minimum Power Rating(W) = 1000.0
+2025-02-05 10:40:45.027  I      Output var rating (vars) = 2000.0
+2025-02-05 10:40:45.027  I      Nominal AC voltage (V) = 120.0
+2025-02-05 10:40:45.027  I      Minimum AC voltage (V) = 105.6
+2025-02-05 10:40:45.027  I      Maximum AC voltage (V) = 132.0
+2025-02-05 10:40:45.028  I      V_in_nom: Nominal input voltage (Vdc) = 400
+2025-02-05 10:40:45.028  I      Nominal AC frequency (Hz) = 60.0
+2025-02-05 10:40:45.028  I      Maximum frequency in the continuous operating region (Hz) = 66.0
+2025-02-05 10:40:45.028  I      Minimum frequency in the continuous operating region (Hz) = 56.0
+2025-02-05 10:40:45.029  I      EUT response to phase imbalance is calculated by: = EUT response to the average of the three-phase effective (RMS)
+2025-02-05 10:40:45.029  I  DER Parameters:
+2025-02-05 10:40:45.029  I      DER Mode = Disabled
+2025-02-05 10:40:45.029  I  Grid Simulator Parameters:
+2025-02-05 10:40:45.030  I      Mode = Opal
+2025-02-05 10:40:45.030  I      Configure grid simulator at beginning of test = Enabled
+2025-02-05 10:40:45.030  I      Opal Parameters:
+2025-02-05 10:40:45.031  I          Phases = 3
+2025-02-05 10:40:45.031  I          Nominal voltage for all phases = 230.0
+2025-02-05 10:40:45.031  I          Frequency = 50.0
+2025-02-05 10:40:45.031  I          Max Voltage = 250.0
+2025-02-05 10:40:45.032  I          Max Frequency = 70.0
+2025-02-05 10:40:45.032  I          Min Frequency = 45.0
+2025-02-05 10:40:45.032  I  PV Simulator Parameters:
+2025-02-05 10:40:45.033  I      Mode = Disabled
+2025-02-05 10:40:45.033  I  Data Acquisition System Parameters:
+2025-02-05 10:40:45.033  I      Mode = Opal
+2025-02-05 10:40:45.033  I      Opal Parameters:
+2025-02-05 10:40:45.034  I          Sample Interval (ms) = 1000
+2025-02-05 10:40:45.034  I          Opal Analog Channel Map (e.g. simulinks blocks, etc,.) = Opal_Phase_Jump
+2025-02-05 10:40:45.034  I          Waveform Directory = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\models\IEEE_1547_Testing\ieee_1547_testing_sm_source\OpREDHAWK64target
+2025-02-05 10:40:45.035  I          Waveform Channel List = PhaseJump
+2025-02-05 10:40:45.035  I          Waveform Data File Name (.mat) = Data.mat
+2025-02-05 10:40:45.035  I          Capture data from the console? = No
+2025-02-05 10:40:45.035  I  HIL Parameters:
+2025-02-05 10:40:45.035  I      Mode = Opal-RT
+2025-02-05 10:40:45.035  I      Opal-RT Parameters:
+2025-02-05 10:40:45.036  I          Target name in RT-LAB = Microgrid_Testbench
+2025-02-05 10:40:45.036  I          Project Directory Loacation = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2025-02-05 10:40:45.036  I          RT-LAB model name (.mdl or .slx) = IEEE_1547_Testing
+2025-02-05 10:40:45.190  I          Real-Time simulation mode = Hardware
+2025-02-05 10:40:45.195  I          Configure HIL in init = False
+2025-02-05 10:40:45.199  I          Stop Time = 3600.0
+2025-02-05 10:40:45.200  I  Functions to be activated in this test script = ['VV']
+2025-02-05 10:40:45.202  D  Sc points: ['V_MEAS', 'V_TARGET', 'Q_MEAS', 'Q_TARGET', 'Q_TARGET_MIN', 'Q_TARGET_MAX', 'EVENT']
+2025-02-05 10:40:45.207  D  summary column=90%_BY_TR=1,WITHIN_BOUNDS_BY_TR=1,WITHIN_BOUNDS_BY_LAST_TR,V_MEAS,V_TARGET,Q_MEAS,Q_TARGET,Q_TARGET_MIN,Q_TARGET_MAX,STEP,FILENAME
+2025-02-05 10:40:45.209  D  1547.1 Library configured for UNDEFINED IN TEST CLASS
+2025-02-05 10:40:45.212  D  y_variables={'Q': 'VV'}
+2025-02-05 10:40:45.212  D  y_temp: Q
+2025-02-05 10:40:45.392  D  y_points: ['AC_Q_1,AC_Q_2,AC_Q_3']
+2025-02-05 10:40:45.395  D  y2_variable for result: V
+2025-02-05 10:40:45.397  D  {'plot.title': 'title_name', 'plot.x.title': 'Time (sec)', 'plot.x.points': 'TIME', 'plot.y.points': 'AC_Q_1,AC_Q_2,AC_Q_3', 'plot.y.title': 'Reactive Power', 'plot.y2.points': 'AC_VRMS_1,AC_VRMS_2,AC_VRMS_3', 'plot.y2.title': 'Voltage', 'plot.Q_TARGET.min_error': 'Q_TARGET_MIN', 'plot.Q_TARGET.max_error': 'Q_TARGET_MAX'}
+2025-02-05 10:40:45.399  D  ***************HIL initialization***************
+2025-02-05 10:40:45.400  I  Opening Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2025-02-05 10:40:45.400  I  Assuming project name is an absolute path to .llp file
+2025-02-05 10:40:45.401  I  Opening project file: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2025-02-05 10:40:46.400  I  Opened Project: C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\OpenSVP_Testing2.llp
+2025-02-05 10:40:46.402  D  info(), self.target_name = Microgrid_Testbench
+2025-02-05 10:40:50.094  E  Test script exception: Traceback (most recent call last):
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Scripts\VV.py", line 119, in volt_vars_mode
+    chil.config()
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\hil_opal.py", line 159, in config
+    self.ts.log("{}".format(self.info()))
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\hil_opal.py", line 318, in info
+    system_info = RtlabApi.GetTargetNodeSystemInfo(self.target_name)
+  File "<string>", line 4, in GetTargetNodeSystemInfo
+OpalApiPy.Exception: (28703, 'Error 28703: Target node 192.168.10.102 is not responding. \nVerify that the node is up and is connected to network.')
+
+2025-02-05 10:40:50.094  I  Stopping/Resetting simulation. Current State: Model Loadable
+2025-02-05 10:40:50.095  I  Model already stopped.
+2025-02-05 10:40:50.095  I  Model state is now: Model Loadable
+2025-02-05 10:40:50.305  I  Test result - Fail

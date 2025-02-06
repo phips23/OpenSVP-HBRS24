@@ -1,0 +1,14 @@
+<result name="2025-02-05_14-30-14-293__VV__VV_1" type="result">
+  <params />
+  <results>
+    <result filename="VV__VV_1\VV__VV_1.log" name="VV/VV_1" status="Fail" type="test">
+      <params />
+      <results>
+        <result filename="VV__VV_1\VV_1.xlsx" name="VV_1.xlsx" type="file">
+          <params />
+          <results />
+        </result>
+      </results>
+    </result>
+  </results>
+</result>

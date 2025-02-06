@@ -60,19 +60,19 @@ class IT6006C(object):
         self.send_command("CURR:LIM:NEG "+str(i))
 
     def getVoltage(self):
-        return self.query_device("VOLT?")
+        return float(self.query_device("VOLT?"))
 
     def getMeasVoltage(self):
-        return self.query_device("MEAS:VOLT?")
+        return float(self.query_device("MEAS:VOLT?"))
 
     def getPosCurrent(self):
-        return self.query_device("CURR:LIM:POS?")
+        return float(self.query_device("CURR:LIM:POS?"))
 
     def getNegCurrent(self):
-        return self.query_device("CURR:LIM:NEG?")
+        return float(self.query_device("CURR:LIM:NEG?"))
 
     def getMeasCurrent(self):
-        return self.query_device("MEAS:CURR?")
+        return float(self.query_device("MEAS:CURR?"))
 
     def outputOn(self):
         self.send_command("OUTP ON")
@@ -82,8 +82,13 @@ class IT6006C(object):
 
 def main():
     try:
-        dc = IT6006C(ip='192.168.10.105')
-        print("test")
+        dc1 = IT6006C(ip='192.168.10.105')
+        dc2 = IT6006C(ip='192.168.10.106')
+        dc3 = IT6006C(ip='192.168.10.107')
+        dc1.outputOff()
+        dc2.outputOff()
+        dc3.outputOff()
+        '''print("test")
         dc.setVoltage(500)
         #print(dc.getVoltage)
         print(dc.getVoltage())
@@ -93,7 +98,7 @@ def main():
         print("Vorgabe maximaler Strom:"+dc.getPosCurrent())
         print("Aktuelle Spannung:"+dc.getMeasVoltage())
         print("Aktueller Strom:"+dc.getMeasCurrent())
-        dc.outputOff()
+        dc.outputOff()'''
 
     except Exception as e:
         print(f"Fehler: {e}")

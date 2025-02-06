@@ -48,6 +48,11 @@ try:
 except ImportError as e:
     print(e)
 
+try:
+    from svpelab import device_itech_IT6006C
+except ImportError as e:
+    print(e)
+
 
 # Dictionary used to create a mapping between a realTimeModeString and a realTimeId
 realTimeModeList = {'Hardware Synchronized': 0, 
@@ -60,15 +65,6 @@ opalrt_info = {
     'name': os.path.splitext(os.path.basename(__file__))[0],
     'mode': 'Opal-RT'
 }
-
-# DC-Sources Settings for Inbuild DC-Sources in OPAL-RT OP1400 Power Amplifier
-dc_1_ip = "192.168.10.105"
-dc_2_ip = "192.168.10.106"
-dc_3_ip = "192.168.10.107"
-dc_telnet_port = 23
-dc_voltage = 500    
-dc_min_current = -10
-dc_max_current = 10
 
 def params(info, group_name=None):
     gname = lambda name: group_name + '.' + name
@@ -297,7 +293,35 @@ class HIL(hil.HIL):
         RtlabApi.GetMonitoringControl(1)
         self.control_panel_info(state=1)  # GetSystemControl
 
+        try:
+            self.configureOP1400dcSources()
+            self.ts.log('DC Sources configured') 
+        except Exception as e:
+            self.ts.log_warning('Could not configure DC Sources:%s' % e)
+            raise
+               
         pass
+
+    def configureOP1400dcSources(self):
+        # DC-Sources Settings for Inbuild DC-Sources in OPAL-RT OP1400 Power Amplifier
+        dc_1_ip = "192.168.10.105"
+        dc_2_ip = "192.168.10.106"
+        dc_3_ip = "192.168.10.107"
+        dc_voltage = 500    
+        dc_min_current = -10
+        dc_max_current = 10
+        self.dc1=device_itech_IT6006C.IT6006C(ip=dc_1_ip)
+        self.dc2=device_itech_IT6006C.IT6006C(ip=dc_2_ip)
+        self.dc3=device_itech_IT6006C.IT6006C(ip=dc_3_ip)
+        self.dc1.setVoltage(dc_voltage)
+        self.dc2.setVoltage(dc_voltage)
+        self.dc3.setVoltage(dc_voltage)
+        self.dc1.setNegCurrent(dc_min_current)
+        self.dc2.setNegCurrent(dc_min_current)
+        self.dc3.setNegCurrent(dc_min_current)
+        self.dc1.setPosCurrent(dc_max_current)
+        self.dc2.setPosCurrent(dc_max_current)
+        self.dc3.setPosCurrent(dc_max_current)
     
     def close(self):
         """
@@ -547,6 +571,9 @@ class HIL(hil.HIL):
             self.ts.log('Model already stopped.')
         else:
             RtlabApi.Reset()
+            self.dc1.outputOff()
+            self.dc2.outputOff()
+            self.dc3.outputOff()
         self.ts.log('Model state is now: %s' % self.model_state())
         return self.model_state()
 
@@ -561,9 +588,49 @@ class HIL(hil.HIL):
             timeFactor = 1
             self.ts.log('Simulation started.')
             RtlabApi.Execute(timeFactor)
+            # Enable DC-BUS
+            self.enableDCSources()
+            # Load DC-BUS
+            self.loadDCBus()
+            # Activate Amplifier Output
+            self.enableAmplifierOutput()
         else:
             self.ts.log_warning('Model is not running because the status is:  %s' % self.model_state())
         return 'The model state is now: %s' % self.model_state()
+    
+    def enableDCSources(self):
+        self.dc1.outputOn()
+        self.dc2.outputOn()
+        self.dc3.outputOn()
+        self.ts.log('Waiting for the DC-Sources to enable output')
+        '''minDCVoltage=498
+        while(self.dc1.getMeasVoltage()<minDCVoltage and self.dc2.getMeasVoltage()<minDCVoltage and self.dc3.getMeasVoltage()<minDCVoltage):
+            sleep(1)'''
+        sleep(3)
+        self.ts.log('DC-Sources output enabled')
+
+    def loadDCBus(self):
+        self.set_matlab_variable_value("ENABLE_DC1",1.0)
+        self.set_matlab_variable_value("ENABLE_DC2",1.0)
+        self.set_matlab_variable_value("ENABLE_DC3",1.0)
+        self.ts.log('Waiting for the DC-BUS to load')
+        pathDC1='IEEE_1547_Testing/SM_Source/OutputConnections/OP8110_Steuerung/OP8110-6 SFP_Link_Ext/FEEDBACK_SIGNALS_AMPLIFIER_1/RESCALING_TO_SI3/Gain_VIN/port1'
+        pathDC2='IEEE_1547_Testing/SM_Source/OutputConnections/OP8110_Steuerung/OP8110-6 SFP_Link_Ext/FEEDBACK_SIGNALS_AMPLIFIER_4/RESCALING_TO_SI3/Gain_VIN/port1'
+        pathDC3='IEEE_1547_Testing/SM_Source/OutputConnections/OP8110_Steuerung/OP8110-3 SFP_Link_Ext/FEEDBACK_SIGNALS_AMPLIFIER_1/RESCALING_TO_SI3/Gain_VIN/port1'
+        minBusVoltage = 498
+        sleep(10)
+        '''# and RtlabApi.GetSignalsByName(pathDC3)<minBusVoltage
+        while(RtlabApi.GetSignalsByName(pathDC1)<minBusVoltage
+              and RtlabApi.GetSignalsByName(pathDC2)<minBusVoltage
+              ):
+            sleep(1)'''
+        self.ts.log('DC-BUS loaded')
+
+    def enableAmplifierOutput(self):
+        self.set_matlab_variable_value("ENABLE_AMP1",1.0)
+        self.set_matlab_variable_value("ENABLE_AMP2",1.0)
+        self.set_matlab_variable_value("ENABLE_AMP3",1.0)
+        self.ts.log('Amplifier Output Enabled')
 
     def run_py_script_on_target(self):
         """

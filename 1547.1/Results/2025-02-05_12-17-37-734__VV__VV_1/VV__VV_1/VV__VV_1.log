@@ -1,0 +1,68 @@
+2025-02-05 12:17:39.600  D  
+2025-02-05 12:17:39.600  D  **************  Starting VV_1  **************
+2025-02-05 12:17:39.600  D  Script: VV.py 1.4.3
+2025-02-05 12:17:39.601  I  Test Parameters:
+2025-02-05 12:17:39.601  I      Volt-Var mode = Normal
+2025-02-05 12:17:39.601  I      Characteristic 1 curve = Enabled
+2025-02-05 12:17:39.601  I      Response time (s) for curve 1 = 10.0
+2025-02-05 12:17:39.602  I      Characteristic 2 curve = Disabled
+2025-02-05 12:17:39.602  I      Characteristic 3 curve = Disabled
+2025-02-05 12:17:39.602  I      Power Levels iteration = 100%
+2025-02-05 12:17:39.603  I      Voltage reference iteration = All
+2025-02-05 12:17:39.603  I  EUT Parameters:
+2025-02-05 12:17:39.603  I      Phases = Three phase
+2025-02-05 12:17:39.606  I      Apparent power rating (VA) = 10000.0
+2025-02-05 12:17:39.606  I      Output power rating (W) = 8000.0
+2025-02-05 12:17:39.606  I      Minimum Power Rating(W) = 1000.0
+2025-02-05 12:17:39.606  I      Output var rating (vars) = 2000.0
+2025-02-05 12:17:39.607  I      Nominal AC voltage (V) = 120.0
+2025-02-05 12:17:39.607  I      Minimum AC voltage (V) = 105.6
+2025-02-05 12:17:39.607  I      Maximum AC voltage (V) = 132.0
+2025-02-05 12:17:39.607  I      V_in_nom: Nominal input voltage (Vdc) = 400
+2025-02-05 12:17:39.608  I      Nominal AC frequency (Hz) = 60.0
+2025-02-05 12:17:39.608  I      Maximum frequency in the continuous operating region (Hz) = 66.0
+2025-02-05 12:17:39.608  I      Minimum frequency in the continuous operating region (Hz) = 56.0
+2025-02-05 12:17:39.608  I      EUT response to phase imbalance is calculated by: = EUT response to the average of the three-phase effective (RMS)
+2025-02-05 12:17:39.608  I  DER Parameters:
+2025-02-05 12:17:39.609  I      DER Mode = Disabled
+2025-02-05 12:17:39.609  I  Grid Simulator Parameters:
+2025-02-05 12:17:39.609  I      Mode = Opal
+2025-02-05 12:17:39.609  I      Configure grid simulator at beginning of test = Enabled
+2025-02-05 12:17:39.610  I      Opal Parameters:
+2025-02-05 12:17:39.610  I          Phases = 3
+2025-02-05 12:17:39.610  I          Nominal voltage for all phases = 230.0
+2025-02-05 12:17:39.611  I          Frequency = 50.0
+2025-02-05 12:17:39.611  I          Max Voltage = 250.0
+2025-02-05 12:17:39.611  I          Max Frequency = 70.0
+2025-02-05 12:17:39.612  I          Min Frequency = 45.0
+2025-02-05 12:17:39.612  I  PV Simulator Parameters:
+2025-02-05 12:17:39.612  I      Mode = Disabled
+2025-02-05 12:17:39.612  I  Data Acquisition System Parameters:
+2025-02-05 12:17:39.613  I      Mode = Opal
+2025-02-05 12:17:39.613  I      Opal Parameters:
+2025-02-05 12:17:39.613  I          Sample Interval (ms) = 1000
+2025-02-05 12:17:39.614  I          Opal Analog Channel Map (e.g. simulinks blocks, etc,.) = Opal_Phase_Jump
+2025-02-05 12:17:39.614  I          Waveform Directory = C:\Users\Host-PC\Desktop\pschmitz\OpenSVP_Testing2\models\IEEE_1547_Testing\ieee_1547_testing_sm_source\OpREDHAWK64target
+2025-02-05 12:17:39.614  I          Waveform Channel List = PhaseJump
+2025-02-05 12:17:39.614  I          Waveform Data File Name (.mat) = Data.mat
+2025-02-05 12:17:39.615  I          Capture data from the console? = No
+2025-02-05 12:17:39.615  I  HIL Parameters:
+2025-02-05 12:17:39.615  I      Mode = Opal-RT
+2025-02-05 12:17:39.615  I  Functions to be activated in this test script = ['VV']
+2025-02-05 12:17:39.616  D  Sc points: ['V_MEAS', 'V_TARGET', 'Q_MEAS', 'Q_TARGET', 'Q_TARGET_MIN', 'Q_TARGET_MAX', 'EVENT']
+2025-02-05 12:17:39.616  D  summary column=90%_BY_TR=1,WITHIN_BOUNDS_BY_TR=1,WITHIN_BOUNDS_BY_LAST_TR,V_MEAS,V_TARGET,Q_MEAS,Q_TARGET,Q_TARGET_MIN,Q_TARGET_MAX,STEP,FILENAME
+2025-02-05 12:17:39.616  D  1547.1 Library configured for UNDEFINED IN TEST CLASS
+2025-02-05 12:17:39.712  D  y_variables={'Q': 'VV'}
+2025-02-05 12:17:39.714  D  y_temp: Q
+2025-02-05 12:17:39.714  D  y_points: ['AC_Q_1,AC_Q_2,AC_Q_3']
+2025-02-05 12:17:39.715  D  y2_variable for result: V
+2025-02-05 12:17:39.715  D  {'plot.title': 'title_name', 'plot.x.title': 'Time (sec)', 'plot.x.points': 'TIME', 'plot.y.points': 'AC_Q_1,AC_Q_2,AC_Q_3', 'plot.y.title': 'Reactive Power', 'plot.y2.points': 'AC_VRMS_1,AC_VRMS_2,AC_VRMS_3', 'plot.y2.title': 'Voltage', 'plot.Q_TARGET.min_error': 'Q_TARGET_MIN', 'plot.Q_TARGET.max_error': 'Q_TARGET_MAX'}
+2025-02-05 12:17:39.716  D  ***************HIL initialization***************
+2025-02-05 12:17:39.717  E  Test script exception: Traceback (most recent call last):
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Scripts\VV.py", line 117, in volt_vars_mode
+    chil = hil.hil_init(ts)
+  File "C:\Users\Philipp Schmitz\Desktop\OpenSVP\OpenSVP-HBRS24\1547.1\Lib\svpelab\hil.py", line 104, in hil_init
+    raise HILError('Unknown HIL mode: %s' % mode)
+svpelab.hil.HILError: Unknown HIL mode: Opal-RT
+
+2025-02-05 12:17:41.038  I  Test result - Fail
